@@ -67,15 +67,6 @@ class User extends Resource {
 		}
 		$f3->reroute($f3->get('SESSION.LastPageURL'));
 	}
-	/*function getSearchResults($f3) {
-	  $this->response->data['SUBPART'] = 'user_list.html';
-	  $page = \Pagination::findCurrentPage();
-	  //$this->resource->filter('comments', array('approved = 1'));
-	  $term=$f3->get('GET.term');
-	  $records = $this->resource->paginate($page-1,10,
-	      array('username LIKE ? OR name LIKE ? )', "%$term%", "%$term%"));
-	  $this->response->data['content'] = $records;
-	}*/
 
 
 
