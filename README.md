@@ -22,9 +22,9 @@ username:mth3l3m3nt
 password:mth3l3m3nt
 
 By Default I have set it to use the JIG database but this you can change at any point in the backend. 
-The DB Dump in place is for users who use MySQL and need demo data. Unfortunately I have only done for MySQL. It's mine of choice. 
+The DB Dump in place is for users who use MySQL and need demo data. Unfortunately I have only done for MySQL. It's my DB of choice. 
 
-If you would like to switch from JIG , other supported Databases are: 
+If you would like to switch from JIG you can do so in the settings. Please note the DB has to be created, it only populates it with the required tables, it doesn't drop or create the DB , other supported Databases are: 
 
 * Mongo DB 
 * MSSQL
