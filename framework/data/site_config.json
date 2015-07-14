@@ -1,0 +1,38 @@
+{
+    "5270220ebb01b093149557": {
+        "ACTIVE_DB": "JIG",
+        "DB_JIG": {
+            "dir": "framework\/data\/",
+            "format": "0"
+        },
+        "DB_MYSQL": {
+            "user": "root",
+            "password": "",
+            "host": "localhost",
+            "port": "3306",
+            "dbname": "h_cms_new"
+        },
+        "DB_SQLITE": {
+            "path": "framework\/data\/mth3l3m3nt_sqlite.db"
+        },
+        "DB_PGSQL": {
+            "user": "root",
+            "password": "h_cms_password",
+            "host": "localhost",
+            "dbname": "h_cms"
+        },
+        "DB_SQLSRV": {
+            "user": "sa",
+            "password": "h_cms_password",
+            "host": "LOCALHOST\\SQLEXPRESS2012",
+            "dbname": "h_cms"
+        },
+        "DB_MONGO": {
+            "host": "localhost",
+            "port": "27017",
+            "dbname": "h_cms"
+        },
+        "framework_title": "Mth3l3m3nt Framework",
+        "ssl_backend": false
+    }
+}

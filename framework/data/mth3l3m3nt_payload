@@ -1,0 +1,9 @@
+{
+    "559a78ca5bade6.82873095": {
+        "pName": "Some Payload",
+        "pType": "XSS",
+        "pCategory": "Some Unique Attribute in the payload",
+        "payload": "My Malicious Code",
+        "pDescription": "What it does in detaiil to remember"
+    }
+}

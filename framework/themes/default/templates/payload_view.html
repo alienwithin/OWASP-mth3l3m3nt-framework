@@ -1,0 +1,12 @@
+
+  <div class="alert alert-danger"><h4>{{ @POST.pName |esc}} - ( {{ @POST.pType |esc}})  </h4></div><br/>
+ 	<blockquote><p class="text-capitalize"><em>{{ @POST.pDescription |esc}}</em></p></blockquote>
+
+     <p><code><strong> Payload is as below:</strong></code></p>
+     
+     <div class="alert alert-info">  {{ @POST.payload |esc }}</div>
+     
+   
+    
+    <a href="{{ @BASE.'/cnc/payload' }}" class="btn btn-primary"><i class="icon-edit icon-white"></i> Back to Payload List</a>
+  

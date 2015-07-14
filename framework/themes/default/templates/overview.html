@@ -1,0 +1,75 @@
+<div class="col-sm-6">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Dashboard</h3>
+        </div>
+        <div class="panel-body">
+            <p>Hey, {{ @BACKEND_USER.name }}. Welcome to <strong>Mth3l3m3nt Framework v {{ @APP_VERSION }}</strong> </p>
+            <p>Mth3l3m3nt Framework is a framework to make Pentesting easy. It has the following features:</p>
+            <ul>
+                
+                <li>Cortex ORM with JIG, SQL (MySQL,PostgreSQL,MSSQL Server) and Mongo database support</li>
+                <li>RFI & LFI Exploitation Module</li>
+                <li>Payloads Module</li>
+                <li>Shell Manager for your web Herd</li>
+                <li>Web Based CURL GUI</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="col-sm-6">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">User Information</h3>
+        </div>
+        <div class="panel-body">
+            <p><strong>Domain  </strong>  : <a href="{{@SCHEME.'://'.@HOST.'/'}}">{{@SCHEME.'://'.@HOST.@BASE.'/'}}</a></p>
+            <p><strong>IP  </strong>      : {{ @IP}}  </p>
+			<p><strong>Package</strong>: {{@PACKAGE}}</p>
+			<p><strong>Active DB Engine</strong>: {{@CONFIG.ACTIVE_DB}}</p>
+			<p><strong>Time Zone</strong>: {{ @TZ}}  </p>
+			<p><strong>User Agent</strong>: {{ @AGENT}}  </p>
+
+        </div>
+    </div>
+</div>
+</div>
+<F3:set payloads="{{\Model\Payload::countAll()}}"/>
+<F3:set payloadsSQLi="{{\Model\Payload::countSQLi()}}"/>
+<F3:set payloadsXSS="{{\Model\Payload::countXSS()}}"/>
+<F3:set payloadsHTMLi="{{\Model\Payload::countHTMLi()}}"/>
+<F3:set payloadsLFI="{{\Model\Payload::countLFI()}}"/>
+<F3:set payloadsMisc="{{\Model\Payload::countMisc()}}"/>
+    <div id="comment-widget" class="panel {{@payloads>0?'panel-info':'panel-default'}}">
+        <div class="panel-heading">
+            <h3 class="panel-title">Payloads ({{ @payloads }})</h3>
+        </div>
+        <div class="panel-body">
+            <F3:check if="{{ @payloads > 0 }}">
+                <true>
+                    <p>
+                        You have <span class="label label-primary">{{ @payloadsSQLi }}</span> SQL Injection Payloads.
+                    </p>
+					<p>
+                        You have <span class="label label-primary">{{ @payloadsXSS }}</span> XSS Payloads.
+                    </p>
+					<p>
+                        You have <span class="label label-primary">{{ @payloadsHTMLi }}</span> HTML Injection Payloads.
+                    </p>
+					<p>
+                        You have <span class="label label-primary">{{ @payloadsLFI }}</span> LFI Payloads.
+                    </p>
+					<p>
+                        You have <span class="label label-primary">{{ @payloadsMisc }}</span> Unclassified Payloads.
+                    </p>
+                </true>
+                <false>
+                    <p>Payloads</p>
+                </false>
+            </F3:check>
+        </div>
+    </div>
+</div>
+
+
+  

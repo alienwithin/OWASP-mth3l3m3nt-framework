@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="{{@SCHEME.'://'.@HOST.@BASE.'/'}}"/>
+
+    <meta charset="{{@$ENCODING}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="{{@UI}}ico/favicon.png">
+    <title>{{@CONFIG.framework_title}}</title>
+    <link href="{{@UI}}css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{@UI}}css/bootstrap-theme.css" rel="stylesheet">
+    <link href="{{@UI}}css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{@UI}}js/fancybox/jquery.fancybox.css" type="text/css" media="screen">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="{{@UI}}js/html5shiv.js"></script>
+    <script src="{{@UI}}js/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <div class="navbar navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="{{ @BASE }}/">{{@CONFIG.framework_title}}</a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="{{ @BASE }}/">Home</a></li>
+                    <li><a href="http://africahackon.com" target="_blank">Africahackon Inspired</a></li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </div>
+
+    <div class="jumbotron" id="hero">
+        <div class="container">
+            <img src="themes/default/images/logo.png" alt=""/>
+        </div>
+    </div>
+
+
+    <div class="container" id="main">
+
+        <include if="{{@ERROR && @ERROR.code != 400}}" href="templates/error.html"/>
+
+        <include if="{{isset(@SUBPART)}}" href="{{'templates/'.@SUBPART}}"/>
+
+        <p class="stats" align="center">{{ \Base::instance()->format('Page rendered by Mth3l3m3nt Framework v{0}, in {1} msecs / Memory usage {2} KB',@APP_VERSION,round(1e3*(microtime(TRUE)-$TIME),2),round(memory_get_usage(TRUE)/1e3,1)) }}</p>
+        <p align="center">Developed by <a href="http://munir.skilledsoft.com" target="_blank">Alienwithin</a></p>
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="{{@UI}}js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{{@UI}}js/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+    <script src="{{@UI}}js/main.js"></script>
+</body>

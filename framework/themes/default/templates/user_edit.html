@@ -1,0 +1,65 @@
+<check if="{{ isset(@PARAMS.id) }}">
+    <true>
+        <h2>Edit User</h2>
+    </true>
+    <false>
+        <h2>Create new User</h2>
+    </false>
+</check>
+<div class="row solid">
+    <div class="col-lg-12">
+        <form action="cnc/user/{{(isset(@PARAMS.id))?'edit/'.@PARAMS.id:'create'}}" method="post" class="form-horizontal" role="form">
+
+            <div class="form-group {{ @FLASH->getKey('error.model.user.username') }}">
+                <label for="input-username" class="col-lg-2 control-label">Username*</label>
+                <div class="col-sm-3">
+                <check if="{{ isset(@POST.username) }}">
+				    <true>
+				        <input type="text" name="username" class="form-control" id="input-username" required value="{{@POST.username|esc}}"/>
+				    </true>
+				    <false>
+				       <input type="text" name="username" class="form-control" id="input-username" placeholder="unique login name" required/>
+				    </false>
+				</check>
+                    
+                </div>
+            </div>
+            <div class="form-group {{ @FLASH->getKey('error.model.user.name') }}">
+                <label for="input-name" class="col-lg-2 control-label">Full Name*</label>
+                <div class="col-sm-3">
+                  <check if="{{ isset(@POST.name) }}">
+				    <true>
+				        <input type="text" name="name" class="form-control" id="input-name" required value="{{@POST.name|esc}}"/>
+				    </true>
+				    <false>
+				       <input type="text" name="name" class="form-control" id="input-name" placeholder="Full Name e.g. Munir Njiru" required/>
+				    </false>
+				</check>
+                    
+                </div>
+            </div>
+            <div class="form-group {{ @FLASH->getKey('error.model.user.password') }}">
+                <label for="input-password" class="col-lg-2 control-label">{{ isset(@PARAMS.id)?'Change Password':'Password*' |esc}}</label>
+                <div class="col-sm-3">
+                    <input type="password" name="password" class="form-control" id="input-password" {{ isset(@PARAMS.id)?'':'required' |esc}} />
+                </div>
+            </div>
+            <div class="form-group {{ @FLASH->getKey('error.model.user.email') }}">
+                <label for="input-email" class="col-lg-2 control-label">E-Mail</label>
+                <div class="col-sm-3">
+                	<check if="{{ isset(@POST.email) }}">
+				    <true>
+				        <input type="text" name="email" class="form-control" id="input-email" required value="{{@POST.name|esc}}"/>
+				    </true>
+				    <false>
+				       <input type="text" name="email" class="form-control" id="input-email" placeholder="E-mail e.g. munir@skilledsoft.com" required/>
+				    </false>
+				</check>
+                   
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Save</button>
+        </form>
+
+    </div>
+</div>

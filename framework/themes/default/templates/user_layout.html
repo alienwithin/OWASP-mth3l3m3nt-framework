@@ -1,0 +1,18 @@
+<div class="col-sm-4 col-md-3 col-lg-2">
+    <div class="list-group">
+        <a href="cnc/user/create" class="list-group-item{{(@PARAMS.0 == '/cnc/user/create'?' active':'') }}">
+            <i class="glyphicon glyphicon-plus-sign"></i> Create new User
+        </a>
+        <a href="cnc/user" class="list-group-item{{(@PARAMS.0 == '/cnc/user'?' active':'') }}">
+            <i class="glyphicon glyphicon-list"></i> List all
+        </a>
+    </div>
+</div>
+
+<div class="col-sm-8 col-md-9 col-lg-10">
+
+    <include href="templates/alert.html"/>
+
+    <include if="{{isset(@SUBPART)}}" href="{{'templates/'.@SUBPART}}"/>
+
+</div>

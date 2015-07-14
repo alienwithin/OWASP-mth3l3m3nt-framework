@@ -1,0 +1,18 @@
+{
+	"name": "alienwithin/mth3l3m3nt-framework",
+	"description": "A powerful yet easy-to-use PHP micro-framework designed to help you Build and manage exploits and payloads fast.",
+	"homepage": "http://mth3l3m3nt-framework.com",
+	"license": "GPL-3.0",
+	"require": {
+		"php": ">=5.3.6"
+	},
+	"repositories": [
+		{
+			"type": "vcs",
+			"url": "https://github.com/alienwithin/mth3l3m3nt-framework"
+		}
+	],
+	"autoload": {
+		"files": ["lib/base.php"]
+	}
+}

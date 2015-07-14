@@ -1,0 +1,33 @@
+<h2>Web Utilities: Encoder</h2>
+
+<div class="row solid">
+        <form id="form" action="cnc/dencoder/encoder_multi" method="post" role="form">
+            <div class="col-sm-6">
+
+                <div class="form-group">
+                    <label>Plain Text</label>
+                    <textarea style="width:100%" name="plaintext" class="form-control custom-control"></textarea><br/>
+                    <select name="encodeFormat" class="form-control custom-control">
+                    	<option name="base64" value="base64">Base 64</option>
+                    	<option name="hex" value="hex">Hex</option>
+                    	<option name="hex_0x" value="hex_0x">Hex with 0x Prefix</option>
+                    	<option name="hex_slash_x" value="hex_slash_x">Hex with \x Seperator</option>
+                    	 <option name="rot13" value="rot13">Rot 13</option>
+                    	<option name="all" value="all">All</option>
+                    </select>
+                    
+                </div>
+
+                               
+
+                <button type="submit" class="btn btn-primary">Encode</button>
+            </div>
+
+        </form>
+      
+       <div class="content col-xs-8" data-wrap="true">
+       <br/>
+      	{{highlight_string(@content,true)|raw}}
+      </div>
+    </div>
+     
