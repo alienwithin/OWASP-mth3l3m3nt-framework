@@ -36,9 +36,8 @@ Other than SQLite please ensure that you have the PHP extensions for the Databas
 
 For MySQL users needing MySQL Sample Data like alot of it especially payloads switch the database to MySQL and import data from the Dump to populate.
 
-Incase of questions or suggestions or bugs and what nots : 
-
-munir.n.n@gmail.com
+Incase of questions or suggestions or bugs and what nots:
+http://munir.skilledsoft.com
 
 It's been tested on : 
 
