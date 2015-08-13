@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class DB\SQL\Schema</title>
+
+	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
+	<link rel="stylesheet" href="resources/style.css?49f43d3208c5d7e33fa16d36107a345bf11cc00d">
+
+</head>
+
+<body>
+	<nav id="navigation" class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a href="index.html" class="navbar-brand">Overview</a>
+			</div>
+			<div class="collapse navbar-collapse">
+
+                <form id="search" class="navbar-form navbar-left" role="search">
+                    <input type="hidden" name="cx" value="">
+                    <input type="hidden" name="ie" value="UTF-8">
+                    <div class="form-group">
+                        <input type="text" name="q" class="search-query form-control" placeholder="Search">
+					</div>
+				</form>
+
+				<ul class="nav navbar-nav">
+					<li>
+						<a href="namespace-DB.SQL.html" title="Summary of DB\SQL"><span>Namespace</span></a>
+					</li>
+					<li class="active">
+<span>Class</span>					</li>
+
+
+
+
+
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div id="left">
+	<div id="menu">
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+					<li>
+						<a href="namespace-Controller.html">
+							Controller						</a>
+							</li>
+					<li class="active">
+						<a href="namespace-DB.html">
+							DB<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-DB.Jig.html">
+							Jig						</a>
+							</li>
+					<li>
+						<a href="namespace-DB.Mongo.html">
+							Mongo						</a>
+							</li>
+					<li class="active">
+						<a href="namespace-DB.SQL.html">
+							SQL						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Model.html">
+							Model						</a>
+							</li>
+					<li>
+						<a href="namespace-None.html">
+							None						</a>
+							</li>
+					<li>
+						<a href="namespace-Template.html">
+							Template<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Template.Tags.html">
+							Tags						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-View.html">
+							View						</a>
+							</li>
+					<li>
+						<a href="namespace-Web.html">
+							Web<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Web.Google.html">
+							Google						</a>
+							</li>
+								</ul></li>
+			</ul>
+		</div>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-DB.SQL.Column.html">Column</a></li>
+				<li><a href="class-DB.SQL.DB_Utils.html">DB_Utils</a></li>
+				<li><a href="class-DB.SQL.Mapper.html">Mapper</a></li>
+				<li class="active"><a href="class-DB.SQL.Schema.html">Schema</a></li>
+				<li><a href="class-DB.SQL.Session.html">Session</a></li>
+				<li><a href="class-DB.SQL.TableBuilder.html">TableBuilder</a></li>
+				<li><a href="class-DB.SQL.TableCreator.html">TableCreator</a></li>
+				<li><a href="class-DB.SQL.TableModifier.html">TableModifier</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Class Schema</h1>
+
+
+
+	<dl class="tree well">
+		<dd style="padding-left:0px">
+			<a href="class-DB.SQL.DB_Utils.html"><span>DB\SQL\DB_Utils</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>DB\SQL\Schema</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="alert alert-info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-DB.html">DB</a>\<a href="namespace-DB.SQL.html">SQL</a><br>
+		
+
+			<b>Located at</b> <a href="source-class-DB.SQL.Schema.html#29-260" title="Go to source code">lib/db/sql/schema.php</a>
+		<br>
+	</div>
+
+
+
+		<div class="panel panel-default">
+			<div class="panel-heading"><h2>Methods summary</h2></div>
+			<table class="summary table table-bordered table-striped methods" id="methods">
+		<tr data-order="__construct" id="___construct">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___construct">#</a>
+			<code><a href="source-class-DB.SQL.Schema.html#136-140" title="Go to source code">__construct</a>( <span><code><a href="class-DB.SQL.html">DB\SQL</a></code> <var>$db</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+					<h4>Overrides</h4>
+					<div class="list"><code><a href="class-DB.SQL.DB_Utils.html#___construct">DB\SQL\DB_Utils::__construct</a></code></div>
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getDatabases" id="_getDatabases">
+
+			<td class="attributes"><code>
+				 public 
+				array|boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getDatabases">#</a>
+			<code><a href="source-class-DB.SQL.Schema.html#142-160" title="Go to source code">getDatabases</a>( )</code>
+
+			<div class="description short">
+				<p>get a list of all databases</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>get a list of all databases</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						array|boolean
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getTables" id="_getTables">
+
+			<td class="attributes"><code>
+				 public 
+				boolean|array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getTables">#</a>
+			<code><a href="source-class-DB.SQL.Schema.html#162-186" title="Go to source code">getTables</a>( )</code>
+
+			<div class="description short">
+				<p>get all tables of current DB</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>get all tables of current DB</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean|array<br>list of tables, or false
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="createTable" id="_createTable">
+
+			<td class="attributes"><code>
+				 public 
+				boolean|<code><a href="class-DB.SQL.TableCreator.html">DB\SQL\TableCreator</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_createTable">#</a>
+			<code><a href="source-class-DB.SQL.Schema.html#188-196" title="Go to source code">createTable</a>( <span> <var>$name</var></span> )</code>
+
+			<div class="description short">
+				<p>returns a table object for creation</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>returns a table object for creation</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$name</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean|<code><a href="class-DB.SQL.TableCreator.html">DB\SQL\TableCreator</a></code>
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="alterTable" id="_alterTable">
+
+			<td class="attributes"><code>
+				 public 
+				boolean|<code><a href="class-DB.SQL.TableModifier.html">DB\SQL\TableModifier</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_alterTable">#</a>
+			<code><a href="source-class-DB.SQL.Schema.html#198-206" title="Go to source code">alterTable</a>( <span> <var>$name</var></span> )</code>
+
+			<div class="description short">
+				<p>returns a table object for altering operations</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>returns a table object for altering operations</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$name</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean|<code><a href="class-DB.SQL.TableModifier.html">DB\SQL\TableModifier</a></code>
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="renameTable" id="_renameTable">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_renameTable">#</a>
+			<code><a href="source-class-DB.SQL.Schema.html#208-238" title="Go to source code">renameTable</a>( <span>string <var>$name</var></span>, <span>string <var>$new_name</var></span>, <span>boolean <var>$exec</var> = <span class="php-keyword1">true</span></span> )</code>
+
+			<div class="description short">
+				<p>rename a table</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>rename a table</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$name</var></dt>
+						<dd></dd>
+						<dt><var>$new_name</var></dt>
+						<dd></dd>
+						<dt><var>$exec</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="dropTable" id="_dropTable">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_dropTable">#</a>
+			<code><a href="source-class-DB.SQL.Schema.html#240-258" title="Go to source code">dropTable</a>( <span><code><a href="class-DB.SQL.TableBuilder.html">DB\SQL\TableBuilder</a></code>|string <var>$name</var></span>, <span>boolean <var>$exec</var> = <span class="php-keyword1">true</span></span> )</code>
+
+			<div class="description short">
+				<p>drop a table</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>drop a table</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$name</var></dt>
+						<dd></dd>
+						<dt><var>$exec</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+			</table>
+		</div>
+
+		<div class="panel panel-default">
+	        <div class="panel-heading"><h3>Methods inherited from <a href="class-DB.SQL.DB_Utils.html#methods">DB\SQL\DB_Utils</a></h3></div>
+			<p class="elementList">
+				<code><a href="class-DB.SQL.DB_Utils.html#_findQuery">findQuery()</a></code>
+			</p>
+		</div>
+
+
+
+
+
+
+
+		<div class="panel panel-default">
+            <div class="panel-heading"><h2>Constants summary</h2></div>
+			<table class="summary table table-bordered table-striped constants" id="constants">
+			<tr data-order="DT_BOOL" id="DT_BOOL">
+
+				<td class="attributes"><code>string</code></td>
+				<td class="name">
+					<code>
+						<a href="source-class-DB.SQL.Schema.html#108" title="Go to source code"><b>DT_BOOL</b></a>
+					</code>
+
+					<div class="description short">
+						
+					</div>
+
+					<div class="description detailed hidden">
+						
+
+					</div>
+				</td>
+				<td class="value">
+					<div>
+						<a href="#DT_BOOL" class="anchor">#</a>
+						<code><span class="php-quote">'BOOLEAN'</span></code>
+					</div>
+				</td>
+			</tr>
+			<tr data-order="DT_BOOLEAN" id="DT_BOOLEAN">
+
+				<td class="attributes"><code>string</code></td>
+				<td class="name">
+					<code>
+						<a href="source-class-DB.SQL.Schema.html#109" title="Go to source code"><b>DT_BOOLEAN</b></a>
+					</code>
+
+					<div class="description short">
+						
+					</div>
+
+					<div class="description detailed hidden">
+						
+
+					</div>
+				</td>
+				<td class="value">
+					<div>
+						<a href="#DT_BOOLEAN" class="anchor">#</a>
+						<code><span class="php-quote">'BOOLEAN'</span></code>
+					</div>
+				</td>
+			</tr>
+			<tr data-order="DT_INT1" id="DT_INT1">
+
+				<td class="attributes"><code>string</code></td>
+				<td class="name">
+					<code>
+						<a href="source-class-DB.SQL.Schema.html#110" title="Go to source code"><b>DT_INT1</b></a>
+					</code>
+
+					<div class="description short">
+						
+					</div>
+
+					<div class="description detailed hidden">
+						
+
+					</div>
+				</td>
+				<td class="value">
+					<div>
+						<a href="#DT_INT1" class="anchor">#</a>
+						<code><span class="php-quote">'INT1'</span></code>
+					</div>
+				</td>
+			</tr>
+			<tr data-order="DT_TINYINT" id="DT_TINYINT">
+
+				<td class="attributes"><code>string</code></td>
+				<td class="name">
+					<code>
+						<a href="source-class-DB.SQL.Schema.html#111" title="Go to source code"><b>DT_TINYINT</b></a>
+					</code>
+
+					<div class="description short">
+						
+					</div>
+
+					<div class="description detailed hidden">
+						
+
+					</div>
+				</td>
+				<td class="value">
+					<div>
+						<a href="#DT_TINYINT" class="anchor">#</a>
+						<code><span class="php-quote">'INT1'</span></code>
+					</div>
+				</td>
+			</tr>
+			<tr data-order="DT_INT2" id="DT_INT2">
+
+				<td class="attributes"><code>string</code></td>
+				<td class="name">
+					<code>
+						<a href="source-class-DB.SQL.Schema.html#112" title="Go to source code"><b>DT_INT2</b></a>
+					</code>
+
+					<div class="description short">
+						
+					</div>
+
+					<div class="description detailed hidden">
+						
+
+					</div>
+				</td>
+				<td class="value">
+					<div>
+						<a href="#DT_INT2" class="anchor">#</a>
+						<code><span class="php-quote">'INT2'</span></code>
+					</div>
+				</td>
+			</tr>
+			<tr data-order="DT_SMALLINT" id="DT_SMALLINT">
+
+				<td class="attributes"><code>string</code></td>
+				<td class="name">
+					<code>
+						<a href="source-class-DB.SQL.Schema.html#113" title="Go to source code"><b>DT_SMALLINT</b></a>
+					</code>
+
+					<div class="description short">
+						
+					</div>
+
+					<div class="description detailed hidden">
+						
+
+					</div>
+				</td>
+				<td class="value">
+					<div>
+						<a href="#DT_SMALLINT" class="anchor">#</a>
+						<code><span class="php-quote">'INT2'</span></code>
+					</div>
+				</td>
+			</tr>
+			<tr data-order="DT_INT4" id="DT_INT4">
+
+				<td class="attributes"><code>string</code></td>
+				<td class="name">
+					<code>
+						<a href="source-class-DB.SQL.Schema.html#114" title="Go to source code"><b>DT_INT4</b></a>
+					</code>
+
+					<div class="description short">
+						
+					</div>
+
+					<div class="description detailed hidden">
+						
+
+					</div>
+				</td>
+				<td class="value">
+					<div>
+						<a href="#DT_INT4" class="anchor">#</a>
+						<code><span class="php-quote">'INT4'</span></code>
+					</div>
+				</td>
+			</tr>
+			<tr data-order="DT_INT" id="DT_INT">
+
+				<td class="attributes"><code>string</code></td>
+				<td class="name">
+					<code>
+						<a href="source-class-DB.SQL.Schema.html#115" title="Go to source code"><b>DT_INT</b></a>
+					</code>
+
+					<div class="description short">
+						
+					</div>
+
+					<div class="description detailed hidden">
+						
+
+					</div>
+				</td>
+				<td class="value">
+					<div>
+						<a href="#DT_INT" class="anchor">#</a>
+						<code><span class="php-quote">'INT4'</span></code>
+					</div>
+				</td>
+			</tr>
+			<tr data-order="DT_INT8" id="DT_INT8">
+
+				<td class="attributes"><code>string</code></td>
+				<td class="name">
+					<code>
+						<a href="source-class-DB.SQL.Schema.html#116" title="Go to source code"><b>DT_INT8</b></a>
+					</code>
+
+					<div class="description short">
+						
+					</div>
+
+					<div class="description detailed hidden">
+						
+
+					</div>
+				</td>
+				<td class="value">
+					<div>
+						<a href="#DT_INT8" class="anchor">#</a>
+						<code><span class="php-quote">'INT8'</span></code>
+					</div>
+				</td>
+			</tr>
+			<tr data-order="DT_BIGINT" id="DT_BIGINT">
+
+				<td class="attributes"><code>string</code></td>
+				<td class="name">
+					<code>
+						<a href="source-class-DB.SQL.Schema.html#117" title="Go to source code"><b>DT_BIGINT</b></a>
+					</code>
+
+					<div class="description short">
+						
+					</div>
+
+					<div class="description detailed hidden">
+						
+
+					</div>
+				</td>
+				<td class="value">
+					<div>
+						<a href="#DT_BIGINT" class="anchor">#</a>
+						<code><span class="php-quote">'INT8'</span></code>
+					</div>
+				</td>
+			</tr>
+			<tr data-order="DT_FLOAT" id="DT_FLOAT">
+
+				<td class="attributes"><code>string</code></td>
+				<td class="name">
+					<code>
+						<a href="source-class-DB.SQL.Schema.html#118" title="Go to source code"><b>DT_FLOAT</b></a>
+					</code>
+
+					<div class="description short">
+						
+					</div>
+
+					<div class="description detailed hidden">
+						
+
+					</div>
+				</td>
+				<td class="value">
+					<div>
+						<a href="#DT_FLOAT" class="anchor">#</a>
+						<code><span class="php-quote">'FLOAT'</span></code>
+					</div>
+				</td>
+			</tr>
+			<tr data-order="DT_DOUBLE" id="DT_DOUBLE">
+
+				<td class="attributes"><code>string</code></td>
+				<td class="name">
+					<code>
+						<a href="source-class-DB.SQL.Schema.html#119" title="Go to source code"><b>DT_DOUBLE</b></a>
+					</code>
+
+					<div class="description short">
+						
+					</div>
+
+					<div class="description detailed hidden">
+						
+
+					</div>
+				</td>
+				<td class="value">
+					<div>
+						<a href="#DT_DOUBLE" class="anchor">#</a>
+						<code><span class="php-quote">'DOUBLE'</span></code>
+					</div>
+				</td>
+			</tr>
+			<tr data-order="DT_DECIMAL" id="DT_DECIMAL">
+
+				<td class="attributes"><code>string</code></td>
+				<td class="name">
+					<code>
+						<a href="source-class-DB.SQL.Schema.html#120" title="Go to source code"><b>DT_DECIMAL</b></a>
+					</code>
+
+					<div class="description short">
+						
+					</div>
+
+					<div class="description detailed hidden">
+						
+
+					</div>
+				</td>
+				<td class="value">
+					<div>
+						<a href="#DT_DECIMAL" class="anchor">#</a>
+						<code><span class="php-quote">'DOUBLE'</span></code>
+					</div>
+				</td>
+			</tr>
+			<tr data-order="DT_VARCHAR128" id="DT_VARCHAR128">
+
+				<td class="attributes"><code>string</code></td>
+				<td class="name">
+					<code>
+						<a href="source-class-DB.SQL.Schema.html#121" title="Go to source code"><b>DT_VARCHAR128</b></a>
+					</code>
+
+					<div class="description short">
+						
+					</div>
+
+					<div class="description detailed hidden">
+						
+
+					</div>
+				</td>
+				<td class="value">
+					<div>
+						<a href="#DT_VARCHAR128" class="anchor">#</a>
+						<code><span class="php-quote">'VARCHAR128'</span></code>
+					</div>
+				</td>
+			</tr>
+			<tr data-order="DT_VARCHAR256" id="DT_VARCHAR256">
+
+				<td class="attributes"><code>string</code></td>
+				<td class="name">
+					<code>
+						<a href="source-class-DB.SQL.Schema.html#122" title="Go to source code"><b>DT_VARCHAR256</b></a>
+					</code>
+
+					<div class="description short">
+						
+					</div>
+
+					<div class="description detailed hidden">
+						
+
+					</div>
+				</td>
+				<td class="value">
+					<div>
+						<a href="#DT_VARCHAR256" class="anchor">#</a>
+						<code><span class="php-quote">'VARCHAR256'</span></code>
+					</div>
+				</td>
+			</tr>
+			<tr data-order="DT_VARCHAR512" id="DT_VARCHAR512">
+
+				<td class="attributes"><code>string</code></td>
+				<td class="name">
+					<code>
+						<a href="source-class-DB.SQL.Schema.html#123" title="Go to source code"><b>DT_VARCHAR512</b></a>
+					</code>
+
+					<div class="description short">
+						
+					</div>
+
+					<div class="description detailed hidden">
+						
+
+					</div>
+				</td>
+				<td class="value">
+					<div>
+						<a href="#DT_VARCHAR512" class="anchor">#</a>
+						<code><span class="php-quote">'VARCHAR512'</span></code>
+					</div>
+				</td>
+			</tr>
+			<tr data-order="DT_TEXT" id="DT_TEXT">
+
+				<td class="attributes"><code>string</code></td>
+				<td class="name">
+					<code>
+						<a href="source-class-DB.SQL.Schema.html#124" title="Go to source code"><b>DT_TEXT</b></a>
+					</code>
+
+					<div class="description short">
+						
+					</div>
+
+					<div class="description detailed hidden">
+						
+
+					</div>
+				</td>
+				<td class="value">
+					<div>
+						<a href="#DT_TEXT" class="anchor">#</a>
+						<code><span class="php-quote">'TEXT'</span></code>
+					</div>
+				</td>
+			</tr>
+			<tr data-order="DT_LONGTEXT" id="DT_LONGTEXT">
+
+				<td class="attributes"><code>string</code></td>
+				<td class="name">
+					<code>
+						<a href="source-class-DB.SQL.Schema.html#125" title="Go to source code"><b>DT_LONGTEXT</b></a>
+					</code>
+
+					<div class="description short">
+						
+					</div>
+
+					<div class="description detailed hidden">
+						
+
+					</div>
+				</td>
+				<td class="value">
+					<div>
+						<a href="#DT_LONGTEXT" class="anchor">#</a>
+						<code><span class="php-quote">'LONGTEXT'</span></code>
+					</div>
+				</td>
+			</tr>
+			<tr data-order="DT_DATE" id="DT_DATE">
+
+				<td class="attributes"><code>string</code></td>
+				<td class="name">
+					<code>
+						<a href="source-class-DB.SQL.Schema.html#126" title="Go to source code"><b>DT_DATE</b></a>
+					</code>
+
+					<div class="description short">
+						
+					</div>
+
+					<div class="description detailed hidden">
+						
+
+					</div>
+				</td>
+				<td class="value">
+					<div>
+						<a href="#DT_DATE" class="anchor">#</a>
+						<code><span class="php-quote">'DATE'</span></code>
+					</div>
+				</td>
+			</tr>
+			<tr data-order="DT_DATETIME" id="DT_DATETIME">
+
+				<td class="attributes"><code>string</code></td>
+				<td class="name">
+					<code>
+						<a href="source-class-DB.SQL.Schema.html#127" title="Go to source code"><b>DT_DATETIME</b></a>
+					</code>
+
+					<div class="description short">
+						
+					</div>
+
+					<div class="description detailed hidden">
+						
+
+					</div>
+				</td>
+				<td class="value">
+					<div>
+						<a href="#DT_DATETIME" class="anchor">#</a>
+						<code><span class="php-quote">'DATETIME'</span></code>
+					</div>
+				</td>
+			</tr>
+			<tr data-order="DT_TIMESTAMP" id="DT_TIMESTAMP">
+
+				<td class="attributes"><code>string</code></td>
+				<td class="name">
+					<code>
+						<a href="source-class-DB.SQL.Schema.html#128" title="Go to source code"><b>DT_TIMESTAMP</b></a>
+					</code>
+
+					<div class="description short">
+						
+					</div>
+
+					<div class="description detailed hidden">
+						
+
+					</div>
+				</td>
+				<td class="value">
+					<div>
+						<a href="#DT_TIMESTAMP" class="anchor">#</a>
+						<code><span class="php-quote">'TIMESTAMP'</span></code>
+					</div>
+				</td>
+			</tr>
+			<tr data-order="DT_BLOB" id="DT_BLOB">
+
+				<td class="attributes"><code>string</code></td>
+				<td class="name">
+					<code>
+						<a href="source-class-DB.SQL.Schema.html#129" title="Go to source code"><b>DT_BLOB</b></a>
+					</code>
+
+					<div class="description short">
+						
+					</div>
+
+					<div class="description detailed hidden">
+						
+
+					</div>
+				</td>
+				<td class="value">
+					<div>
+						<a href="#DT_BLOB" class="anchor">#</a>
+						<code><span class="php-quote">'BLOB'</span></code>
+					</div>
+				</td>
+			</tr>
+			<tr data-order="DT_BINARY" id="DT_BINARY">
+
+				<td class="attributes"><code>string</code></td>
+				<td class="name">
+					<code>
+						<a href="source-class-DB.SQL.Schema.html#130" title="Go to source code"><b>DT_BINARY</b></a>
+					</code>
+
+					<div class="description short">
+						
+					</div>
+
+					<div class="description detailed hidden">
+						
+
+					</div>
+				</td>
+				<td class="value">
+					<div>
+						<a href="#DT_BINARY" class="anchor">#</a>
+						<code><span class="php-quote">'BLOB'</span></code>
+					</div>
+				</td>
+			</tr>
+			<tr data-order="DF_CURRENT_TIMESTAMP" id="DF_CURRENT_TIMESTAMP">
+
+				<td class="attributes"><code>string</code></td>
+				<td class="name">
+					<code>
+						<a href="source-class-DB.SQL.Schema.html#133" title="Go to source code"><b>DF_CURRENT_TIMESTAMP</b></a>
+					</code>
+
+					<div class="description short">
+						
+					</div>
+
+					<div class="description detailed hidden">
+						
+
+					</div>
+				</td>
+				<td class="value">
+					<div>
+						<a href="#DF_CURRENT_TIMESTAMP" class="anchor">#</a>
+						<code><span class="php-quote">'CUR_STAMP'</span></code>
+					</div>
+				</td>
+			</tr>
+			</table>
+		</div>
+
+		<div class="panel panel-default">
+            <div class="panel-heading"><h3>Constants inherited from <a href="class-DB.SQL.DB_Utils.html#constants">DB\SQL\DB_Utils</a></h3></div>
+			<p class="elementList">
+				<code><a href="class-DB.SQL.DB_Utils.html#TEXT_ENGINE_NOT_SUPPORTED"><b>TEXT_ENGINE_NOT_SUPPORTED</b></a></code>
+			</p>
+		</div>
+
+
+
+		<div class="panel panel-default">
+            <div class="panel-heading"><h2>Properties summary</h2></div>
+			<table class="summary table table-bordered table-striped properties" id="properties">
+		<tr data-order="dataTypes" id="$dataTypes">
+			<td class="attributes"><code>
+				public  
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-DB.SQL.Schema.html#31-91" title="Go to source code"><var>$dataTypes</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$dataTypes" class="anchor">#</a>
+					<code><span class="php-keyword1">array</span>(
+        <span class="php-quote">'BOOLEAN'</span> =&gt;    <span class="php-keyword1">array</span>(<span class="php-quote">'mysql|sqlite2?|pgsql'</span> =&gt; <span class="php-quote">'BOOLEAN'</span>,
+                              <span class="php-quote">'mssql|sybase|dblib|odbc|sqlsrv'</span> =&gt; <span class="php-quote">'bit'</span>,
+                              <span class="php-quote">'ibm'</span> =&gt; <span class="php-quote">'numeric(1,0)'</span>,
+        ),
+        <span class="php-quote">'INT1'</span> =&gt;       <span class="php-keyword1">array</span>(<span class="php-quote">'mysql'</span> =&gt; <span class="php-quote">'TINYINT UNSIGNED'</span>,
+                              <span class="php-quote">'sqlite2?'</span> =&gt; <span class="php-quote">'integer'</span>,
+                              <span class="php-quote">'mssql|sybase|dblib|odbc|sqlsrv'</span> =&gt; <span class="php-quote">'tinyint'</span>,
+                              <span class="php-quote">'pgsql|ibm'</span> =&gt; <span class="php-quote">'smallint'</span>,
+        ),
+        <span class="php-quote">'INT2'</span> =&gt;       <span class="php-keyword1">array</span>(<span class="php-quote">'mysql'</span> =&gt; <span class="php-quote">'SMALLINT'</span>,
+                              <span class="php-quote">'sqlite2?'</span> =&gt; <span class="php-quote">'integer'</span>,
+                              <span class="php-quote">'pgsql|ibm|mssql|sybase|dblib|odbc|sqlsrv'</span> =&gt; <span class="php-quote">'smallint'</span>,
+        ),
+        <span class="php-quote">'INT4'</span> =&gt;       <span class="php-keyword1">array</span>(<span class="php-quote">'sqlite2?|pgsql|sybase|odbc|sqlsrv|imb'</span> =&gt; <span class="php-quote">'integer'</span>,
+                              <span class="php-quote">'mysql|mssql|dblib'</span> =&gt; <span class="php-quote">'int'</span>,
+        ),
+        <span class="php-quote">'INT8'</span> =&gt;       <span class="php-keyword1">array</span>(<span class="php-quote">'sqlite2?'</span> =&gt; <span class="php-quote">'integer'</span>,
+                              <span class="php-quote">'pgsql|mysql|mssql|sybase|dblib|odbc|sqlsrv|imb'</span> =&gt; <span class="php-quote">'bigint'</span>,
+        ),
+        <span class="php-quote">'FLOAT'</span> =&gt;      <span class="php-keyword1">array</span>(<span class="php-quote">'mysql|sqlite2?'</span> =&gt; <span class="php-quote">'FLOAT'</span>,
+                              <span class="php-quote">'pgsql'</span> =&gt; <span class="php-quote">'double precision'</span>,
+                              <span class="php-quote">'mssql|sybase|dblib|odbc|sqlsrv'</span> =&gt; <span class="php-quote">'float'</span>,
+                              <span class="php-quote">'imb'</span> =&gt; <span class="php-quote">'decfloat'</span>
+        ),
+        <span class="php-quote">'DOUBLE'</span> =&gt;     <span class="php-keyword1">array</span>(<span class="php-quote">'mysql|sqlite2?|ibm'</span> =&gt; <span class="php-quote">'DOUBLE'</span>,
+                              <span class="php-quote">'pgsql|sybase|odbc|sqlsrv'</span> =&gt; <span class="php-quote">'double precision'</span>,
+                              <span class="php-quote">'mssql|dblib'</span> =&gt; <span class="php-quote">'decimal'</span>,
+        ),
+        <span class="php-quote">'VARCHAR128'</span> =&gt; <span class="php-keyword1">array</span>(<span class="php-quote">'mysql|pgsql|sqlite2?|ibm|mssql|sybase|dblib|odbc|sqlsrv'</span> =&gt; <span class="php-quote">'varchar(128)'</span>,
+        ),
+        <span class="php-quote">'VARCHAR256'</span> =&gt; <span class="php-keyword1">array</span>(<span class="php-quote">'mysql|pgsql|sqlite2?|ibm|mssql|sybase|dblib|odbc|sqlsrv'</span> =&gt; <span class="php-quote">'varchar(255)'</span>,
+        ),
+        <span class="php-quote">'VARCHAR512'</span> =&gt; <span class="php-keyword1">array</span>(<span class="php-quote">'mysql|pgsql|sqlite2?|ibm|mssql|sybase|dblib|odbc|sqlsrv'</span> =&gt; <span class="php-quote">'varchar(512)'</span>,
+        ),
+        <span class="php-quote">'TEXT'</span> =&gt;       <span class="php-keyword1">array</span>(<span class="php-quote">'mysql|sqlite2?|pgsql|mssql'</span> =&gt; <span class="php-quote">'text'</span>,
+                              <span class="php-quote">'sybase|dblib|odbc|sqlsrv'</span> =&gt; <span class="php-quote">'nvarchar(max)'</span>,
+                              <span class="php-quote">'ibm'</span> =&gt; <span class="php-quote">'BLOB SUB_TYPE TEXT'</span>,
+        ),
+        <span class="php-quote">'LONGTEXT'</span> =&gt;   <span class="php-keyword1">array</span>(<span class="php-quote">'mysql'</span> =&gt; <span class="php-quote">'LONGTEXT'</span>,
+                              <span class="php-quote">'sqlite2?|pgsql|mssql'</span> =&gt; <span class="php-quote">'text'</span>,
+                              <span class="php-quote">'sybase|dblib|odbc|sqlsrv'</span> =&gt; <span class="php-quote">'nvarchar(max)'</span>,
+                              <span class="php-quote">'ibm'</span> =&gt; <span class="php-quote">'CLOB(2000000000)'</span>,
+        ),
+        <span class="php-quote">'DATE'</span> =&gt;       <span class="php-keyword1">array</span>(<span class="php-quote">'mysql|sqlite2?|pgsql|mssql|sybase|dblib|odbc|sqlsrv|ibm'</span> =&gt; <span class="php-quote">'date'</span>,
+        ),
+        <span class="php-quote">'DATETIME'</span> =&gt;   <span class="php-keyword1">array</span>(<span class="php-quote">'pgsql'</span> =&gt; <span class="php-quote">'timestamp without time zone'</span>,
+                              <span class="php-quote">'mysql|sqlite2?|mssql|sybase|dblib|odbc|sqlsrv'</span> =&gt; <span class="php-quote">'datetime'</span>,
+                              <span class="php-quote">'ibm'</span> =&gt; <span class="php-quote">'timestamp'</span>,
+        ),
+        <span class="php-quote">'TIMESTAMP'</span> =&gt;  <span class="php-keyword1">array</span>(<span class="php-quote">'mysql|ibm'</span> =&gt; <span class="php-quote">'timestamp'</span>,
+                              <span class="php-quote">'pgsql|odbc'</span> =&gt; <span class="php-quote">'timestamp without time zone'</span>,
+                              <span class="php-quote">'sqlite2?|mssql|sybase|dblib|sqlsrv'</span>=&gt;<span class="php-quote">'DATETIME'</span>,
+        ),
+        <span class="php-quote">'BLOB'</span> =&gt;       <span class="php-keyword1">array</span>(<span class="php-quote">'mysql|odbc|sqlite2?|ibm'</span> =&gt; <span class="php-quote">'blob'</span>,
+                              <span class="php-quote">'pgsql'</span> =&gt; <span class="php-quote">'bytea'</span>,
+                              <span class="php-quote">'mssql|sybase|dblib'</span> =&gt; <span class="php-quote">'image'</span>,
+                              <span class="php-quote">'sqlsrv'</span> =&gt; <span class="php-quote">'varbinary(max)'</span>,
+        ),
+    )</code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="defaultTypes" id="$defaultTypes">
+			<td class="attributes"><code>
+				public  
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-DB.SQL.Schema.html#92-98" title="Go to source code"><var>$defaultTypes</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$defaultTypes" class="anchor">#</a>
+					<code><span class="php-keyword1">array</span>(
+        <span class="php-quote">'CUR_STAMP'</span> =&gt;  <span class="php-keyword1">array</span>(<span class="php-quote">'mysql'</span> =&gt; <span class="php-quote">'CURRENT_TIMESTAMP'</span>,
+                              <span class="php-quote">'mssql|sybase|dblib|odbc|sqlsrv'</span> =&gt; <span class="php-quote">'getdate()'</span>,
+                              <span class="php-quote">'pgsql'</span> =&gt; <span class="php-quote">'LOCALTIMESTAMP(0)'</span>,
+                              <span class="php-quote">'sqlite2?'</span> =&gt; <span class="php-quote">&quot;(datetime('now','localtime'))&quot;</span>,
+        ),
+    )</code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="name" id="$name">
+			<td class="attributes"><code>
+				public  
+				
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-DB.SQL.Schema.html#100-101" title="Go to source code"><var>$name</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$name" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="fw" id="$fw">
+			<td class="attributes"><code>
+				protected  
+				<code><a href="class-Base.html">Base</a></code>
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-DB.SQL.Schema.html#103-104" title="Go to source code"><var>$fw</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$fw" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+			</table>
+		</div>
+
+		<div class="panel panel-default">
+            <div class="panel-heading"><h3>Properties inherited from <a href="class-DB.SQL.DB_Utils.html#properties">DB\SQL\DB_Utils</a></h3></div>
+			<p class="elementList">
+				<code><a href="class-DB.SQL.DB_Utils.html#$db"><var>$db</var></a></code>, 
+				<code><a href="class-DB.SQL.DB_Utils.html#$f3"><var>$f3</var></a></code>
+			</p>
+		</div>
+
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		 API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

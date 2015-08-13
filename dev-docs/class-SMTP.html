@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class SMTP</title>
+
+	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
+	<link rel="stylesheet" href="resources/style.css?49f43d3208c5d7e33fa16d36107a345bf11cc00d">
+
+</head>
+
+<body>
+	<nav id="navigation" class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a href="index.html" class="navbar-brand">Overview</a>
+			</div>
+			<div class="collapse navbar-collapse">
+
+                <form id="search" class="navbar-form navbar-left" role="search">
+                    <input type="hidden" name="cx" value="">
+                    <input type="hidden" name="ie" value="UTF-8">
+                    <div class="form-group">
+                        <input type="text" name="q" class="search-query form-control" placeholder="Search">
+					</div>
+				</form>
+
+				<ul class="nav navbar-nav">
+					<li>
+						<a href="namespace-None.html" title="Summary of None"><span>Namespace</span></a>
+					</li>
+					<li class="active">
+<span>Class</span>					</li>
+
+
+
+
+
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div id="left">
+	<div id="menu">
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+					<li>
+						<a href="namespace-Controller.html">
+							Controller						</a>
+							</li>
+					<li>
+						<a href="namespace-DB.html">
+							DB<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-DB.Jig.html">
+							Jig						</a>
+							</li>
+					<li>
+						<a href="namespace-DB.Mongo.html">
+							Mongo						</a>
+							</li>
+					<li>
+						<a href="namespace-DB.SQL.html">
+							SQL						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Model.html">
+							Model						</a>
+							</li>
+					<li class="active">
+						<a href="namespace-None.html">
+							None						</a>
+							</li>
+					<li>
+						<a href="namespace-Template.html">
+							Template<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Template.Tags.html">
+							Tags						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-View.html">
+							View						</a>
+							</li>
+					<li>
+						<a href="namespace-Web.html">
+							Web<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Web.Google.html">
+							Google						</a>
+							</li>
+								</ul></li>
+			</ul>
+		</div>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Audit.html">Audit</a></li>
+				<li><a href="class-Auth.html">Auth</a></li>
+				<li><a href="class-Base.html">Base</a></li>
+				<li><a href="class-Basket.html">Basket</a></li>
+				<li><a href="class-Bcrypt.html">Bcrypt</a></li>
+				<li><a href="class-Cache.html">Cache</a></li>
+				<li><a href="class-Config.html">Config</a></li>
+				<li><a href="class-DBHandler.html">DBHandler</a></li>
+				<li><a href="class-Error.html">Error</a></li>
+				<li><a href="class-F3.html">F3</a></li>
+				<li><a href="class-Flash.html" class="invalid">Flash</a></li>
+				<li><a href="class-Image.html">Image</a></li>
+				<li><a href="class-ISO.html">ISO</a></li>
+				<li><a href="class-Log.html">Log</a></li>
+				<li><a href="class-Magic.html">Magic</a></li>
+				<li><a href="class-Markdown.html">Markdown</a></li>
+				<li><a href="class-Matrix.html">Matrix</a></li>
+				<li><a href="class-Pagination.html">Pagination</a></li>
+				<li><a href="class-Prefab.html">Prefab</a></li>
+				<li><a href="class-Preview.html">Preview</a></li>
+				<li><a href="class-Registry.html">Registry</a></li>
+				<li><a href="class-Session.html">Session</a></li>
+				<li><a href="class-setup.html">setup</a></li>
+				<li class="active"><a href="class-SMTP.html">SMTP</a></li>
+				<li><a href="class-Template.html">Template</a></li>
+				<li><a href="class-Test.html">Test</a></li>
+				<li><a href="class-UTF.html">UTF</a></li>
+				<li><a href="class-Validation.html">Validation</a></li>
+				<li><a href="class-View.html">View</a></li>
+				<li><a href="class-Web.html">Web</a></li>
+			</ul>
+
+
+
+
+
+			<h3>Functions</h3>
+			<ul>
+				<li><a href="function-gzdecode.html">gzdecode</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Class SMTP</h1>
+
+
+
+	<dl class="tree well">
+		<dd style="padding-left:0px">
+			<a href="class-Magic.html"><span>Magic</span></a>
+			
+			 implements 
+<span>ArrayAccess</span>
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>SMTP</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="alert alert-info">
+		
+		
+		
+		
+
+			<b>Located at</b> <a href="source-class-SMTP.html#24-304" title="Go to source code">lib/smtp.php</a>
+		<br>
+	</div>
+
+
+
+		<div class="panel panel-default">
+			<div class="panel-heading"><h2>Methods summary</h2></div>
+			<table class="summary table table-bordered table-striped methods" id="methods">
+		<tr data-order="fixheader" id="_fixheader">
+
+			<td class="attributes"><code>
+				 protected 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_fixheader">#</a>
+			<code><a href="source-class-SMTP.html#53-61" title="Go to source code">fixheader</a>( <span> <var>$key</var></span> )</code>
+
+			<div class="description short">
+				<p>Fix header</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Fix header</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$key</var></dt>
+						<dd>string</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						string
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="exists" id="_exists">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_exists">#</a>
+			<code><a href="source-class-SMTP.html#63-71" title="Go to source code">exists</a>( <span> <var>$key</var></span> )</code>
+
+			<div class="description short">
+				<p>Return TRUE if header exists</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Return TRUE if header exists</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$key</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="set" id="_set">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_set">#</a>
+			<code><a href="source-class-SMTP.html#73-82" title="Go to source code">set</a>( <span> <var>$key</var></span>, <span> <var>$val</var></span> )</code>
+
+			<div class="description short">
+				<p>Bind value to e-mail header</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Bind value to e-mail header</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$key</var></dt>
+						<dd>string</dd>
+						<dt><var>$val</var></dt>
+						<dd>string</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						string
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="get" id="_get">
+
+			<td class="attributes"><code>
+				 public 
+				string|null
+				&amp;
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_get">#</a>
+			<code><a href="source-class-SMTP.html#84-96" title="Go to source code">get</a>( <span> <var>$key</var></span> )</code>
+
+			<div class="description short">
+				<p>Return value of e-mail header</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Return value of e-mail header</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$key</var></dt>
+						<dd>string</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						string|null
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="clear" id="_clear">
+
+			<td class="attributes"><code>
+				 public 
+				null
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_clear">#</a>
+			<code><a href="source-class-SMTP.html#98-106" title="Go to source code">clear</a>( <span> <var>$key</var></span> )</code>
+
+			<div class="description short">
+				<p>Remove header</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Remove header</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$key</var></dt>
+						<dd>string</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						null
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="log" id="_log">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_log">#</a>
+			<code><a href="source-class-SMTP.html#108-114" title="Go to source code">log</a>( )</code>
+
+			<div class="description short">
+				<p>Return client-server conversation history</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Return client-server conversation history</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						string
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="dialog" id="_dialog">
+
+			<td class="attributes"><code>
+				 protected 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_dialog">#</a>
+			<code><a href="source-class-SMTP.html#116-138" title="Go to source code">dialog</a>( <span> <var>$cmd</var> = <span class="php-keyword1">NULL</span></span>, <span> <var>$log</var> = <span class="php-keyword1">TRUE</span></span> )</code>
+
+			<div class="description short">
+				<p>Send SMTP command and record server response</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Send SMTP command and record server response</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$cmd</var></dt>
+						<dd>string</dd>
+						<dt><var>$log</var></dt>
+						<dd>bool</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						string
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="attach" id="_attach">
+
+			<td class="attributes"><code>
+				 public 
+				null
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_attach">#</a>
+			<code><a href="source-class-SMTP.html#140-153" title="Go to source code">attach</a>( <span> <var>$file</var></span>, <span> <var>$alias</var> = <span class="php-keyword1">NULL</span></span>, <span> <var>$cid</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+			<div class="description short">
+				<p>Add e-mail attachment</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Add e-mail attachment</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$file</var></dt>
+						<dd>string</dd>
+						<dt><var>$alias</var></dt>
+						<dd>string</dd>
+						<dt><var>$cid</var></dt>
+						<dd>string</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						null
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="send" id="_send">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_send">#</a>
+			<code><a href="source-class-SMTP.html#155-280" title="Go to source code">send</a>( <span> <var>$message</var></span>, <span> <var>$log</var> = <span class="php-keyword1">TRUE</span></span> )</code>
+
+			<div class="description short">
+				<p>Transmit message</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Transmit message</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$message</var></dt>
+						<dd>string</dd>
+						<dt><var>$log</var></dt>
+						<dd>bool</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="__construct" id="___construct">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___construct">#</a>
+			<code><a href="source-class-SMTP.html#282-302" title="Go to source code">__construct</a>( <span> <var>$host</var></span>, <span> <var>$port</var></span>, <span> <var>$scheme</var></span>, <span> <var>$user</var></span>, <span> <var>$pw</var></span> )</code>
+
+			<div class="description short">
+				<p>Instantiate class</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Instantiate class</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$host</var></dt>
+						<dd>string</dd>
+						<dt><var>$port</var></dt>
+						<dd>int</dd>
+						<dt><var>$scheme</var></dt>
+						<dd>string</dd>
+						<dt><var>$user</var></dt>
+						<dd>string</dd>
+						<dt><var>$pw</var></dt>
+						<dd>string</dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+			</table>
+		</div>
+
+		<div class="panel panel-default">
+	        <div class="panel-heading"><h3>Methods inherited from <a href="class-Magic.html#methods">Magic</a></h3></div>
+			<p class="elementList">
+				<code><a href="class-Magic.html#___get">__get()</a></code>, 
+				<code><a href="class-Magic.html#___isset">__isset()</a></code>, 
+				<code><a href="class-Magic.html#___set">__set()</a></code>, 
+				<code><a href="class-Magic.html#___unset">__unset()</a></code>, 
+				<code><a href="class-Magic.html#_offsetexists">offsetexists()</a></code>, 
+				<code><a href="class-Magic.html#_offsetget">offsetget()</a></code>, 
+				<code><a href="class-Magic.html#_offsetset">offsetset()</a></code>, 
+				<code><a href="class-Magic.html#_offsetunset">offsetunset()</a></code>
+			</p>
+		</div>
+		<div class="panel panel-default">
+	        <div class="panel-heading"><h3>Methods inherited from ArrayAccess</h3></div>
+			<p class="elementList">
+				<code>offsetExists()</code>, 
+				<code>offsetGet()</code>, 
+				<code>offsetSet()</code>, 
+				<code>offsetUnset()</code>
+			</p>
+		</div>
+
+
+
+
+
+
+
+		<div class="panel panel-default">
+            <div class="panel-heading"><h2>Constants summary</h2></div>
+			<table class="summary table table-bordered table-striped constants" id="constants">
+			<tr data-order="E_Header" id="E_Header">
+
+				<td class="attributes"><code>string</code></td>
+				<td class="name">
+					<code>
+						<a href="source-class-SMTP.html#28" title="Go to source code"><b>E_Header</b></a>
+					</code>
+
+					<div class="description short">
+						
+					</div>
+
+					<div class="description detailed hidden">
+						
+
+					</div>
+				</td>
+				<td class="value">
+					<div>
+						<a href="#E_Header" class="anchor">#</a>
+						<code><span class="php-quote">'%s: header is required'</span></code>
+					</div>
+				</td>
+			</tr>
+			<tr data-order="E_Blank" id="E_Blank">
+
+				<td class="attributes"><code>string</code></td>
+				<td class="name">
+					<code>
+						<a href="source-class-SMTP.html#29" title="Go to source code"><b>E_Blank</b></a>
+					</code>
+
+					<div class="description short">
+						
+					</div>
+
+					<div class="description detailed hidden">
+						
+
+					</div>
+				</td>
+				<td class="value">
+					<div>
+						<a href="#E_Blank" class="anchor">#</a>
+						<code><span class="php-quote">'Message must not be blank'</span></code>
+					</div>
+				</td>
+			</tr>
+			<tr data-order="E_Attach" id="E_Attach">
+
+				<td class="attributes"><code>string</code></td>
+				<td class="name">
+					<code>
+						<a href="source-class-SMTP.html#30" title="Go to source code"><b>E_Attach</b></a>
+					</code>
+
+					<div class="description short">
+						
+					</div>
+
+					<div class="description detailed hidden">
+						
+
+					</div>
+				</td>
+				<td class="value">
+					<div>
+						<a href="#E_Attach" class="anchor">#</a>
+						<code><span class="php-quote">'Attachment %s not found'</span></code>
+					</div>
+				</td>
+			</tr>
+			</table>
+		</div>
+
+
+
+
+		<div class="panel panel-default">
+            <div class="panel-heading"><h2>Properties summary</h2></div>
+			<table class="summary table table-bordered table-striped properties" id="properties">
+		<tr data-order="headers" id="$headers">
+			<td class="attributes"><code>
+				protected  
+				
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-SMTP.html#33-35" title="Go to source code"><var>$headers</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$headers" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="attachments" id="$attachments">
+			<td class="attributes"><code>
+				protected  
+				
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-SMTP.html#37" title="Go to source code"><var>$attachments</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$attachments" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="host" id="$host">
+			<td class="attributes"><code>
+				protected  
+				
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-SMTP.html#39" title="Go to source code"><var>$host</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$host" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="port" id="$port">
+			<td class="attributes"><code>
+				protected  
+				
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-SMTP.html#41" title="Go to source code"><var>$port</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$port" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="scheme" id="$scheme">
+			<td class="attributes"><code>
+				protected  
+				
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-SMTP.html#43" title="Go to source code"><var>$scheme</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$scheme" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="user" id="$user">
+			<td class="attributes"><code>
+				protected  
+				
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-SMTP.html#45" title="Go to source code"><var>$user</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$user" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="pw" id="$pw">
+			<td class="attributes"><code>
+				protected  
+				
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-SMTP.html#47" title="Go to source code"><var>$pw</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$pw" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="socket" id="$socket">
+			<td class="attributes"><code>
+				protected  
+				
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-SMTP.html#49" title="Go to source code"><var>$socket</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$socket" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="log" id="$log">
+			<td class="attributes"><code>
+				protected  
+				
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-SMTP.html#51" title="Go to source code"><var>$log</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$log" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+			</table>
+		</div>
+
+
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		 API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

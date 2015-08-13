@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class Web\Geo</title>
+
+	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
+	<link rel="stylesheet" href="resources/style.css?49f43d3208c5d7e33fa16d36107a345bf11cc00d">
+
+</head>
+
+<body>
+	<nav id="navigation" class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a href="index.html" class="navbar-brand">Overview</a>
+			</div>
+			<div class="collapse navbar-collapse">
+
+                <form id="search" class="navbar-form navbar-left" role="search">
+                    <input type="hidden" name="cx" value="">
+                    <input type="hidden" name="ie" value="UTF-8">
+                    <div class="form-group">
+                        <input type="text" name="q" class="search-query form-control" placeholder="Search">
+					</div>
+				</form>
+
+				<ul class="nav navbar-nav">
+					<li>
+						<a href="namespace-Web.html" title="Summary of Web"><span>Namespace</span></a>
+					</li>
+					<li class="active">
+<span>Class</span>					</li>
+
+
+
+
+
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div id="left">
+	<div id="menu">
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+					<li>
+						<a href="namespace-Controller.html">
+							Controller						</a>
+							</li>
+					<li>
+						<a href="namespace-DB.html">
+							DB<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-DB.Jig.html">
+							Jig						</a>
+							</li>
+					<li>
+						<a href="namespace-DB.Mongo.html">
+							Mongo						</a>
+							</li>
+					<li>
+						<a href="namespace-DB.SQL.html">
+							SQL						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-Model.html">
+							Model						</a>
+							</li>
+					<li>
+						<a href="namespace-None.html">
+							None						</a>
+							</li>
+					<li>
+						<a href="namespace-Template.html">
+							Template<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Template.Tags.html">
+							Tags						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-View.html">
+							View						</a>
+							</li>
+					<li class="active">
+						<a href="namespace-Web.html">
+							Web<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Web.Google.html">
+							Google						</a>
+							</li>
+								</ul></li>
+			</ul>
+		</div>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-Web.Geo.html">Geo</a></li>
+				<li><a href="class-Web.OpenID.html">OpenID</a></li>
+				<li><a href="class-Web.Pingback.html">Pingback</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Class Geo</h1>
+
+
+
+	<dl class="tree well">
+		<dd style="padding-left:0px">
+			<a href="class-Prefab.html"><span>Prefab</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>Web\Geo</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="alert alert-info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Web.html">Web</a><br>
+		
+
+			<b>Located at</b> <a href="source-class-Web.Geo.html#26-108" title="Go to source code">lib/web/geo.php</a>
+		<br>
+	</div>
+
+
+
+		<div class="panel panel-default">
+			<div class="panel-heading"><h2>Methods summary</h2></div>
+			<table class="summary table table-bordered table-striped methods" id="methods">
+		<tr data-order="tzinfo" id="_tzinfo">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_tzinfo">#</a>
+			<code><a href="source-class-Web.Geo.html#28-47" title="Go to source code">tzinfo</a>( <span> <var>$zone</var></span> )</code>
+
+			<div class="description short">
+				<p>Return information about specified Unix time zone</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Return information about specified Unix time zone</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$zone</var></dt>
+						<dd>string</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						array
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="location" id="_location">
+
+			<td class="attributes"><code>
+				 public 
+				array|false
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_location">#</a>
+			<code><a href="source-class-Web.Geo.html#49-83" title="Go to source code">location</a>( <span> <var>$ip</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+			<div class="description short">
+				<p>Return geolocation data based on specified/auto-detected IP address</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Return geolocation data based on specified/auto-detected IP address</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$ip</var></dt>
+						<dd>string</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						array|false
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="weather" id="_weather">
+
+			<td class="attributes"><code>
+				 public 
+				array|false
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_weather">#</a>
+			<code><a href="source-class-Web.Geo.html#85-106" title="Go to source code">weather</a>( <span> <var>$latitude</var></span>, <span> <var>$longitude</var></span> )</code>
+
+			<div class="description short">
+				<p>Return weather data based on specified latitude/longitude</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Return weather data based on specified latitude/longitude</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$latitude</var></dt>
+						<dd>float</dd>
+						<dt><var>$longitude</var></dt>
+						<dd>float</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						array|false
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+			</table>
+		</div>
+
+		<div class="panel panel-default">
+	        <div class="panel-heading"><h3>Methods inherited from <a href="class-Prefab.html#methods">Prefab</a></h3></div>
+			<p class="elementList">
+				<code><a href="class-Prefab.html#_instance">instance()</a></code>
+			</p>
+		</div>
+
+
+
+
+
+
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		 API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>
