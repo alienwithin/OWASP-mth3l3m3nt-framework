@@ -1,8 +1,12 @@
-#Mth3l3m3nt Framework - Beta
+#Mth3l3m3nt Framework - V1
 
-
-
-In order to use this Application Usage is easy. 
+Modules Packed in this version are: 
+* Payload Store
+* Shell Generator (PHP/ASP/JSP/JSPX)
+* Payload Encoder and Decoder (Base64/Rot13/Hex/Hexwith \x seperator/ Hex with 0x Prefix)
+* CURL GUI (GET/POST)
+* LFI Exploitation module (currently prepacked with: Koha Lib Lime LFI/ Wordpress Aspose E-book generator LFI/ Zimbra Collaboration Server LFI)
+* HTTP Bot Herd to control web shells. 
 
 Currently it is set to use a flat file database. 
 
