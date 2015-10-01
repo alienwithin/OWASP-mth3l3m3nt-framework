@@ -38,6 +38,9 @@ class Mth3l3m3nt extends \DB\Cortex {
 					// check unique
 					if (isset($conf['unique']))
 						$valid = \Validation::instance()->unique($self,$val,$field,'error.'.$model.'.'.$field);
+					//ensures that the above are met if not no entry is done
+					if (!$valid)
+                        break;
 				}
 			}
 			return $valid;
