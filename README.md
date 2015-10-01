@@ -1,6 +1,6 @@
-#Mth3l3m3nt Framework - V1
+#Mth3l3m3nt Framework - 
 
-Modules Packed in this version are: 
+Modules Packed in so far are: 
 * Payload Store
 * Shell Generator (PHP/ASP/JSP/JSPX)
 * Payload Encoder and Decoder (Base64/Rot13/Hex/Hexwith \x seperator/ Hex with 0x Prefix)
