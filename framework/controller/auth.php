@@ -12,6 +12,7 @@
 namespace Controller;
 
 
+
 class Auth extends Mth3l3m3nt {
 
     protected
@@ -25,7 +26,7 @@ class Auth extends Mth3l3m3nt {
     }
 
     /**
-     * check login state
+     * Check Logged In State of the User
      * @return bool
      */
     static public function isLoggedIn() {
@@ -43,7 +44,9 @@ class Auth extends Mth3l3m3nt {
     }
 
     /**
-     * login procedure
+     * Login Procedure
+     * @param $f3
+     * @param $params
      */
     public function login($f3,$params) {
         if ($f3->exists('POST.username') && $f3->exists('POST.password')) {
@@ -72,6 +75,11 @@ class Auth extends Mth3l3m3nt {
         $this->response->setTemplate('templates/login.html');
     }
 
+    /**
+     * Logout Procedure
+     * @param $f3
+     * @param $params
+     */
     public function logout($f3,$params) {
         $f3->clear('SESSION');
         $f3->reroute('http://'.$f3->get('HOST').$f3->get('BASE').'/');

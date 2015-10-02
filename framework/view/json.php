@@ -10,9 +10,15 @@
         @url : http://munir.skilledsoft.com
  **/
 namespace View;
-
+/**
+ * Class JSON
+ * @package View
+ */
 class JSON extends Base {
-
+    /**
+     * Handles JSON Encoding
+     * @return mixed|string
+     */
 	public function render() {
 		header('Content-Type: application/json');
 		return json_encode($this->data);

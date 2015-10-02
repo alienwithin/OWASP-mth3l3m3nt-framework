@@ -13,8 +13,14 @@
 		@version 0.2.0
  **/
 
+/**
+ * Class setup
+ */
 class setup {
-
+    /**
+     * Installs tables with default user
+     * @param $db_type
+     */
 	public function install($db_type) {
 		$f3 = \Base::instance();
 		$db_type = strtoupper($db_type);
@@ -44,6 +50,9 @@ class setup {
 		\Flash::instance()->addMessage('Setup was completed with no errors','success');
 	}
 
+    /**
+     * Works on destroying table data
+     */
 	public function uninstall()
 	{
 		die('serious?');

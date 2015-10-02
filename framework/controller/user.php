@@ -11,15 +11,25 @@
  **/
 
 namespace Controller;
-
+/**
+ * Hydrates User Model
+ * Class User
+ * @package Controller
+ */
 class User extends Resource {
 
-
+    /**
+     * Initialize mapper and load appropriate model
+     */
 	public function __construct() {
 		$mapper = new \Model\User();
 		parent::__construct($mapper);
 	}
 
+    /**
+     * @param \Base $f3
+     * @param array $params
+     */
 	public function getSingle(\Base $f3, $params) {
 		$this->response->data['SUBPART'] = 'user_edit.html';
 		if (isset($params['id'])) {
@@ -29,12 +39,20 @@ class User extends Resource {
 			$this->response->data['POST'] = $this->resource;
 		}
 	}
-//The \Base is for \Base:instance from f3 base class not our abstract class
+
+    /**
+     * @param \Base $f3
+     * @param array $param
+     */
 	public function getList(\Base $f3,$param) {
 		$this->response->data['SUBPART'] = 'user_list.html';
 		$this->response->data['content'] = $this->resource->find();
 	}
 
+    /**
+     * @param \Base $f3
+     * @param array $params
+     */
 	public function post(\Base $f3, $params) {
 		$this->response->data['SUBPART'] = 'user_edit.html';
 		$msg = \Flash::instance();
@@ -52,6 +70,10 @@ class User extends Resource {
 		parent::post($f3,$params);
 	}
 
+    /**
+     * @param \Base $f3
+     * @param array $params
+     */
 	public function delete(\Base $f3, $params) {
 		$this->resource->reset();
 		$msg = \Flash::instance();

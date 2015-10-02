@@ -10,9 +10,15 @@
         @url : http://munir.skilledsoft.com
  **/
 namespace View;
-
+/**
+ * Class Frontend
+ * @package View
+ */
 class Frontend extends Base {
-
+    /**
+     * Renders Front end views
+     * @return mixed|string
+     */
     public function render() {
         /** @var \Base $f3 */
         $f3 = \Base::instance();

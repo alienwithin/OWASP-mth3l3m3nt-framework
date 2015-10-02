@@ -10,8 +10,13 @@
         @url : http://munir.skilledsoft.com
  **/
 
+/**
+ * Class Error
+ */
 class Error {
-
+    /**
+     * Handles Errors and how they are mailed or shown
+     */
 	function render() {
 
 		// Clean all output given first

@@ -11,18 +11,27 @@
  **/
 
 class Config extends \DB\Jig\Mapper {
-
+    /**
+     * Load Site Configuration
+     */
 	public function __construct() {
 		$db = new \DB\Jig('framework/data/');
 		parent::__construct($db,'site_config.json');
 		$this->load();
 	}
 
+    /**
+     *
+     */
 	public function expose() {
 		$arr = $this->cast();
 		\Base::instance()->mset($arr);
 	}
 
+    /**
+     * Define Configuration Instance for Site
+     * @return Config|object
+     */
 	static public function instance() {
 		if (\Registry::exists('CONFIG'))
 			$cfg = \Registry::get('CONFIG');

@@ -14,6 +14,9 @@
         @date: 21.01.2015
  **/
 
+/**
+ * Class Flash
+ */
 class Flash extends Prefab {
 
     /** @var \Base */
@@ -25,34 +28,61 @@ class Flash extends Prefab {
     /** @var array */
     protected $key;
 
+    /**
+     * @param string $key
+     */
     public function __construct($key = 'flash') {
         $this->f3 = \Base::instance();
         $this->msg = &$this->f3->ref('SESSION.'.$key.'.msg');
         $this->key = &$this->f3->ref('SESSION.'.$key.'.key');
     }
 
+    /**
+     * Creates new flash message
+     * @param $text
+     * @param string $status
+     */
     public function addMessage($text,$status = 'info') {
         $this->msg[] = array('text'=>$text,'status'=>$status);
     }
 
+    /**
+     * Retrieves flash message
+     * @return array
+     */
     public function getMessages() {
         $out = $this->msg;
         $this->clearMessages();
         return $out;
     }
 
+    /**
+     * Clears Flash Messages
+     */
     public function clearMessages() {
         $this->msg = array();
     }
 
+    /**
+     * Check if a message exists
+     * @return bool
+     */
     public function hasMessages() {
         return !empty($this->msg);
     }
 
+    /**
+     * @param $key
+     * @param bool $val
+     */
     public function setKey($key,$val=TRUE) {
         $this->key[$key] = $val;
     }
 
+    /**
+     * @param $key
+     * @return null
+     */
     public function getKey($key) {
         $out = NULL;
         if ($this->key && array_key_exists($key,$this->key)) {
@@ -62,6 +92,10 @@ class Flash extends Prefab {
         return $out;
     }
 
+    /**
+     * @param $key
+     * @return bool
+     */
     public function hasKey($key) {
         return ($this->key && array_key_exists($key,$this->key));
     }

@@ -10,15 +10,26 @@
         @url : http://munir.skilledsoft.com
  **/
 namespace Controller;
-
+/**
+ * Hydrates and handles CRUD for Payloads
+ * Class Payload
+ * @package Controller
+ */
 class Payload extends Resource {
 
-
+    /**
+     * Initialize the database mapper and load Model
+     */
 	public function __construct() {
 		$mapper = new \Model\Payload();
 		parent::__construct($mapper);
 	}
 
+    /**
+     * Load 1 record
+     * @param \Base $f3
+     * @param array $params
+     */
 	public function getSingle(\Base $f3, $params) {
 		$this->response->data['SUBPART'] = 'payload_edit.html';
 		if (isset($params['id'])) {
@@ -28,8 +39,11 @@ class Payload extends Resource {
 			$this->response->data['POST'] = $this->resource;
 		}
 	}
-	
-//The \Base is for \Base:instance from f3 base class not our abstract class
+
+    /**
+     * @param \Base $f3
+     * @param array $param
+     */
 	public function getList(\Base $f3,$param) {
 		$this->response->data['SUBPART'] = 'payload_list.html';
 		$page = \Pagination::findCurrentPage();
@@ -46,6 +60,10 @@ class Payload extends Resource {
 		$this->response->data['content'] = $records;
 	}
 
+    /**
+     * @param \Base $f3
+     * @param array $params
+     */
 	public function post(\Base $f3, $params) {
 		$this->response->data['SUBPART'] = 'payload_edit.html';
 		$msg = \Flash::instance();
@@ -55,7 +73,12 @@ class Payload extends Resource {
 	}
 		parent::post($f3,$params);
 	}
-	
+
+    /**
+     * View Single Item
+     * @param \Base $f3
+     * @param array $params
+     */
 	public function viewSingle(\Base $f3, $params) {
 		$this->response->data['SUBPART'] = 'payload_view.html';
 		if (isset($params['id'])) {
@@ -66,7 +89,10 @@ class Payload extends Resource {
 		}
 		
 	}
-	
+
+    /**Search Payloads Backend
+     * @param $f3
+     */
 	public function getSearchResults($f3) {
 	  $this->response->data['SUBPART'] = 'payload_list.html';
 	  $page = \Pagination::findCurrentPage();
@@ -80,6 +106,11 @@ class Payload extends Resource {
 	
 	  $this->response->data['content'] = $records;
 	}
+
+    /**
+     * Search Payloads Frontend
+     * @param $f3
+     */
 	public function search_frontend($f3) {
 	  $this->response->data['SUBPART'] = 'payload_list.html';
 	  $page = \Pagination::findCurrentPage();
@@ -95,7 +126,11 @@ class Payload extends Resource {
 	}
 
 
-
+    /**
+     * Delete Payloads
+     * @param \Base $f3
+     * @param array $params
+     */
 	public function delete(\Base $f3, $params) {
 		$this->resource->reset();
 		$msg = \Flash::instance();

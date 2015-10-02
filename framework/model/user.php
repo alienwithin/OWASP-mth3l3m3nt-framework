@@ -11,7 +11,9 @@
  **/
 
 namespace Model;
-
+/*
+* Defines Schema for the user table
+*/
 class User extends Mth3l3m3nt {
 
     protected

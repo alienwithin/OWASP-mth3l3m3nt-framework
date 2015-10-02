@@ -10,9 +10,15 @@
         @url : http://munir.skilledsoft.com
  **/
 namespace Controller;
-
+/**
+ * Handles HTTP Bot Functions
+ * Class Webot
+ * @package Controller
+ */
 class Webot extends Resource {
-
+    /**
+     * Initialize Mapper and load appropriate model
+     */
 
 	public function __construct() {
 		$mapper = new \Model\Webot();
@@ -30,6 +36,10 @@ class Webot extends Resource {
 	}
 	
 //The \Base is for \Base:instance from f3 base class not our abstract class
+    /**
+     * @param \Base $f3
+     * @param array $param
+     */
 	public function getList(\Base $f3,$param) {
 		$this->response->data['SUBPART'] = 'webot_list.html';
 		$page = \Pagination::findCurrentPage();
@@ -46,6 +56,10 @@ class Webot extends Resource {
 		$this->response->data['content'] = $records;
 	}
 
+    /**
+     * @param \Base $f3
+     * @param array $params
+     */
 	public function post(\Base $f3, $params) {
 		$this->response->data['SUBPART'] = 'webot_edit.html';
 		$msg = \Flash::instance();
@@ -55,7 +69,11 @@ class Webot extends Resource {
 	}
 		parent::post($f3,$params);
 	}
-	
+
+    /**
+     * @param \Base $f3
+     * @param array $params
+     */
 	public function viewSingle(\Base $f3, $params) {
 		$web=\Web::instance();
 		$this->response->data['SUBPART'] = 'webot_control.html';
@@ -79,7 +97,13 @@ class Webot extends Resource {
 			
 		
 	}
-	
+
+    /**
+     * Controls Botnet Remotely
+     * @param $url
+     * @param $command_key
+     * @param $instruction
+     */
 	private function bot_master( $url, $command_key, $instruction){
 		$web=\Web::instance();
 		$f3=\Base::instance();
@@ -120,7 +144,10 @@ class Webot extends Resource {
 			
 		}
 	}
-	
+
+    /**
+     * @param $f3
+     */
 	public function getSearchResults($f3) {
 	  $this->response->data['SUBPART'] = 'webot_list.html';
 	  $page = \Pagination::findCurrentPage();
@@ -134,8 +161,11 @@ class Webot extends Resource {
 	
 	  $this->response->data['content'] = $records;
 	}
-	
 
+    /**
+     * @param \Base $f3
+     * @param array $params
+     */
 	public function delete(\Base $f3, $params) {
 		$this->resource->reset();
 		$msg = \Flash::instance();

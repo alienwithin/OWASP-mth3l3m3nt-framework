@@ -10,8 +10,14 @@
         @url : http://munir.skilledsoft.com
  **/
 
+/**
+ * Class DBHandler
+ */
 class DBHandler extends Prefab {
-
+    /**Get and Define database connection settings
+     * @param $type
+     * @return bool|\DB\Jig|\DB\Mongo|\DB\SQL
+     */
 	public function get($type) {
 		$cfg = Config::instance();
 		$type = strtoupper($type);
@@ -45,6 +51,11 @@ class DBHandler extends Prefab {
 		return isset($db) ? $db : false;
 	}
 
+    /**
+     * Update DB Connection Settings
+     * @param $type
+     * @param $conf
+     */
 	public function update($type,$conf) {
 		$cfg = Config::instance();
 		$cfg->set('DB_'.strtoupper($type), $conf);

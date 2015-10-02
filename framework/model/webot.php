@@ -10,7 +10,11 @@
         @url : http://munir.skilledsoft.com
  **/
 namespace Model;
-
+/**
+ * This defines Schema of HTTP Botnet Table
+ * Class Webot
+ * @package Model
+ */
 class Webot	extends Mth3l3m3nt {
 
     protected

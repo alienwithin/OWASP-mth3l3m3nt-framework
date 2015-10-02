@@ -10,7 +10,11 @@
         @url : http://munir.skilledsoft.com
  **/
 namespace Model;
-
+/**
+ * Defines Schema of Payload Table
+ * Class Payload
+ * @package Model
+ */
 class Payload extends Mth3l3m3nt {
 
     protected
@@ -43,31 +47,59 @@ class Payload extends Mth3l3m3nt {
         $table = 'payload',
         $db = 'DB';
 
-
+    /**
+     * Returns total count of Payloads in DB
+     * @return mixed
+     */
     static public function countAll() {
         $payloads = new self;
         return $payloads->count();
     }
+
+    /**
+     * Returns count of all Payloads that are SQL Injection
+     * @return mixed
+     */
 	 static public function countSQLi() {
         $payloads = new self;
         return $payloads->count(array('pType = ?','SQLi'));
 		
     }
+
+    /**
+     * Returns count of all Payloads that are XSS Related
+     * @return mixed
+     */
 	static public function countXSS() {
         $payloads = new self;
         return $payloads->count(array('pType = ?','XSS'));
 		
     }
+
+    /**
+     * Returns Count of all HTML Injection Payloads
+     * @return mixed
+     */
 	static public function countHTMLi() {
         $payloads = new self;
         return $payloads->count(array('pType = ?','HTML Injection'));
 		
     }
+
+    /**
+     * Returns Count of All LFI Payloads
+     * @return mixed
+     */
 	static public function countLFI() {
         $payloads = new self;
         return $payloads->count(array('pType = ?','LFI'));
 		
     }
+
+    /**
+     * Returns Count of All Miscellaneous Payloads
+     * @return mixed
+     */
 	static public function countMisc() {
         $payloads = new self;
         return $payloads->count(array('pType = ?','Miscellaneous'));

@@ -12,15 +12,25 @@
 
 namespace Controller;
 
-
+/**
+ * This Handles Encoding and Decoding Values
+ * Class Dencoder
+ * @package Controller
+ */
 class Dencoder extends Mth3l3m3nt {
 
-
+    /**
+     * Loads main Layout for the interface
+     */
 	public function beforeroute() {
 		$this->response = new \View\Backend();
 		$this->response->data['LAYOUT'] = 'websaccre_layout.html';
 	}
-	
+
+    /**
+     * Handles various encoding functions
+     * @param \Base $f3
+     */
 	public function encoder_multi(\Base $f3){
 		$this->response->data['SUBPART'] = 'dencoder_encoder_multi.html';
 		$audit_instance = \Audit::instance();
@@ -74,7 +84,11 @@ class Dencoder extends Mth3l3m3nt {
 			}
 		}
 	}
-	
+
+    /**
+     * Handles Decoding Functions
+     * @param \Base $f3
+     */
 	public function decoder_multi(\Base $f3){
 		$this->response->data['SUBPART'] = 'dencoder_decoder_multi.html';
 		$audit_instance = \Audit::instance();

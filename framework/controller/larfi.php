@@ -10,8 +10,18 @@
         @url : http://munir.skilledsoft.com
  **/
 namespace Controller;
+/**
+ * Handles Remote and Local File Inclusion Attacks
+ * Class Larfi
+ * @package Controller
+ */
 class Larfi extends Mth3l3m3nt{
-	
+    /**
+     * Helps Generate a standard LFI using GET Requests
+     * @param $blankurl
+     * @param $url
+     * @param $payload
+     */
 public function uri_based_lfi($blankurl, $url, $payload){
 		$web=\Web::instance();
 		$f3=\Base::instance();
@@ -56,6 +66,14 @@ public function uri_based_lfi($blankurl, $url, $payload){
 		}
 			
 	}
+
+    /**
+     * Handles Generating an LFI based on Cookies
+     * @param $method
+     * @param $blankurl
+     * @param $url
+     * @param $payload
+     */
 	public function cookie_based_lfi($method, $blankurl, $url, $payload){
 		$web=\Web::instance();
 		$f3=\Base::instance();

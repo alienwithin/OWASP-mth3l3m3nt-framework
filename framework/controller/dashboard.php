@@ -11,7 +11,11 @@
  **/
 
 namespace Controller;
-
+/**
+ * Manages the initial Backend Dashboard
+ * Class Dashboard
+ * @package Controller
+ */
 class Dashboard extends Mth3l3m3nt{
 	
 

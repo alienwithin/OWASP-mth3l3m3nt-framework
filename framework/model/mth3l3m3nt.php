@@ -10,7 +10,11 @@
         @url : http://munir.skilledsoft.com
  **/
 namespace Model;
-
+/**
+ * Thisextends some elements of the Cortex database mapper to make it easier to use in models
+ * Class Mth3l3m3nt
+ * @package Model
+ */
 class Mth3l3m3nt extends \DB\Cortex {
 
 	// persistence settings
@@ -38,8 +42,8 @@ class Mth3l3m3nt extends \DB\Cortex {
 					// check unique
 					if (isset($conf['unique']))
 						$valid = \Validation::instance()->unique($self,$val,$field,'error.'.$model.'.'.$field);
-					//ensures that the above are met if not no entry is done
-					if (!$valid)
+                    //fixes issue of double entry
+                    if (!$valid)
                         break;
 				}
 			}

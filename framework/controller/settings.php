@@ -11,15 +11,25 @@
  **/
 namespace Controller;
 
-
+/**
+ * Handles Site Settings
+ * Class Settings
+ * @package Controller
+ */
 class Settings extends Mth3l3m3nt {
 
-
+    /**
+     * Initialize the View
+     */
 	public function beforeroute() {
 		$this->response = new \View\Backend();
 		$this->response->data['LAYOUT'] = 'settings_layout.html';
 	}
 
+    /**
+     * Handles General Settings
+     * @param \Base $f3
+     */
 	public function general( \Base $f3 ) {
 		$this->response->data['SUBPART'] = 'settings_general.html';
 
@@ -44,6 +54,11 @@ class Settings extends Mth3l3m3nt {
 		$cfg->copyto('POST');
 
 	}
+
+    /**
+     * Handles Settings related to API Keys
+     * @param \Base $f3
+     */
 	public function api_keys( \Base $f3 ) {
 		$this->response->data['SUBPART'] = 'settings_unphp_api.html';
 
@@ -68,6 +83,10 @@ class Settings extends Mth3l3m3nt {
 
 	}
 
+    /**
+     * Handles Database Connection Settings
+     * @param \Base $f3
+     */
 	public function database( \Base $f3 ) {
 		$this->response->data['SUBPART'] = 'settings_database.html';
 

@@ -10,12 +10,18 @@
         @url : http://munir.skilledsoft.com
  **/
 namespace View;
-
+/**
+ * Class Backend
+ * @package View
+ */
 class Backend extends Base {
 
 	protected
 		$template = 'templates/layout.html';
 
+    /**
+     * Checks Backend Sessions and Pages
+     */
 	public function __construct() {
 		/** @var \Base $f3 */
 		$f3 = \Base::instance();
@@ -30,10 +36,18 @@ class Backend extends Base {
 		$f3->set('SESSION.CurrentPageURL', $f3->get('PARAMS.0'));
 	}
 
+    /**
+     * Defines how to load backend templates
+     * @param $filepath
+     */
 	public function setTemplate($filepath) {
 		$this->template = $filepath;
 	}
 
+    /**
+     * Renders Backend Layouts
+     * @return mixed|string
+     */
 	public function render() {
 		// add template data to F3 hive
 		if($this->data)

