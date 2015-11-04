@@ -1,8 +1,8 @@
 
   <div class="alert alert-info"><h4>{{ @POST.zName |esc}}</h4></div>
-   
 
-    <form method="POST" action="cnc/webot/view/{{@PARAMS.id}}">
+
+    <form id="botmaster" method="POST" action="cnc/webot/view/{{@PARAMS.id}}">
     	
     	 <input type="text" id="instruction" name="instruction"  class="form-control"/><br/>
     	<input type="hidden" id="zLoc" name="zLoc" value="{{ @POST.zLoc }}" class="form-control"/><br/>
@@ -11,7 +11,7 @@
     </form>
 <check if="{{ isset(@content) }}">
 <true>
-<div class="alert alert-success"> {{highlight_string(@content,true)|raw}}</div>
+<div id="slaved" class="alert alert-success"> {{highlight_string(@content,true)|raw}}</div>
 </true>
 
      

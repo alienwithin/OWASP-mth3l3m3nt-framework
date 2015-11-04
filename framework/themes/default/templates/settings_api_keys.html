@@ -1,0 +1,44 @@
+<h2>Settings: Database Configuration</h2>
+
+
+<div class="row">
+        <div class="form-group">
+            <div class="col-sm-12">
+                <div class="panel-group" id="accordion">
+
+                    <div class="panel {{@CONFIG.unphp_api_key=='unphp'?'panel-success':'panel-default'}}">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#unphp">
+                                   UnPHP.Net API Key
+                                </a>
+                            </h4>
+                        </div>
+                         <div id="unphp" class="panel-collapse collapse {{(@CONFIG.unphp_api_key=='unphp'?'in':'')}}">
+                            <div class="panel-body">
+                                <p>UnPHP.Net is a PHP Decoding application, we can leverage on its API, with a little work from our end to make it understand malicious code and bring it back to human form.</p>
+                              
+                                <form action="cnc/settings/api_keys" method="post" role="form">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label>storage directory</label>
+                                                <input type="text" name="unphp_api_key" class="form-control" placeholder="UnPHP.Net API Key" value="{{isset(@POST.unphp_api_key)?@POST.unphp_api_key:'' |esc}}"/>
+                                                <span class="help-block">Notice: If you have no key you can get it from <a href="http://www.unphp.net/api/request/" target="_blank">here</a></span>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                     <button type="submit" class="btn btn-primary">Save</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <!--These last four dives are for the whole section-->
+                    </div>
+                   </div>
+                  </div>
+                 </div>

@@ -1,9 +1,13 @@
-Options -Indexes
+# Enable rewrite engine and route requests to framework
 RewriteEngine On
+Options -Indexes
+# Some servers require you to specify the `RewriteBase` directive
+# In such cases, it should be the path (relative to the document root)
+# containing this .htaccess file
+#
+#RewriteBase /
 
-RewriteBase /
-
-
+#Return 404 on important files. This will prove effective especially to scanners
 RewriteRule ^(tmp)\/|\.ini$ - [R=404]
 
 RewriteCond %{REQUEST_URI} /framework/data/*.

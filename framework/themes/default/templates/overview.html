@@ -1,19 +1,27 @@
+<script src="{{@UI}}js/Chart.min.js"></script>
+
 <div class="col-sm-6">
     <div class="panel panel-default">
         <div class="panel-heading">
             <h3 class="panel-title">Dashboard</h3>
         </div>
         <div class="panel-body">
-            <p>Hey, {{ @BACKEND_USER.name }}. Welcome to <strong>Mth3l3m3nt Framework v {{ @APP_VERSION }}</strong> </p>
-            <p>Mth3l3m3nt Framework is a framework to make Pentesting easy. It has the following features:</p>
-            <ul>
-                
-                <li>Cortex ORM with JIG, SQL (MySQL,PostgreSQL,MSSQL Server) and Mongo database support</li>
-                <li>RFI & LFI Exploitation Module</li>
-                <li>Payloads Module</li>
-                <li>Shell Manager for your web Herd</li>
-                <li>Web Based CURL GUI</li>
-            </ul>
+            <p>Hey, {{ @BACKEND_USER.name }}. Welcome to the <strong>OWASP Mth3l3m3nt Framework v {{ @APP_VERSION }}</strong> </p>
+            <div class="row" >
+                <div class="col-xs-12">
+                    <a href="cnc/websaccre" title="Web Utilities"><img src="{{@UI}}images/icons/Web-browser-icon.png" height="60px" width="60px" alt="Web Utilities" hspace="15"></a>
+                    <a href="cnc/payload" title="Payloads"><img src="{{@UI}}images/icons/virus-icon.png" height="60px" width="60px" alt="Payloads"  hspace="15"></a>
+                    <a href="cnc/webot" title="Web Bot"><img src="{{@UI}}images/icons/robot-network-icon.png" height="60px" width="60px" alt="Web Bot"  hspace="15"></a>
+                    <a href="cnc/lfi" title="LFI Exploits"><img src="{{@UI}}images/icons/Files-icon.png" height="60px" width="60px" alt="LFI Exploits"  hspace="15"></a>
+                </div>
+                <div class="col-xs-12">
+                    <a href="{{@BASE}}" title="Frontend" target="_blank"><img src="{{@UI}}images/icons/house-icon.png" height="60px" width="60px" alt="Frontend"  hspace="15"></a>
+                    <a href="cnc/user" title="User Manager"><img src="{{@UI}}images/icons/Office-Customer-Male-Light-icon.png" height="60px" width="60px" alt="User Manager"  hspace="15"></a>
+                    <a href="cnc/settings" title="Settings"><img src="{{@UI}}images/icons/Settings-icon.png" height="60px" width="60px" alt="Settings"  hspace="15"></a>
+                    <a href="cnc/leave" title="Logout"><img src="{{@UI}}images/icons/logout-icon.png" height="60px" width="60px" alt="Logout"  hspace="15"></a>
+                </div>
+            </div>
+
         </div>
     </div>
 </div>
@@ -47,24 +55,39 @@
         <div class="panel-body">
             <F3:check if="{{ @payloads > 0 }}">
                 <true>
-                    <p>
-                        You have <span class="label label-primary">{{ @payloadsSQLi }}</span> SQL Injection Payloads.
-                    </p>
-					<p>
-                        You have <span class="label label-primary">{{ @payloadsXSS }}</span> XSS Payloads.
-                    </p>
-					<p>
-                        You have <span class="label label-primary">{{ @payloadsHTMLi }}</span> HTML Injection Payloads.
-                    </p>
-					<p>
-                        You have <span class="label label-primary">{{ @payloadsLFI }}</span> LFI Payloads.
-                    </p>
-					<p>
-                        You have <span class="label label-primary">{{ @payloadsMisc }}</span> Unclassified Payloads.
-                    </p>
+                    <canvas id="payload-chart" width="300" height="300"/>
+
+
+
+                    <script>
+
+                        var pieData = {
+                            labels: ["SQL Injection", "Cross Site Scripting", "HTML Injection", "Local File Inclusion", "Miscellaneous"],
+                            datasets: [
+                                {
+                                    label: "Payload Dataset",
+                                    fillColor: "rgba(151,187,205,0.2)",
+                                    strokeColor: "rgba(151,187,205,1)",
+                                    pointColor: "rgba(151,187,205,1)",
+                                    pointStrokeColor: "#fff",
+                                    pointHighlightFill: "#fff",
+                                    pointHighlightStroke: "rgba(151,187,205,1)",
+                                    data: [{{ @payloadsSQLi }}, {{ @payloadsXSS }}, {{ @payloadsHTMLi }}, {{ @payloadsLFI }}, {{ @payloadsMisc }}]
+                                }
+                            ]
+                        };
+
+                        window.onload = function(){
+                            var ctx = document.getElementById("payload-chart").getContext("2d");
+                            window.myPie = new Chart(ctx).Radar(pieData);
+                        };
+
+
+                    </script>
+
                 </true>
                 <false>
-                    <p>Payloads</p>
+                    <p>No Payloads Added</p>
                 </false>
             </F3:check>
         </div>

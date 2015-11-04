@@ -82,7 +82,7 @@ class Payload extends Mth3l3m3nt {
      */
 	static public function countHTMLi() {
         $payloads = new self;
-        return $payloads->count(array('pType = ?','HTML Injection'));
+        return $payloads->count(array('pType = ?','HTMLi'));
 		
     }
 

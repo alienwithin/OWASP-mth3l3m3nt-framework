@@ -44,10 +44,41 @@ class setup {
 			$user->password = 'mth3l3m3nt';
 			$user->email = 'placeholder_mail@mth3l3m3nt.com';
 			$user->save();
+         //migrate payloads successfully
+
+            $payload_file = $f3->ROOT.$f3->BASE.'/db_dump_optional/mth3l3m3nt_payload';
+            if (file_exists($payload_file)) {
+                $payload = new \Model\Payload();
+
+                $payload_file_data=$f3->read($payload_file);
+                $payloadarray = json_decode($payload_file_data, true);
+
+                foreach ($payloadarray as $payloaddata) {
+                    $payload->pName = $payloaddata['pName'];
+                    $payload->pType = $payloaddata['pType'];
+                    $payload->pCategory = $payloaddata['pCategory'];
+                    $payload->pDescription = $payloaddata['pDescription'];
+                    $payload->payload = $payloaddata['payload'];
+                    $payload->save();
+                    //ensures values set to null before continuing update
+                    $payload->reset();
+                }
+                //migtate payloads
+                \Flash::instance()->addMessage('Payload StarterPack: ,'
+                    .'All Starter Pack Payloads added New database','success');
+            }
+            else{
+                \Flash::instance()->addMessage('Payload StarterPack: ,'
+                    .'StarterPack Database not Found no payloads installed ','danger');
+            }
+
+
 			\Flash::instance()->addMessage('Admin User created,'
-				.' username: mth3l3m3nt, password: mth3l3m3nt','success');
+                .' username: mth3l3m3nt, password: mth3l3m3nt','success');
+
+
 		}
-		\Flash::instance()->addMessage('Setup was completed with no errors','success');
+		\Flash::instance()->addMessage('New Database Setup Completed','success');
 	}
 
     /**

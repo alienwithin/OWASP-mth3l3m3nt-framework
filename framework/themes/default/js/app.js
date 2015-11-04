@@ -7,6 +7,7 @@ toggleFields();
         $("#postData").hide();
 };
 
+
 	//form headers
 	var max_fields      = 10; //maximum input boxes allowed
     var wrapper         = $(".custom_headers"); //Fields wrapper
@@ -25,15 +26,24 @@ toggleFields();
         e.preventDefault(); $(this).parent('div').remove(); x--;
     })
     //end form headers
-    
+    //tabs initialize
+    $(function() {
+        $( "#tabs" ).tabs();
+    });
+    //tabs initialize
     //post data toggle
     $("#means").change(function () {
         toggleFields();
     });
-    
+
+    //init tabs
+    $( "#tabs" ).tabs();
+    //end tab init
    
     //end post data toggle
-    
+    //tooltips
+    $('[data-toggle="tooltip"]').tooltip();
+    //end tooltips
     
     // datepicker
     $('.datepicker').datepicker({

@@ -6,6 +6,20 @@
         <h2>New Payload</h2>
     </false>
 </check>
+
+
+<script>
+    window.onload = function(){
+        CKEDITOR.replace( 'pDescription',
+                {
+                    toolbar : 'Basic',
+                    uiColor : '#9AB8F3',
+                    width : '600px'
+
+    });
+    };
+
+</script>
 <div class="row solid">
     <div class="col-lg-12">
         <form action="cnc/payload/{{(isset(@PARAMS.id))?'edit/'.@PARAMS.id:'create'}}" method="post" class="form-horizontal" role="form">
@@ -77,10 +91,10 @@
                 <div class="col-sm-3">
                 <check if="{{ isset(@POST.payload) }}">
 				    <true>
-				        <textarea rows="4" cols="50" name="pDescription">{{@POST.pDescription|esc}}</textarea>
+				        <textarea rows="4" cols="50" id="pDescription" name="pDescription">{{@POST.pDescription}}</textarea>
 				    </true>
 				    <false>
-				       <textarea rows="4" cols="50" name="pDescription"></textarea>
+				       <textarea rows="4" cols="50" id="pDescription" name="pDescription"></textarea>
 				    </false>
 				</check>
                     

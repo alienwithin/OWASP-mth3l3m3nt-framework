@@ -23,4 +23,4 @@ ONERROR = \Error->render
 db_table_prefix = mth3l3m3nt_
 password_hash_engine = md5
 password_md5_salt = JKjdk%^Y(198237#)
-error_mail = munir@skilledsoft.com
+error_mail = frameworkadmin@mth3l3m3nt-framework.mars

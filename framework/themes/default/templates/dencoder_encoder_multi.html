@@ -1,13 +1,37 @@
 <h2>Web Utilities: Encoder</h2>
+<script type='text/javascript'>
 
+        $('#myencoder').validate({
+            submitHandler: function(form) {
+                $(form).ajaxSubmit({
+                    type:"POST",
+                    data: $(form).serialize(),
+                    url:"cnc/dencoder/encoder_multi",
+                    success: function() {
+                        $('#myencoder :input').attr('disabled', 'disabled');
+                        $('#myencoder').fadeTo( "slow", 0.15, function() {
+                            $(this).find(':input').attr('disabled', 'disabled');
+                            $(this).find('label').css('cursor','default');
+                            $('#shell').fadeIn();
+                        });
+                    },
+                    error: function() {
+                        $('#myencoder').fadeTo( "slow", 0.15, function() {
+                            $('#error').fadeIn();
+                        });
+                    }
+                });
+            }
+        });
+</script>
 <div class="row solid">
-        <form id="form" action="cnc/dencoder/encoder_multi" method="post" role="form">
+        <form id="myencoder" name="myencoder" action="" method="post" role="form">
             <div class="col-sm-6">
 
                 <div class="form-group">
                     <label>Plain Text</label>
-                    <textarea style="width:100%" name="plaintext" class="form-control custom-control"></textarea><br/>
-                    <select name="encodeFormat" class="form-control custom-control">
+                    <textarea style="width:100%" id="plaintext" name="plaintext" class="form-control custom-control"></textarea><br/>
+                    <select id="encodeFormat" name="encodeFormat" class="form-control custom-control">
                     	<option name="base64" value="base64">Base 64</option>
                     	<option name="hex" value="hex">Hex</option>
                     	<option name="hex_0x" value="hex_0x">Hex with 0x Prefix</option>
@@ -25,7 +49,7 @@
 
         </form>
       
-       <div class="content col-xs-8" data-wrap="true">
+       <div id="shell" class="content col-xs-8" data-wrap="true">
        <br/>
       	{{highlight_string(@content,true)|raw}}
       </div>

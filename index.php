@@ -16,9 +16,9 @@ $f3=require('lib/base.php');
 //load the configuration
 $f3->config('framework/configuration.php');
 
-$f3->set('APP_VERSION', '1.0');
+$f3->set('APP_VERSION', '1.2');
 $f3->set('ESCAPE', TRUE);
-$f3->set('PACKAGE', 'Mth3l3m3nt Framework');
+$f3->set('PACKAGE', 'OWASP Mth3l3m3nt Framework');
 
 //Check Writeable Directories and Files have the right permissions
 
@@ -101,13 +101,16 @@ if (\Controller\Auth::isLoggedIn()) {
 	$f3->route('GET|POST /cnc/lfi','Controller\lfiplugins->koha_lfi');
 	$f3->route('GET|POST /cnc/lfi/@type','Controller\lfiplugins->@type');
 	
-	//fuzzer-routes
-	$f3->route('GET|POST|HEAD /cnc/websaccre/dirfuzz','Controller\Urlfuzzer->dirfuzzer');
-	//$f3->route('GET|POST /cnc/recon/@type','Controller\recon->@type');
-	
+    //Client Side Tools
+    $f3->route('GET|POST /cnc/cst/cso','Controller\Cst->client_side_obfuscator');
+    $f3->route('GET|POST /cnc/cst/@type','Controller\Cst->@type');
 	//Websaccre-routes
 	$f3->route('GET|POST /cnc/websaccre','Controller\Websaccre->generic_request');
 	$f3->route('GET|POST /cnc/websaccre/@type','Controller\Websaccre->@type');
+
+    //recon tools
+    $f3->route('GET|POST /cnc/recon','Controller\Recon->getwhois');
+    $f3->route('GET|POST /cnc/recon/@type','Controller\Recon->@type');
 		//Dencoder-routes
 	$f3->route('GET|POST /cnc/dencoder','Controller\Dencoder->encoder_multi');
 	$f3->route('GET|POST /cnc/dencoder/@type','Controller\Dencoder->@type');

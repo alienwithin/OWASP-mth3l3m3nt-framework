@@ -7,8 +7,24 @@
 	p {word-wrap:break-word;}
 	
 </style>
+<script type='text/javascript'>
+    $("#webform").submit(function(event) {
+
+
+        event.preventDefault();
+
+
+        var $form = $( this ),
+                url = $form.attr( 'action' );
+
+
+        var posting = $.post( url, { means: $('#means').val(), url: $('#url').val(),postReceive: $('#postReceive').val() } );
+
+
+    });
+</script>
 <div class="box-body">
-        <form id="form" action="cnc/websaccre/generic_request" method="post" role="form">
+        <form id="webform" action="cnc/websaccre/generic_request" method="post" role="form">
             <div class="col-sm-6">
             
 			<label>Method</label>
@@ -28,7 +44,7 @@
             </div>
 
         </form>
-      
+
        <div class="content col-xs-8" data-wrap="true">
        <br/>
       {{highlight_string(@content,true)|raw}}
