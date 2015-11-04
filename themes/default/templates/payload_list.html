@@ -1,22 +1,78 @@
 <h2>Payload Finder</h2>
-
+<script src="{{@UI}}js/Chart.min.js"></script>
 <div class="container">
-	<div class="row">
-<form action="/payload/search" method="GET">
-           <div id="custom-search-input">
-                            <div class="input-group col-md-12">
-                                <input type="text" class="  search-query form-control" placeholder="Search" name="term" />
-                                <span class="input-group-btn">
-                                    <button class="btn btn-warning" type="button">
-                                        <span class=" glyphicon glyphicon-search"></span>
-                                    </button>
-                                </span>
-                            </div>
-                        </div>
-	</div>
-</form>
-</div>
+    <div class="row">
+        <form action="/payload/search" method="GET">
+                   <div id="custom-search-input">
+                                    <div class="input-group col-md-12">
+                                        <input type="text" class="  search-query form-control" placeholder="Search" name="term" />
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-warning" type="button">
+                                                <span class=" glyphicon glyphicon-search"></span>
+                                            </button>
+                                        </span>
+                                    </div>
+                                </div>
 
+        </form>
+    </div>
+</div>
+<div class="panel-body" >
+    <F3:set payloads="{{\Model\Payload::countAll()}}"/>
+    <F3:set payloadsSQLi="{{\Model\Payload::countSQLi()}}"/>
+    <F3:set payloadsXSS="{{\Model\Payload::countXSS()}}"/>
+    <F3:set payloadsHTMLi="{{\Model\Payload::countHTMLi()}}"/>
+    <F3:set payloadsLFI="{{\Model\Payload::countLFI()}}"/>
+    <F3:set payloadsMisc="{{\Model\Payload::countMisc()}}"/>
+    <div id="canvas-holder" align="center">
+        <h2 class="alert alert-danger" align="center">{{@payloads}} Payloads</h2>
+        <canvas id="payload-chart" width="200" height="200"/>
+    </div>
+
+    <script>
+
+        var pieData = [
+            {
+                value: {{ @payloadsSQLi }},
+        color:"#F7464A",
+                highlight: "#FF5A5E",
+                label: "SQL Injection"
+        },
+        {
+            value: {{ @payloadsXSS }},
+            color: "#46BFBD",
+                    highlight: "#5AD3D1",
+                label: "Cross Site Scripting"
+        },
+        {
+            value: {{ @payloadsHTMLi }},
+            color: "#FDB45C",
+                    highlight: "#FFC870",
+                label: "HTML Injection"
+        },
+        {
+            value: {{ @payloadsLFI }},
+            color: "#949FB1",
+                    highlight: "#A8B3C5",
+                label: "Local File Inclusion"
+        },
+        {
+            value: {{ @payloadsMisc }},
+            color: "#4D5360",
+                    highlight: "#616774",
+                label: "Miscellaneous"
+        }
+
+        ];
+
+        window.onload = function(){
+            var ctx = document.getElementById("payload-chart").getContext("2d");
+            window.myPie = new Chart(ctx).Pie(pieData);
+        };
+
+
+    </script>
+</div>
 <F3:pagebrowser items="{{@content.total}}" src="templates/pagebrowser.html" limit="{{@content.limit}}" token-prefix="page-"/>
 <div class="solid">
     <table class="table table-hover table-striped">
@@ -36,7 +92,7 @@
                 <td>{{ @item.pCategory |esc}}</td>
                 <td>
               	  <a href="payload/{{@item._id}}" class="btn btn-sm btn-info"><i class="glyphicon glyphicon-expand"></i> View</a>
-                
+
                 </td>
             </tr>
         </F3:repeat>
