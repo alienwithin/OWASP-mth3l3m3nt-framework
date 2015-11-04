@@ -50,6 +50,9 @@ For MySQL users needing MySQL Sample Data like alot of it especially payloads sw
 Incase of questions or suggestions or bugs and what nots:
 http://munir.skilledsoft.com
 
+You may also send them or subscribe to the mailing list: 
+https://lists.owasp.org/mailman/listinfo/owasp-mth3l3m3nt-framework-project
+
 It's been tested on : 
 
 * Apache 
