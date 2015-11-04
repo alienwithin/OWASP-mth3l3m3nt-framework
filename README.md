@@ -7,6 +7,9 @@ Modules Packed in so far are:
 * CURL GUI (GET/POST)
 * LFI Exploitation module (currently prepacked with: Koha Lib Lime LFI/ Wordpress Aspose E-book generator LFI/ Zimbra Collaboration Server LFI)
 * HTTP Bot Herd to control web shells. 
+* WHOIS
+* String Tools 
+* Client Side Obfuscator
 
 Currently it is set to use a flat file database. 
 
