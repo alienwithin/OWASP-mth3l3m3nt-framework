@@ -57,3 +57,71 @@ Incase you test on another server please give your review.
 
 If installing it in a subfolder edit the .htaccess file to reflect the RewriteBase as the subfolder.
 
+Webserver Configuration in event you encounter issues with the routing engines and URLs give 404: 
+
+###Sample Apache2 Configuration
+
+```
+<Directory /var/www/>
+    Options -Indexes +FollowSymLinks +Includes
+    AllowOverride All
+    Order allow,deny
+    Allow from all
+    Require all granted # This is required for apache 2.4.3 or higher if lower version remove this line
+</Directory>
+```
+
+
+###Sample Nginx Configuration
+
+``` 
+server {
+    root /var/www/html;
+    location / {
+        index index.php index.html index.htm;
+        try_files $uri /index.php?$query_string;
+    }
+    location ~ \.php$ {
+        fastcgi_pass ip_address:port;
+        fastcgi_index index.php;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        include fastcgi_params;
+    } 
+    
+```
+
+###Sample IIS Configuration
+
+``` 
+
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <system.webServer>
+    <rewrite>
+      <rules>
+        <rule name="Application" stopProcessing="true">
+          <match url=".*" ignoreCase="false" />
+          <conditions logicalGrouping="MatchAll">
+            <add input="{REQUEST_FILENAME}" matchType="IsFile" ignoreCase="false" negate="true" />
+            <add input="{REQUEST_FILENAME}" matchType="IsDirectory" ignoreCase="false" negate="true" />
+          </conditions>
+          <action type="Rewrite" url="index.php" appendQueryString="true" />
+        </rule>
+      </rules>
+    </rewrite>
+  </system.webServer>
+</configuration> 
+
+```
+
+###Sample Lighttpd Configuration
+```
+$HTTP["host"] =~ "www\.example\.com$" {
+    url.rewrite-once = ( "^/(.*?)(\?.+)?$"=>"/index.php/$1?$2" )
+    server.error-handler-404 = "/index.php"
+}
+
+}
+
+```
+
