@@ -29,8 +29,11 @@
             
 			<label>Method</label>
 			<select name="means" id="means" class="form-control">
-			<option name="get" value="GET">GET</option>
-            	<option name="post" value="POST">POST</option>	
+			    <option name="get" value="GET">GET</option>
+                <option name="head" value="HEAD">HEAD</option>
+                <option name="options" value="OPTIONS">OPTIONS</option>
+                <option name="trace" value="TRACE">TRACE</option>
+                <option name="post" value="POST">POST</option>
             </select>
                   
            <br/><label>Web Address</label>
@@ -47,7 +50,7 @@
 
        <div class="content col-xs-8" data-wrap="true">
        <br/>
-      {{highlight_string(@content,true)|raw}}
+           {{highlight_string(@content,true)|raw}}
       </div>
     </div>
      

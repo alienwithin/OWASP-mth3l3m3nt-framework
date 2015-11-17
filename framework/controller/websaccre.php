@@ -51,19 +51,31 @@ class Websaccre extends Mth3l3m3nt {
 					$postReceive=$f3->get('Post.postReceive');
 					$postData = explode("&", $postReceive);
 					$postData = array_map("trim", $postData);
-					
-					$address=$f3->get('POST.url');
+
+                    //$postData=urldecode($postData);
+                    //check if safemode is on:
+                    //Shared Hosting Servers Have an issue ..safemode and openbasedir sets and curl gives error enable the lines below and comment out the $request_successful one
+                    if( ini_get('safe_mode') ){
+                        $follow_loc=FALSE;
+                    }else{
+                        $follow_loc=TRUE;
+                    }
+
+
+                    $address=$f3->get('POST.url');
 					if ($f3->get('POST.means')=="POST"){
 						$options = array(
 								    'method'  => $f3->get('POST.means'),
-								    'content' => http_build_query($postData),
+								    'content' => $postData,
+                                    'follow_location'=>$follow_loc
 								   
 						);
 					}
 					else{
 						$options = array(
-								    'method'  => $f3->get('POST.means')
-							
+								    'method'  => $f3->get('POST.means'),
+                                    'follow_location'=>$follow_loc
+
 						);
 					}
 
@@ -126,4 +138,4 @@ public function shellGenerator(\Base $f3){
 			}
 		}
 	}
-} 
+}
