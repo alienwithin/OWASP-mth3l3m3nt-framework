@@ -103,6 +103,7 @@ if (\Controller\Auth::isLoggedIn()) {
 	
     //Client Side Tools
     $f3->route('GET|POST /cnc/cst/cso','Controller\Cst->client_side_obfuscator');
+    $f3->route('GET|POST /cnc/cst/@type','Controller\Cst->@type');
 
 	//Websaccre-routes
 	$f3->route('GET|POST /cnc/websaccre','Controller\Websaccre->generic_request');
