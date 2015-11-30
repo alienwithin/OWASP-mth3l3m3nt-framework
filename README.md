@@ -56,7 +56,8 @@ https://lists.owasp.org/mailman/listinfo/owasp-mth3l3m3nt-framework-project
 It's been tested on : 
 
 * Apache 
-* Lightspeed
+* Litespeed
+* Nginx
 * Lighttpd
 
 Incase you test on another server please give your review.
