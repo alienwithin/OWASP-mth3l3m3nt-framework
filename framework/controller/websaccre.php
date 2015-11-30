@@ -14,19 +14,24 @@
 
 namespace Controller;
 /**
- * Class Websaccre
+ * Handles Web Based Stuff in regard to webshells and Requests to other servers
  * @package Controller
  */
 
 class Websaccre extends Mth3l3m3nt {
-
+    /**
+     * Loads the Main Interface Layout
+     */
 
 	public function beforeroute() {
 		$this->response = new \View\Backend();
 		$this->response->data['LAYOUT'] = 'websaccre_layout.html';
 	}
 
-
+    /**
+     * Handles Your little Hurl.it like service to make requests to remote servers using various methods
+     * @package Controller
+     */
 	public function generic_request(\Base $f3){
 		$web=\Web::instance();
 		$this->response->data['SUBPART'] = 'websaccre_generic_request.html';
@@ -40,21 +45,13 @@ class Websaccre extends Mth3l3m3nt {
 			} else {
 				$audited_url=$audit_instance->url($f3->get('POST.url'));
 				if ($audited_url==TRUE){
-					/**
-					* 
-					Shared Hosting Servers Have an issue ..safemode and openbasedir setr and curl gives error enable the lines below and comment out the $request_successful one 
-					$options = array('follow_location'=>FALSE);
-					$request_successful=$web->request($f3->get('POST.url'),$options);
-					* 
-					*/
+
 					//handle POST data
 					$postReceive=$f3->get('Post.postReceive');
 					$postData = explode("&", $postReceive);
 					$postData = array_map("trim", $postData);
 
-                    //$postData=urldecode($postData);
-                    //check if safemode is on:
-                    //Shared Hosting Servers Have an issue ..safemode and openbasedir sets and curl gives error enable the lines below and comment out the $request_successful one
+
                     if( ini_get('safe_mode') ){
                         $follow_loc=FALSE;
                     }else{
@@ -70,20 +67,27 @@ class Websaccre extends Mth3l3m3nt {
                                     'follow_location'=>$follow_loc
 								   
 						);
-					}
-					else{
+                        $request_successful=$web->request($address,$options);
+
+                    }
+					elseif($f3->get('POST.means')=="GET" or $f3->get('POST.means')=="TRACE" or $f3->get('POST.means')=="OPTIONS" or $f3->get('POST.means')=="HEAD") {
 						$options = array(
 								    'method'  => $f3->get('POST.means'),
                                     'follow_location'=>$follow_loc
 
 						);
-					}
+                        $request_successful=$web->request($address,$options);
 
-					$request_successful=$web->request($address,$options);
+                    }
+                    else{
+                        \Flash::instance()->addMessage('Unsupported Header Method','danger');
+
+                    }
+
 
 					 if (!($request_successful)){
-				    	\Flash::instance()->addMessage('You have entered an invalid URL try something like: http://africahackon.com','warning');
-					}
+				    	\Flash::instance()->addMessage('Something went wrong your request could not be completed.','warning');
+					  }
 					else{
 						$result_body=$request_successful['body'];
 				    	$result_headers=$request_successful['headers'];
