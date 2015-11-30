@@ -2,7 +2,7 @@
 
 Modules Packed in so far are: 
 * Payload Store
-* Shell Generator (PHP/ASP/JSP/JSPX)
+* Shell Generator (PHP/ASP/JSP/JSPX/CFM)
 * Payload Encoder and Decoder (Base64/Rot13/Hex/Hexwith \x seperator/ Hex with 0x Prefix)
 * CURL GUI (GET/POST/TRACE/OPTIONS/HEAD)
 * LFI Exploitation module (currently prepacked with: Koha Lib Lime LFI/ Wordpress Aspose E-book generator LFI/ Zimbra Collaboration Server LFI)
