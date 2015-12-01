@@ -47,9 +47,8 @@ class Websaccre extends Mth3l3m3nt {
 				if ($audited_url==TRUE){
 
 					//handle POST data
-					$postReceive=$f3->get('Post.postReceive');
-					$postData = explode("&", $postReceive);
-					$postData = array_map("trim", $postData);
+					$postReceive=$f3->get('POST.postReceive');
+                    $createPostArray=parse_str($postReceive,$postData);
 
 
                     if( ini_get('safe_mode') ){
@@ -63,7 +62,7 @@ class Websaccre extends Mth3l3m3nt {
 					if ($f3->get('POST.means')=="POST"){
 						$options = array(
 								    'method'  => $f3->get('POST.means'),
-								    'content' => $postData,
+								    'content' => http_build_query($postData),
                                     'follow_location'=>$follow_loc
 								   
 						);
@@ -94,7 +93,7 @@ class Websaccre extends Mth3l3m3nt {
 				    	$engine=$request_successful['engine'];
 				    	$headers_max=implode("\n",$result_headers);
 						$myFinalRequest="Headers: \n\n".$headers_max."\n\n Body:\n\n".$result_body."\n\n Engine Used: ".$engine;
-						$this->response->data['content']=$myFinalRequest;
+						$this->response->data['content']=$myFinalRequest.var_dump($postData);
 					}
 					
 				}
