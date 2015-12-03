@@ -93,7 +93,7 @@ class Websaccre extends Mth3l3m3nt {
 				    	$engine=$request_successful['engine'];
 				    	$headers_max=implode("\n",$result_headers);
 						$myFinalRequest="Headers: \n\n".$headers_max."\n\n Body:\n\n".$result_body."\n\n Engine Used: ".$engine;
-						$this->response->data['content']=$myFinalRequest.var_dump($postData);
+						$this->response->data['content']=$myFinalRequest;
 					}
 					
 				}
