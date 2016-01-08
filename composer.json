@@ -1,7 +1,7 @@
 {
 	"name": "alienwithin/owasp-mth3l3m3nt-framework",
-	"description": "A powerful yet easy-to-use PHP micro-framework designed to help you Build and manage exploits and payloads fast as well as exploit system",
-	"homepage": "https://www.owasp.org/index.php/OWASP_Mth3l3m3nt_Framework_Project",
+	"description": "OWASP Mth3l3m3nt Framework is a penetration testing aiding tool and exploitation framework. It fosters a principle of attack the web using the web as well as pentest on the go through its responsive interface.",
+	"homepage": "https://alienwithin.github.io/OWASP-mth3l3m3nt-framework/",
 	"license": "GPL-3.0",
 	"require": {
 		"php": ">=5.3.6"
@@ -12,6 +12,12 @@
 			"url": "https://github.com/alienwithin/OWASP-mth3l3m3nt-framework"
 		}
 	],
+	"authors": [
+      {
+          "name": "Munir Njiru",
+          "email": "munir@skilledsoft.com"
+      }
+  ],
 	"autoload": {
 		"files": ["lib/base.php"],
 		 "classmap": [
