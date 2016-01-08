@@ -28,6 +28,11 @@ the login url is: /cnc
 username:mth3l3m3nt
 password:mth3l3m3nt
 
+For composer users: 
+```
+composer require alienwithin/owasp-mth3l3m3nt-framework
+```
+
 By Default I have set it to use the JIG database but this you can change at any point in the backend. 
 The DB Dump in place is for users who use MySQL and need demo data. Unfortunately I have only done for MySQL. It's my DB of choice. 
 
