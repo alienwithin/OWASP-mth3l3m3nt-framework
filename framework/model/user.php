@@ -11,9 +11,10 @@
  **/
 
 namespace Model;
-/*
-* Defines Schema for the user table
-*/
+/**
+ * Defines Schema of User Table
+ * @package Model
+ */
 class User extends Mth3l3m3nt {
 
     protected
@@ -44,24 +45,33 @@ class User extends Mth3l3m3nt {
 
     /**
      * crypt password
+     * Defines whether to use bcrypt or salted MD5
      * @param $val
      * @return string
+	 
      */
     public function set_password($val) {
         $f3 = \Base::instance();
-        $hash_engine = $f3->get('password_hash_engine');
-        switch($hash_engine) {
-            case 'bcrypt':
-                $crypt = \Bcrypt::instance();
-                $val = $crypt->hash($val);
-                break;
-            case 'md5':
-                // fall-through
-            default:
-                $val = md5($val.$f3->get('password_md5_salt'));
-                break;
-        }
-        return $val;
+        if (!$val){
+               $userDetails = new self;
+               $userDetails->load(array('username = ?',$f3->get('POST.username')));
+               $val = $userDetails->password;
+               return $val;
+           }else{
+               $hash_engine = $f3->get('password_hash_engine');
+               switch($hash_engine) {
+                   case 'bcrypt':
+                       $crypt = \Bcrypt::instance();
+                       $val = $crypt->hash($val);
+                       break;
+                   case 'md5':
+                       // fall-through
+                   default:
+                       $val = md5($val.$f3->get('password_md5_salt'));
+                       break;
+               }
+               return $val;
+           }
     }
 
     /**
