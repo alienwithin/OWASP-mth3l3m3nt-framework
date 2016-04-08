@@ -69,6 +69,8 @@ $f3->route(array(
 $f3->route(array(
       'GET /payload/search'
    ), 'Controller\Payload->search_frontend');
+
+$f3->route('GET|POST /xssr','Controller\Xssr->cookie_theft');
 ///////////////
 //  backend  //
 ///////////////
@@ -114,7 +116,11 @@ if (\Controller\Auth::isLoggedIn()) {
 		//Dencoder-routes
 	$f3->route('GET|POST /cnc/dencoder','Controller\Dencoder->encoder_multi');
 	$f3->route('GET|POST /cnc/dencoder/@type','Controller\Dencoder->@type');
-    
+    //ctdb routes the rest are hydrated by the resource routes
+    //Deals with Frontend Retrieval of information from the hooking script
+    $f3->route('GET|POST /cnc/xssr','Controller\Xssr->cookie_theft');
+    //Purely Backend Version of XSSR to create attack campaigns more features to come that will allow deleting campaigns and possibly filtering them
+    $f3->route('GET|POST /cnc/xssrc','Controller\Xssrc->create_campaign');
     // no auth again
     $f3->redirect('GET|POST /login', '/cnc', false);
 
