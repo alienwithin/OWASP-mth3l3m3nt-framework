@@ -23,6 +23,8 @@ Ensure the Folders Below are writeable:
 * tmp
 * framework/data
 * framework/data/site_config.json
+* incoming/
+* scripts/
 
 It should run from the get go All just navigate to it.
 
