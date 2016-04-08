@@ -12,6 +12,7 @@ Modules Packed in so far are:
 * WHOIS
 * String Tools 
 * Client Side Obfuscator
+* Cookie Theft Database (Enables you to steal session cookies & download page content if a stored XSS is present)
 
 Currently it is set to use a flat file database. 
 
