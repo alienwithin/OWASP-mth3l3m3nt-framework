@@ -51,7 +51,7 @@ class Websaccre extends Mth3l3m3nt {
                     $createPostArray=parse_str($postReceive,$postData);
 
 
-                    if( ini_get('safe_mode') ){
+                    if( ini_get('open_basedir') ){
                         $follow_loc=FALSE;
                     }else{
                         $follow_loc=TRUE;
