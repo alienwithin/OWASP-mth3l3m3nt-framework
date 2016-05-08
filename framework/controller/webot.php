@@ -114,8 +114,10 @@ class Webot extends Resource {
 					$params = array(
 					    $command_key => $instruction
 					);
-					$options = array('method' => 'GET');
-					$url .= '?'.http_build_query($params);
+					$options = array('method' => 'POST',
+					'content' => http_build_query($params)
+					);
+					
 					$request_successful=$web->request($url,$options);
 					 if (!($request_successful)){
 				    	\Flash::instance()->addMessage('The Request was unsuccessful check whether slave exists','warning');
@@ -128,7 +130,7 @@ class Webot extends Resource {
 					    	$headers_max=implode("\n",$result_headers);
 						if (strpos($response_header,'200 OK') !== false) {
 						  	
-							//$myFinalRequest="Headers: \n\n".$headers_max."\n\n Body:\n\n".$result_body."\n\n Engine Used: ".$engine;
+							
 							$this->response->data['content']=$result_body;
 						}
 						else {
