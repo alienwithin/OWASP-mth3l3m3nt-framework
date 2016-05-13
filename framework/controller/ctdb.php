@@ -117,12 +117,18 @@ class Ctdb extends Resource {
         $msg = \Flash::instance();
         if (isset($params['id'])) {
             $this->resource->load(array('_id = ?', $params['id']));
-            $url1=$this->resource->vulnerablePageContent;
+			$url1=$this->resource->vulnerablePageContent;
             $url2=$this->resource->indirect_target_page;
+			$url3=$this->resource->vulnerableUrl;
             $vulnPage=$f3->ROOT.parse_url($url1, PHP_URL_PATH);
             $targetPage=$f3->ROOT.parse_url($url2, PHP_URL_PATH);
-            unlink($vulnPage);
-            unlink($targetPage);
+			$attack_script=$f3->ROOT . $f3->BASE . '/scripts/' .parse_url($url3, PHP_URL_HOST). '.js';
+            if (file_exists($vulnPage) || file_exists ($targetPage) || file_exists($attack_script)){
+				unlink($vulnPage);
+				unlink($targetPage);
+				unlink($attack_script);
+			}
+           
             parent::delete($f3,$params);
 
         }
