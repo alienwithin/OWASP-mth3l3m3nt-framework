@@ -92,7 +92,7 @@ class Larfi extends Resource {
 					return $this->cookie_based_lfi($method,$blankurl,$url,$payload);
 				}
 				else{
-					return $this->uri_based_lfi($blankurl,$url,$payload);
+					return $this->uri_based_lfi($method,$blankurl,$url,$payload);
 				}
 			}	
 		}		
@@ -137,7 +137,7 @@ class Larfi extends Resource {
      * @param $url
      * @param $payload
      */
-public function uri_based_lfi($blankurl, $url, $payload){
+public function uri_based_lfi($method,$blankurl, $url, $payload){
 		$web=\Web::instance();
 		$f3=\Base::instance();
 		$audit_instance = \Audit::instance();
@@ -150,7 +150,25 @@ public function uri_based_lfi($blankurl, $url, $payload){
 				$audited_url=$audit_instance->url($url);
 				if ($audited_url==TRUE){
 					$url=rtrim($url,"/");
-					$request_successful=$web->request($url.$payload);
+					if( ini_get('open_basedir') ){
+						$follow_loc=FALSE;
+					}else{
+						$follow_loc=TRUE;
+					}
+					
+					if ($method=="POST"){
+						$options = array(
+						'content'=>$payload,
+						'follow_location'=>$follow_loc		   
+						);
+						$request_successful=$web->request($url,$options);
+					}else{
+						$options = array(
+						'follow_location'=>$follow_loc		   
+						);
+						$request_successful=$web->request($url.$payload,$options);
+					}
+					
 					 if (!($request_successful)){
 				    	\Flash::instance()->addMessage('You have entered an invalid URL try something like: http://africahackon.com','warning');
 					}
@@ -192,8 +210,14 @@ public function uri_based_lfi($blankurl, $url, $payload){
 	public function cookie_based_lfi($method, $blankurl, $url, $payload){
 		$web=\Web::instance();
 		$f3=\Base::instance();
+		if( ini_get('open_basedir') ){
+						$follow_loc=FALSE;
+					}else{
+						$follow_loc=TRUE;
+					}
 		$options = array(
 		    'method'  => $method,
+			'follow_location'=>$follow_loc,
 		    'header' => array(
 			     'Accept: */*',
 				 'User-Agent: Mth3l3m3ntFramework/4.0 (compatible; MSIE 6.0; HackingtoshTuxu 4.0; .NET CLR 1.1.4322)', 
