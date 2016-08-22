@@ -1,0 +1,50 @@
+<h2>LFI Plugins</h2>
+
+<div class="container">
+	<div class="row">
+<form action="cnc/larfi/search" method="GET">
+           <div id="custom-search-input">
+                            <div class="input-group col-md-12">
+                                <input type="text" class="  search-query form-control" placeholder="Search" name="term" />
+                                <span class="input-group-btn">
+                                    <button class="btn btn-warning" type="button">
+                                        <span class=" glyphicon glyphicon-search"></span>
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+	</div>
+	</form>
+</div>
+
+<F3:pagebrowser items="{{@content.total}}" src="templates/pagebrowser.html" limit="{{@content.limit}}" token-prefix="page-"/>
+<include href="templates/alert.html"/>
+
+<div class="solid">
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Title</th>
+            <th>Type</th>
+			<th>Description</th>
+			<th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <F3:repeat group="{{ @content.subset }}" value="{{ @item }}">
+            <tr>
+                <td>{{ @item.lTitle |esc}}</td>
+                <td>{{ @item.lType |esc}}</td>
+				<td><button type="button" class="btn btn-info btn-sm" data-toggle="tooltip" title="{{@item.lDescription}}" data-html="true">More Information</button></td>
+                <td>
+              	  <a href="cnc/larfi/view/{{@item._id}}" class="btn btn-sm btn-default"><i class="glyphicon glyphicon-expand"></i> Exploit</a>
+                  <a href="cnc/larfi/edit/{{@item._id}}" class="btn btn-sm btn-default"><i class="glyphicon glyphicon-pencil"></i> Edit</a>
+                  <a href="cnc/larfi/delete/{{@item._id}}" class="btn btn-sm btn-default"><i class="glyphicon glyphicon-trash"></i> Delete</a>
+                </td>
+            </tr>
+        </F3:repeat>
+        </tbody>
+    </table>
+</div>
+
+</div>

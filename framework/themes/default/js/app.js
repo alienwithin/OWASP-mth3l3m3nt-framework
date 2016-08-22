@@ -6,7 +6,8 @@ toggleFields();
     else
         $("#postData").hide();
 };
-
+//tooltips
+ $('[data-toggle="tooltip"]').tooltip(); 
 
 	//form headers
 	var max_fields      = 10; //maximum input boxes allowed

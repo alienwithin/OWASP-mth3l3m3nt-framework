@@ -1,23 +1,16 @@
-<h2>LFI: {{@exploit_title}}</h2>
-<style type="text/css">
-	.content{
-		    white-space:normal !important;
-   		 word-wrap:break-word; 
-	}
-	p {word-wrap:break-word;}
-	
-</style>
+<h2>LFI: {{ @POST.lTitle }}</h2><br/>
+<div><button type="button" class="btn btn-success btn-lg" data-toggle="tooltip" title="{{@POST.lDescription}}" data-html="true">About This Vulnerability</button></div>
+<br/>
 <div class="box-body">
-        <form id="form" action="cnc/lfi/{{ isset(@PARAMS.type)?@PARAMS.type:'koha_lfi' }}" method="post" role="form">
+        <form id="form" action="cnc/larfi/view/{{@PARAMS.id}}" method="post" role="form">
             <div class="col-sm-6">
 
                 <div class="form-group">
                     <label>Web Address</label>
                     <input type="text" name="url" class="form-control" placeholder="http://africahackon.com" />
+					<input type="hidden" id="lPayload" name="lPayload" value="{{ @POST.lPayload }}" class="form-control"/><br/>
+					<input type="hidden" id="lMethod" name="lMethod" value="{{ @POST.lMethod }}" class="form-control"/><br/>
                 </div>
-
-                               
-
                 <button type="submit" class="btn btn-primary">Perform LFI</button>
             </div>
 
