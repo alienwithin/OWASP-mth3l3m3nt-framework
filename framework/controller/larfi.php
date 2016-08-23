@@ -88,12 +88,19 @@ class Larfi extends Resource {
 				$lfi_type=$f3->get('POST.lType');
 				$payload=$f3->get('POST.lPayload');
 				$method=$f3->get('POST.lMethod');
-				if ($lfi_type=="Cookie Based"){
-					return $this->cookie_based_lfi($method,$blankurl,$url,$payload);
+				switch ($lfi_type){
+					case "Generic":
+						\Flash::instance()->addMessage('Exploited by injecting into the URL/Body where applicable','info');
+						return $this->uri_based_lfi($method,$blankurl,$url,$payload);
+					break;
+					case "Cookie":
+						\Flash::instance()->addMessage('Exploited by injecting into the cookie','info');
+						return $this->cookie_based_lfi($method,$blankurl,$url,$payload);
+					break;
+					default:
+						\Flash::instance()->addMessage('This is an invalid attack type','warning');
 				}
-				else{
-					return $this->uri_based_lfi($method,$blankurl,$url,$payload);
-				}
+
 			}	
 		}		
 		
@@ -211,13 +218,13 @@ public function uri_based_lfi($method,$blankurl, $url, $payload){
 		$web=\Web::instance();
 		$f3=\Base::instance();
 		if( ini_get('open_basedir') ){
-						$follow_loc=FALSE;
-					}else{
-						$follow_loc=TRUE;
-					}
+			$follow_loc=FALSE;
+		}else{
+			$follow_loc=TRUE;
+		}
 		$options = array(
 		    'method'  => $method,
-			'follow_location'=>$follow_loc,
+			'follow_location' => $follow_loc,
 		    'header' => array(
 			     'Accept: */*',
 				 'User-Agent: Mth3l3m3ntFramework/4.0 (compatible; MSIE 6.0; HackingtoshTuxu 4.0; .NET CLR 1.1.4322)', 
@@ -237,7 +244,6 @@ public function uri_based_lfi($method,$blankurl, $url, $payload){
 			} else {
 				$audited_url=$audit_instance->url($url);
 				if ($audited_url==TRUE){
-					
 					$request_successful=$web->request($url,$options);
 					 if (!($request_successful)){
 				    	\Flash::instance()->addMessage('You have entered an invalid URL try something like: http://africahackon.com','warning');
