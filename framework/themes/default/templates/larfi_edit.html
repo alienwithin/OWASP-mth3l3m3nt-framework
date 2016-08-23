@@ -35,13 +35,13 @@
 				    <true>
 						 <select class="form-control" id="input-lType" name="lType">
 							<option selected="{{@POST.lType|esc}}">{{@POST.lType|esc}}</option>
-							<option id="cookie" value="Cookie Based">Cookie Based </option>
+							<option id="cookie" value="Cookie">Cookie</option>
 							<option id="generic" value="Generic">Generic</option>
 					</select>
 				    </true>
 				    <false>
 				       <select class="form-control" id="input-lType" name="lType">
-							<option id="cookie" value="Cookie Based">Cookie Based</option>
+							<option id="cookie" value="Cookie">Cookie</option>
 							<option id="generic" value="Generic">Generic</option>
 					</select>
 				    </false>
@@ -55,14 +55,14 @@
 				    <true>
 						<select class="form-control" id="input-lMethod" name="lMethod">
 							<option selected="{{@POST.lMethod|esc}}">{{@POST.lMethod|esc}}</option>	
-							<option id="cookie" value="GET">GET</option>
-							<option id="generic" value="POST">POST</option>
+							<option id="GET" value="GET">GET</option>
+							<option id="POST" value="POST">POST</option>
 					</select>
 				    </true>
 				    <false>
 				       <select class="form-control" id="input-lMethod" name="lMethod">
-							<option id="cookie" value="GET">GET</option>
-							<option id="generic" value="POST">POST</option>
+							<option id="GET" value="GET">GET</option>
+							<option id="POST" value="POST">POST</option>
 					</select>
 				    </false>
 				</check>
