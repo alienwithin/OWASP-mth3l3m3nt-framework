@@ -1,14 +1,16 @@
-<h2>Payload Finder</h2>
-<script src="{{@UI}}js/Chart.min.js"></script>
-<div class="container">
-    <div class="row">
-        <form action="payload/search" method="GET">
+
+	 <div id="payloads"> 
+	 	<div class="container">
+		<div class="row">
+		<h4>Search</h4>
+		<div class="hline"></div><br/>
+        <form id="searchme" action="payload/search" method="GET">
                    <div id="custom-search-input">
                                     <div class="input-group col-md-12">
-                                        <input type="text" class="  search-query form-control" placeholder="Search" name="term" />
+                                        <input type="text" class="search-query form-control" placeholder="Search for something e.g. basic xss & press enter" name="term" data-toggle="tooltip" title="Type the item or keyword you wish to search for then press <br> enter!" data-html="true"/>
                                         <span class="input-group-btn">
                                             <button class="btn btn-warning" type="button">
-                                                <span class=" glyphicon glyphicon-search"></span>
+                                                <span class=" glyphicon glyphicon-search" data-toggle="tooltip" title="Press Enter rather than clicking me!"></span>
                                             </button>
                                         </span>
                                     </div>
@@ -16,86 +18,17 @@
 
         </form>
     </div>
-</div>
-<div class="panel-body" >
-    <F3:set payloads="{{\Model\Payload::countAll()}}"/>
-    <F3:set payloadsSQLi="{{\Model\Payload::countSQLi()}}"/>
-    <F3:set payloadsXSS="{{\Model\Payload::countXSS()}}"/>
-    <F3:set payloadsHTMLi="{{\Model\Payload::countHTMLi()}}"/>
-    <F3:set payloadsLFI="{{\Model\Payload::countLFI()}}"/>
-    <F3:set payloadsMisc="{{\Model\Payload::countMisc()}}"/>
-    <div id="canvas-holder" align="center">
-        <h2 class="alert alert-danger" align="center">{{@payloads}} Payloads</h2>
-        <canvas id="payload-chart" width="200" height="200"/>
-    </div>
-
-    <script>
-
-        var pieData = [
-            {
-                value: {{ @payloadsSQLi }},
-        color:"#F7464A",
-                highlight: "#FF5A5E",
-                label: "SQL Injection"
-        },
-        {
-            value: {{ @payloadsXSS }},
-            color: "#46BFBD",
-                    highlight: "#5AD3D1",
-                label: "Cross Site Scripting"
-        },
-        {
-            value: {{ @payloadsHTMLi }},
-            color: "#FDB45C",
-                    highlight: "#FFC870",
-                label: "HTML Injection"
-        },
-        {
-            value: {{ @payloadsLFI }},
-            color: "#949FB1",
-                    highlight: "#A8B3C5",
-                label: "Local File Inclusion"
-        },
-        {
-            value: {{ @payloadsMisc }},
-            color: "#4D5360",
-                    highlight: "#616774",
-                label: "Miscellaneous"
-        }
-
-        ];
-
-        window.onload = function(){
-            var ctx = document.getElementById("payload-chart").getContext("2d");
-            window.myPie = new Chart(ctx).Pie(pieData);
-        };
-
-
-    </script>
-</div>
-<F3:pagebrowser items="{{@content.total}}" src="templates/pagebrowser.html" limit="{{@content.limit}}" token-prefix="page-"/>
-<div class="solid">
-    <table class="table table-hover table-striped">
-        <thead>
-        <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Category</th>
-            <th>Action</th>
-        </tr>
-        </thead>
-        <tbody>
-        <F3:repeat group="{{ @content.subset }}" value="{{ @item }}">
-            <tr>
-                <td class="alert alert-warning">{{ @item.pName |esc}}</td>
-                <td>{{ @item.pType |esc}}</td>
-                <td>{{ @item.pCategory |esc}}</td>
-                <td>
-              	  <a href="payload/{{@item._id}}" class="btn btn-sm btn-info"><i class="glyphicon glyphicon-expand"></i> View</a>
-
-                </td>
-            </tr>
-        </F3:repeat>
-        </tbody>
-    </table>
-</div>
+		<F3:pagebrowser items="{{@content.total}}" src="templates/pagebrowser.html" limit="{{@content.limit}}" token-prefix="page-"/>
+ 			<div class="row centered">
+			<F3:repeat group="{{ @content.subset }}" value="{{ @item }}">
+ 				<div class="col-md-4">
+ 					<i class="fa fa-terminal fa-lg"></i>
+ 					<h4>{{ @item.pName |esc}}</h4>
+ 					<p> This {{ @item.pType |esc}} payload is categorized as: {{ @item.pCategory |esc}}</p>
+ 					<p><br/><a href="payload/{{@item._id}}" class="btn btn-theme">More Info</a></p>
+ 				</div>
+			</F3:repeat>
+ 			</div>
+	 	</div><! --/container -->
+	 </div><! --/payloads -->
+	

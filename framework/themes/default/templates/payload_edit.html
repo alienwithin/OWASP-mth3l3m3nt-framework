@@ -37,7 +37,7 @@
 				</check>
                 </div>
             </div>
-            <div class="form-group {{ @FLASH->getKey('error.model.payload.pType') }}">
+            <div class="form-group {{ @FLASH->getKey('error.model.payload.lType') }}">
                 <label for="input-pType" class="col-lg-2 control-label">Type*</label>
                 <div class="col-sm-3">
             	<check if="{{ isset(@POST.pType) }}">
@@ -47,9 +47,8 @@
 				    <false>
 				       <select class="form-control" id="input-pType" name="pType">
 							<option id="XSS" value="XSS">XSS</option>
-							<option id="SQLi" value="SQLi">SQL Injection</option>
-							<option id="LFI" value="LFI">Local File Inclusion</option>
-							<option id="HTMLi" value="HTMLi">HTML Injection</option>
+							<option id="injection" value="Injection">Injection</option>
+							<option id="fi" value="file inclusion">File Inclusion</option>
 							<option id="Miscellaneous" value="Miscellaneous">Miscellaneous</option>
 						</select>
 				    </false>
@@ -57,6 +56,7 @@
                    
                 </div>
             </div>
+
 			<div class="form-group {{ @FLASH->getKey('error.model.payload.pCategory') }}">
                 <label for="input-pCategory" class="col-lg-2 control-label">Category*</label>
                 <div class="col-sm-3">
@@ -86,7 +86,7 @@
                     
                 </div>
             </div>
-              <div class="form-group {{ @FLASH->getKey('error.model.payload.pDescription') }}">
+             <div class="form-group {{ @FLASH->getKey('error.model.payload.pDescription') }}">
                 <label for="input-pDescription" class="col-lg-2 control-label">Description*</label>
                 <div class="col-sm-3">
                 <check if="{{ isset(@POST.payload) }}">

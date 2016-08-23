@@ -62,7 +62,7 @@ class Payload extends Mth3l3m3nt {
      */
 	 static public function countSQLi() {
         $payloads = new self;
-        return $payloads->count(array('pType = ?','SQLi'));
+        return $payloads->count(array('pType = ?','Injection'));
 		
     }
 
@@ -75,16 +75,7 @@ class Payload extends Mth3l3m3nt {
         return $payloads->count(array('pType = ?','XSS'));
 		
     }
-
-    /**
-     * Returns Count of all HTML Injection Payloads
-     * @return mixed
-     */
-	static public function countHTMLi() {
-        $payloads = new self;
-        return $payloads->count(array('pType = ?','HTMLi'));
-		
-    }
+    
 
     /**
      * Returns Count of All LFI Payloads
@@ -92,7 +83,7 @@ class Payload extends Mth3l3m3nt {
      */
 	static public function countLFI() {
         $payloads = new self;
-        return $payloads->count(array('pType = ?','LFI'));
+        return $payloads->count(array('pType = ?','file inclusion'));
 		
     }
 

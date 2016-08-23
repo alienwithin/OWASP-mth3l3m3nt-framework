@@ -45,7 +45,6 @@
 <F3:set payloads="{{\Model\Payload::countAll()}}"/>
 <F3:set payloadsSQLi="{{\Model\Payload::countSQLi()}}"/>
 <F3:set payloadsXSS="{{\Model\Payload::countXSS()}}"/>
-<F3:set payloadsHTMLi="{{\Model\Payload::countHTMLi()}}"/>
 <F3:set payloadsLFI="{{\Model\Payload::countLFI()}}"/>
 <F3:set payloadsMisc="{{\Model\Payload::countMisc()}}"/>
     <div id="comment-widget" class="panel {{@payloads>0?'panel-info':'panel-default'}}">
@@ -62,7 +61,7 @@
                     <script>
 
                         var pieData = {
-                            labels: ["SQL Injection", "Cross Site Scripting", "HTML Injection", "Local File Inclusion", "Miscellaneous"],
+                            labels: ["Injection", "Cross Site Scripting", "File Inclusion", "Miscellaneous"],
                             datasets: [
                                 {
                                     label: "Payload Dataset",
@@ -72,7 +71,7 @@
                                     pointStrokeColor: "#fff",
                                     pointHighlightFill: "#fff",
                                     pointHighlightStroke: "rgba(151,187,205,1)",
-                                    data: [{{ @payloadsSQLi }}, {{ @payloadsXSS }}, {{ @payloadsHTMLi }}, {{ @payloadsLFI }}, {{ @payloadsMisc }}]
+                                    data: [{{ @payloadsSQLi }}, {{ @payloadsXSS }}, {{ @payloadsLFI }}, {{ @payloadsMisc }}]
                                 }
                             ]
                         };
