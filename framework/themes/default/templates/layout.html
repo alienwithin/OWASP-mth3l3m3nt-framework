@@ -4,16 +4,19 @@
     <base href="{{@SCHEME.'://'.@HOST.@BASE.'/'}}"/>
     <meta charset="{{@ENCODING}}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="{{@UI}}ico/favicon.png">
+    <link rel="shortcut icon" href="{{@UI}}ico/favicon.ico">
     <title>{{@CONFIG.framework_title}} - Backend </title>
     <link href="{{@UI}}css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{@UI}}assets/css/style.css" rel="stylesheet">
     <link href="{{@UI}}css/datepicker.css" rel="stylesheet">
     <link href="{{@UI}}css/backend.css" rel="stylesheet">
+    <link href="{{@UI}}css/framework.css" rel="stylesheet">
 
 
     <script src="{{@UI}}editor/ckeditor.js"></script>
     <F3:check if="{{ isset(@ASSETS.CSS) }}">
     <F3:repeat group="{{ @ASSETS.CSS }}" value="{{ @path }}">
+    <link href="themes/default/assets/css/font-awesome.min.css" rel="stylesheet">
     <link href="{{@path}}" rel="stylesheet">
     </F3:repeat>
     </F3:check>
@@ -34,7 +37,7 @@
                 <span class="icon-bar"></span>
             </button>
           
-            <a class="navbar-brand" href="cnc/"><img src="framework/themes/default/images/mth3l3m3nt-small.png"/></a>
+            <a class="navbar-brand" href="cnc/"><img src="{{@UI}}images/omf2.svg" /></a>
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">

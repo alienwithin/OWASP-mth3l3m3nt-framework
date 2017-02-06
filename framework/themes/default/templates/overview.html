@@ -5,20 +5,18 @@
         <div class="panel-heading">
             <h3 class="panel-title">Dashboard</h3>
         </div>
-        <div class="panel-body">
+        <div class="panel-body icon_block">
             <p>Hey, {{ @BACKEND_USER.name }}. Welcome to the <strong>OWASP Mth3l3m3nt Framework v {{ @APP_VERSION }}</strong> </p>
             <div class="row" >
-                <div class="col-xs-12">
-                    <a href="cnc/websaccre" title="Web Utilities"><img src="{{@UI}}images/icons/Web-browser-icon.png" height="60px" width="60px" alt="Web Utilities" hspace="15"></a>
-                    <a href="cnc/payload" title="Payloads"><img src="{{@UI}}images/icons/virus-icon.png" height="60px" width="60px" alt="Payloads"  hspace="15"></a>
-                    <a href="cnc/webot" title="Web Bot"><img src="{{@UI}}images/icons/robot-network-icon.png" height="60px" width="60px" alt="Web Bot"  hspace="15"></a>
-                    <a href="cnc/lfi" title="LFI Exploits"><img src="{{@UI}}images/icons/Files-icon.png" height="60px" width="60px" alt="LFI Exploits"  hspace="15"></a>
-                </div>
-                <div class="col-xs-12">
-                    <a href="{{@BASE}}" title="Frontend" target="_blank"><img src="{{@UI}}images/icons/house-icon.png" height="60px" width="60px" alt="Frontend"  hspace="15"></a>
-                    <a href="cnc/user" title="User Manager"><img src="{{@UI}}images/icons/Office-Customer-Male-Light-icon.png" height="60px" width="60px" alt="User Manager"  hspace="15"></a>
-                    <a href="cnc/settings" title="Settings"><img src="{{@UI}}images/icons/Settings-icon.png" height="60px" width="60px" alt="Settings"  hspace="15"></a>
-                    <a href="cnc/leave" title="Logout"><img src="{{@UI}}images/icons/logout-icon.png" height="60px" width="60px" alt="Logout"  hspace="15"></a>
+                <div class="col-xs-12 icon_block_in">
+                    <a href="cnc/websaccre" title="Web Utilities"><i class="glyphicon glyphicon-cloud dropdown"></i></a>
+                    <a href="cnc/payload" title="Payloads"><i class="glyphicon glyphicon-tint"></i></a>
+                    <a href="cnc/webot" title="Web Bot"><i class="glyphicon glyphicon-screenshot dropdown"></i></a>
+                    <a href="cnc/lfi" title="LFI Exploits"><i class="fa fa-thumb-tack" aria-hidden="true"></i></a>
+                    <a href="{{@BASE}}" title="Frontend" target="_blank"><i class="glyphicon glyphicon-home"></i></a>
+                    <a href="cnc/user" title="User Manager"><i class="fa fa-user" aria-hidden="true"></i></a>
+                    <a href="cnc/settings" title="Settings"><i class="glyphicon glyphicon-wrench"></i></a>
+                    <a href="cnc/leave" title="Logout"><i class="glyphicon glyphicon-off"></i></a>
                 </div>
             </div>
 
@@ -31,13 +29,18 @@
             <h3 class="panel-title">User Information</h3>
         </div>
         <div class="panel-body">
-            <p><strong>Domain  </strong>  : <a href="{{@SCHEME.'://'.@HOST.'/'}}">{{@SCHEME.'://'.@HOST.@BASE.'/'}}</a></p>
-            <p><strong>IP  </strong>      : {{ @IP}}  </p>
-			<p><strong>Package</strong>: {{@PACKAGE}}</p>
-			<p><strong>Active DB Engine</strong>: {{@CONFIG.ACTIVE_DB}}</p>
-			<p><strong>Time Zone</strong>: {{ @TZ}}  </p>
-			<p><strong>User Agent</strong>: {{ @AGENT}}  </p>
-
+            <div class="row" >
+                <div class="col-xs-6">  
+                    <p><strong>Domain  </strong>  : <a href="{{@SCHEME.'://'.@HOST.'/'}}">{{@SCHEME.'://'.@HOST.@BASE.'/'}}</a></p>
+                    <p><strong>IP  </strong>      : {{ @IP}}  </p>
+        			<p><strong>Package</strong>: {{@PACKAGE}}</p>
+                </div>
+                <div class="col-xs-6">            
+        			<p><strong>Active DB Engine</strong>: {{@CONFIG.ACTIVE_DB}}</p>
+        			<p><strong>Time Zone</strong>: {{ @TZ}}  </p>
+        			<p><strong>User Agent</strong>: {{ @AGENT}}  </p>
+                </div>   
+            </div>     
         </div>
     </div>
 </div>
@@ -56,10 +59,7 @@
                 <true>
                     <canvas id="payload-chart" width="300" height="300"/>
 
-
-
                     <script>
-
                         var pieData = {
                             labels: ["Injection", "Cross Site Scripting", "File Inclusion", "Miscellaneous"],
                             datasets: [
@@ -80,10 +80,7 @@
                             var ctx = document.getElementById("payload-chart").getContext("2d");
                             window.myPie = new Chart(ctx).Radar(pieData);
                         };
-
-
                     </script>
-
                 </true>
                 <false>
                     <p>No Payloads Added</p>

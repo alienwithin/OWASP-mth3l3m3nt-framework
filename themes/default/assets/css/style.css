@@ -15,7 +15,7 @@ body {
 	background: #ffffff; 
 	margin: 0; 
 	height: 100%; 
-	color: #384452;
+	color: #000;
 	font-family: 'Lato', sans-serif;
 	font-weight: 400;
 	}
@@ -76,12 +76,17 @@ a:focus {
 	BOOTSTRAP MODIFICATIONS & TWEAKS
 ################################################################# */
 .navbar {
-	min-height: 70px;
-	padding-top: 10px;
+	min-height: 50px;
+	padding-top: 4px;
 	margin-bottom: 0px;
 }
 
+
 .navbar-brand {
+    float: left;
+    padding: 4px 10px;
+    font-size: 18px;
+    line-height: 20px;
 	font-family: 'Raleway', sans-serif;
 	font-weight: 900;
 }
@@ -91,27 +96,38 @@ a:focus {
 }
 
 .navbar-default .navbar-nav > li > a {
-	color: white;
+	color: #676767;
 	font-weight: 700;
 	font-size: 12px;
 }
 
 .navbar-default .navbar-nav > li > a:hover {
-	color: #00b3fe;
+	color: white;
 }
 
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-	color: #00b3fe;
+	color: white;
 	background-color: transparent;
 }
 
 .navbar-default {
-	background-color: #384452;
+	// background-color: #000000;
 	border-color: transparent;
+	background: #000 url(../img/pattern1.png); 
+}
+
+.dropdown-menu > li > a {
+    display: block;
+    padding: 12px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.42857143;
+    color: #333;
+    white-space: nowrap;
 }
 
 .dropdown-menu {
-	background: #384452;
+	background: #000000;
 }
 
 .dropdown-menu > li > a {
@@ -120,11 +136,17 @@ a:focus {
 	font-size: 12px;
 }
 
+.btn-default {
+    color: #fff;
+    background-color: rgb(100, 181, 29);
+    border-color: transparent;
+}
+
 .btn-theme {
-  color: #fff;
-  background-color: #384452;
-  border-color: #384452;
-  margin: 4px;
+    color: #000000;
+    background-color: transparent;
+    border-color: #cccccc;
+    margin: 4px;
 }
 .btn-theme:hover,
 .btn-theme:focus,
@@ -132,8 +154,8 @@ a:focus {
 .btn-theme.active,
 .open .dropdown-toggle.btn-theme {
   color: #fff;
-  background-color: #00b3fe;
-  border-color: #00b3fe;
+    background-color: #64b51d;
+    border-color: #64b51d;
 }
 
 .dmbutton:hover,
@@ -195,11 +217,16 @@ a:focus {
 ################################################################# */
 
 #headerwrap {
-	background-color: #000000;
-	min-height: 550px;
-	padding-top: 100px;
-	padding-bottom: 0px;
-	text-align: center;
+    // background-color: #000000;
+    min-height: 500px;
+    /* padding-top: 100px; */
+    padding-bottom: 0px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+	background: #000 url(../img/pattern1.png);    
 }
 
 #headerwrap h3, h5 {
@@ -218,14 +245,26 @@ a:focus {
 
 /* Payloads Wrap */
 #payloads {
-	margin-top: 100px;
-	margin-bottom: 80px;
+    margin-top: 20px;
+    margin-bottom: 40px;
 }
 
 #payloads i {
-	color: #00b3fe;
+	color: #64b51d;
 	font-size: 30px;
 	padding: 15px;
+}
+
+.blocks_A .block_A {
+    margin-bottom: 30px;
+}
+.blocks_A section {
+    box-shadow: 0px 0px 4px 0px #CCC;
+    background: #f9f9f9;
+    padding: 4px 30px;
+}
+.block_A h4 {
+    color: #000;
 }
 
 /* Portfolio Wrap */
@@ -277,14 +316,19 @@ a:focus {
 }
 
 /* Testimonials Wrap */
+div#twrap h4 {
+    color: #FFF;
+    font-weight: 100;
+    line-height: 1.6em;
+}
 #twrap {
 	background: url(../img/t-back.jpg) no-repeat center top;
 	margin-top: 0px;
-	padding-top:60px;
+	padding-top:80px;
 	text-align:center;
 	background-attachment: relative;
 	background-position: center center;
-	min-height: 450px;
+	min-height: 400px;
 	width: 100%;
 	
     -webkit-background-size: 100%;
@@ -303,6 +347,11 @@ a:focus {
 	color: white;
 	margin-bottom: 25px;
 }
+
+.block_A section p {
+    min-height: 50px;
+}
+
 
 #twrap p {
 	color: white;
@@ -324,27 +373,32 @@ a:focus {
 
 /* Footer */
 #footerwrap {
-	padding-top: 60px;
-	padding-bottom: 60px;
-	background: #384452;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: #64b51d;
 }
 
 #footerwrap p {
-	color: #bfc9d3;
+	color: #ffffff;
 }
 
 #footerwrap h4 {
-	color: white;
+    color: white;
+    margin-top: 20px;
 }
 
 #footerwrap i {
 	font-size: 30px;
-	color: #bfc9d3;
+	color: #FFF;
 	padding-right: 25px;
 }
 
 #footerwrap i:hover {
-	color: #00b3fe
+	color: #000000;
+}
+
+#footerwrap div#canvas-holder {
+    float: left;
 }
 
 /*	################################################################
@@ -447,4 +501,86 @@ csmall2 {
 .share i {
 	padding-right: 15px;
 	font-size: 18px;
+}
+
+/* 1.2 */
+section.box {
+    margin-bottom: 50px;
+}
+#headerwrap h3 {
+    font-size: 39px;
+    line-height: 1.8em;
+}
+
+
+
+/* Pagination */
+.pagination {
+    width: 100%;
+    text-align: center;
+}
+.pagination > li {
+    display: inline-block;
+    margin: 0px 1px;
+}
+.pagination > li > a, .pagination > li > span {
+    background-color: #fff;
+    border: 1px solid #d0d0d0;
+    border-radius: 100px !important;
+}
+.pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+    background-color: #64b51d;
+    border-color: #64b51d;
+}
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+    background-color: #64b51d;
+    border-color: #64b51d;
+}
+.pagination > li > a, .pagination > li > span {
+    color: #64b51d;
+}
+
+
+/* Main Search */
+.main_search {
+    padding: 30px;
+    background: #fbfbfb;
+}
+
+    padding: 3px;
+    border: solid 1px #E4E4E4;
+    border-radius: 6px;
+    background-color: #fff;
+}
+
+#custom-search-input input{
+    border: 0;
+    box-shadow: none;
+}
+
+#searchme input {
+    font-size: 1.8em;
+    color: #000;
+    padding: 30px;
+    box-shadow: none;
+    border-radius: 0px;
+    border: 3px solid #000;
+    border-right: 0px;
+}
+
+.stylish-input-group .input-group-addon {
+    background: white !important;
+    border: 3px solid #000;
+    font-size: 1.8em;
+    color: #000;
+    border-left: 0px;
+}
+.stylish-input-group .form-control{
+    border-right:0; 
+    box-shadow:0 0 0; 
+    border-color:#ccc;
+}
+.stylish-input-group button{
+    border:0;
+    background:transparent;
 }

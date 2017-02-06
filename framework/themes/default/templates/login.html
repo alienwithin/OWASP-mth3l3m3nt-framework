@@ -15,7 +15,7 @@
     <![endif]-->
 </head>
 
-<body>
+<body class="login_screen">
 
 <div class="container">
 
@@ -27,7 +27,7 @@
     </repeat>
             <div id="login-box" class="borderflow">
                 <div class="header clearfix">
-                    <a href="cnc/" ><img src="framework/themes/default/images/mth3l3m3nt-small.png"/></a>
+                    <a href="cnc/" ><img src="themes/default/assets/img/omf.png"/></a>                    
                 </div>
                 <form role="form" method="post" action="{{@CONFIG.ssl_backend?'https://'.@HOST.@BASE.'/login':'login'}}" id="login-form">
                     <div class="form-group">
@@ -38,7 +38,7 @@
                         <label class="control-label" for="inputPassword">Password</label>
                         <input type="password" class="form-control" id="inputPassword" name="password" />
                     </div>
-                    <button id="login-submit" type="submit" class="btn btn-default">Login</button>
+                    <button id="login-submit" type="submit" class="btn btn-primary">Login</button>
                 </form>
             </div>
 </div>
