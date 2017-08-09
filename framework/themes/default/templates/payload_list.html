@@ -2,7 +2,7 @@
 
 <div class="container">
 	<div class="row">
-<form action="/cnc/payload/search" method="GET">
+<form action="cnc/payload/search" method="GET">
            <div id="custom-search-input">
                             <div class="input-group col-md-12">
                                 <input type="text" class="  search-query form-control" placeholder="Search" name="term" />
@@ -20,30 +20,39 @@
 <F3:pagebrowser items="{{@content.total}}" src="templates/pagebrowser.html" limit="{{@content.limit}}" token-prefix="page-"/>
 <include href="templates/alert.html"/>
 
-<div class="solid">
-    <table class="table">
-        <thead>
-        <tr>
-            <th>Name</th>
-            <th>Type</th>
-   			<th>Category</th>
-            <th>Action</th>
-        </tr>
-        </thead>
-        <tbody>
         <F3:repeat group="{{ @content.subset }}" value="{{ @item }}">
         
-            <tr>
-                <td> <a href="cnc/payload/view/{{@item._id}}" class="">{{ @item.pName |esc}}</a></td>
-                <td>{{ @item.pType |esc}}</td>
-                <td>{{ @item.pCategory |esc}}</td>
-              
-                <td>
-                  <a href="cnc/payload/edit/{{@item._id}}" class="btn btn-sm btn-primary"><i class="glyphicon glyphicon-pencil"></i> Edit</a>
-                  <a href="cnc/payload/delete/{{@item._id}}" class="btn btn-sm btn-danger"><i class="glyphicon glyphicon-trash"></i> Delete</a>
-                </td>
-            </tr>
-        </F3:repeat>
-        </tbody>
-    </table>
+        <div class="payload-list-item solid">
+        <div class="row">
+            <div class="col-md-8">
+                <p class="title">{{ @item.pName |esc}}</p>
+            </div>
+            <div class="col-md-4">
+                <div class="pull-right">
+                    <div class="btn-group btn-group-sm">
+                        <a href="cnc/payload/view/{{@item._id}}" class="btn btn-default">
+                            <i class="glyphicon glyphicon-eye-open"></i> view
+                        </a>
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="cnc/payload/edit/{{@item._id}}"><i class="glyphicon glyphicon-pencil"></i> edit </a></li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="cnc/payload/delete/{{@item._id}}">
+                                    <i class="glyphicon glyphicon-trash"></i> delete
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+		<div class="meta">
+                <span class="author pull-left"><i class="glyphicon glyphicon-screenshot"></i> 
+				{{ @item.pCategory |esc}}</span>
+                <span><i class="glyphicon glyphicon-tint"></i> {{ @item.pType |esc}}</span>
+        </div>
 </div>
+        </F3:repeat>

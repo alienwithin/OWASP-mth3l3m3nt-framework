@@ -26,7 +26,6 @@
         <tr>
             <th>Title</th>
             <th>Type</th>
-			<th>Description</th>
 			<th>Actions</th>
         </tr>
         </thead>
@@ -35,7 +34,6 @@
             <tr>
                 <td>{{ @item.lTitle |esc}}</td>
                 <td>{{ @item.lType |esc}}</td>
-				<td><button type="button" class="btn btn-info btn-sm" data-toggle="tooltip" title="{{@item.lDescription}}" data-html="true">More Information</button></td>
                 <td>
               	  <a href="cnc/larfi/view/{{@item._id}}" class="btn btn-sm btn-default"><i class="glyphicon glyphicon-expand"></i> Exploit</a>
                   <a href="cnc/larfi/edit/{{@item._id}}" class="btn btn-sm btn-default"><i class="glyphicon glyphicon-pencil"></i> Edit</a>

@@ -3,10 +3,9 @@
 <div class="col-sm-6">
     <div class="panel panel-default">
         <div class="panel-heading">
-            <h3 class="panel-title">Dashboard</h3>
+            <h3 class="panel-title">Quick Actions</h3>
         </div>
         <div class="panel-body icon_block">
-            <p>Hey, {{ @BACKEND_USER.name }}. Welcome to the <strong>OWASP Mth3l3m3nt Framework v {{ @APP_VERSION }}</strong> </p>
             <div class="row" >
                 <div class="col-xs-12 icon_block_in">
                     <a href="cnc/websaccre" title="Web Utilities"><i class="glyphicon glyphicon-cloud dropdown"></i></a>
@@ -26,39 +25,33 @@
 <div class="col-sm-6">
     <div class="panel panel-default">
         <div class="panel-heading">
-            <h3 class="panel-title">User Information</h3>
+            <h3 class="panel-title">Package Information</h3>
         </div>
         <div class="panel-body">
             <div class="row" >
-                <div class="col-xs-6">  
+                <div class="col-xs-12">  
                     <p><strong>Domain  </strong>  : <a href="{{@SCHEME.'://'.@HOST.'/'}}">{{@SCHEME.'://'.@HOST.@BASE.'/'}}</a></p>
                     <p><strong>IP  </strong>      : {{ @IP}}  </p>
-        			<p><strong>Package</strong>: {{@PACKAGE}}</p>
-                </div>
-                <div class="col-xs-6">            
-        			<p><strong>Active DB Engine</strong>: {{@CONFIG.ACTIVE_DB}}</p>
-        			<p><strong>Time Zone</strong>: {{ @TZ}}  </p>
-        			<p><strong>User Agent</strong>: {{ @AGENT}}  </p>
-                </div>   
+        			<p><strong>Package</strong>: {{@PACKAGE}} v {{@APP_VERSION}}</p>
+					<p><strong>DB Engine</strong>: {{@CONFIG.ACTIVE_DB}}</p>
+                </div>  
             </div>     
         </div>
     </div>
-</div>
 </div>
 <F3:set payloads="{{\Model\Payload::countAll()}}"/>
 <F3:set payloadsSQLi="{{\Model\Payload::countSQLi()}}"/>
 <F3:set payloadsXSS="{{\Model\Payload::countXSS()}}"/>
 <F3:set payloadsLFI="{{\Model\Payload::countLFI()}}"/>
 <F3:set payloadsMisc="{{\Model\Payload::countMisc()}}"/>
-    <div id="comment-widget" class="panel {{@payloads>0?'panel-info':'panel-default'}}">
+<div class="col-sm-6">
+    <div class="panel panel-default">
         <div class="panel-heading">
             <h3 class="panel-title">Payloads ({{ @payloads }})</h3>
         </div>
-        <div class="panel-body">
             <F3:check if="{{ @payloads > 0 }}">
                 <true>
                     <canvas id="payload-chart" width="300" height="300"/>
-
                     <script>
                         var pieData = {
                             labels: ["Injection", "Cross Site Scripting", "File Inclusion", "Miscellaneous"],
@@ -86,9 +79,28 @@
                     <p>No Payloads Added</p>
                 </false>
             </F3:check>
+    </div>
+</div>
+<div class="col-sm-6">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">User Information</h3>
+        </div>
+        <div class="panel-body">
+            <div class="row" >
+                <div class="col-xs-12">  
+                    <p><strong>User's Name  </strong>  : {{ @BACKEND_USER.name }}</p>
+                    <p><strong>IP  </strong>      : {{ @IP}}  </p>
+        			<p><strong>User Agent</strong>: {{ @AGENT}}  </p>
+					<p><strong>Time Zone</strong>: {{ @TZ}}  </p>
+                </div>  
+            </div>     
         </div>
     </div>
 </div>
+</div>
 
-
-  
+    <div id="comment-widget" class="panel {{@payloads>0?'panel-info':'panel-default'}}">
+        
+    </div>
+</div>
