@@ -1,7 +1,0 @@
-{
-    "559a7898201d71.89216834": {
-        "zName": "Unique Name for Your shell",
-        "zLoc": "http:\/\/path-to-your\/shell-script.extension",
-        "zParam": "parameter-it-receives"
-    }
-}
