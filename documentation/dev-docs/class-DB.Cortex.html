@@ -1,0 +1,3685 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class DB\Cortex | OMF 1.2 Documentation</title>
+
+	<link rel="stylesheet" href="resources/style.css?e99947befd7bf673c6b43ff75e9e0f170c88a60e">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+				<li>
+					<a href="namespace-Controller.html">
+						Controller					</a>
+
+						</li>
+				<li class="active">
+					<a href="namespace-DB.html">
+						DB<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-DB.Jig.html">
+						Jig					</a>
+
+						</li>
+				<li>
+					<a href="namespace-DB.Mongo.html">
+						Mongo					</a>
+
+						</li>
+				<li>
+					<a href="namespace-DB.SQL.html">
+						SQL					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="namespace-Model.html">
+						Model					</a>
+
+						</li>
+				<li>
+					<a href="namespace-None.html">
+						None					</a>
+
+						</li>
+				<li>
+					<a href="namespace-Template.html">
+						Template<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Template.Tags.html">
+						Tags					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="namespace-View.html">
+						View					</a>
+
+						</li>
+				<li>
+					<a href="namespace-Web.html">
+						Web<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Web.Google.html">
+						Google					</a>
+
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-DB.Cortex.html">Cortex</a></li>
+				<li><a href="class-DB.CortexCollection.html">CortexCollection</a></li>
+				<li><a href="class-DB.CortexQueryParser.html">CortexQueryParser</a></li>
+				<li><a href="class-DB.Cursor.html">Cursor</a></li>
+				<li><a href="class-DB.Jig.html">Jig</a></li>
+				<li><a href="class-DB.Mongo.html">Mongo</a></li>
+				<li><a href="class-DB.SQL.html">SQL</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-DB.html" title="Summary of DB"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class Cortex</h1>
+
+
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-Magic.html"><span>Magic</span></a>
+			
+			 implements 
+<span>ArrayAccess</span>
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+			<a href="class-DB.Cursor.html"><span>DB\Cursor</span></a>
+			
+			 implements 
+<span>IteratorAggregate</span>
+			
+			
+		</dd>
+		<dd style="padding-left:60px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>DB\Cortex</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+	<div>
+		<h4>Direct known subclasses</h4>
+			<a href="class-Model.Mth3l3m3nt.html">Model\Mth3l3m3nt</a>
+	</div>
+
+	<div>
+		<h4>Indirect known subclasses</h4>
+			<a href="class-Model.Payload.html">Model\Payload</a>, 
+			<a href="class-Model.User.html">Model\User</a>, 
+			<a href="class-Model.Webot.html">Model\Webot</a>
+	</div>
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-DB.html">DB</a><br>
+		
+
+			<b>Located at</b> <a href="source-class-DB.Cortex.html#29-1981" title="Go to source code">lib/db/cortex.php</a>
+		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-DB.Cortex.html#89-122" title="Go to source code">__construct</a>( <span>null|object <var>$db</var> = <span class="php-keyword1">NULL</span></span>, <span>string <var>$table</var> = <span class="php-keyword1">NULL</span></span>, <span>null|boolean <var>$fluid</var> = <span class="php-keyword1">NULL</span></span>, <span>integer <var>$ttl</var> = <span class="php-num">0</span></span> )</code>
+
+		<div class="description short">
+			<p>init the ORM, based on given DBS</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>init the ORM, based on given DBS</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$db</var></dt>
+					<dd></dd>
+					<dt><var>$table</var></dt>
+					<dd></dd>
+					<dt><var>$fluid</var></dt>
+					<dd></dd>
+					<dt><var>$ttl</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="initMapper" id="_initMapper">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_initMapper">#</a>
+		<code><a href="source-class-DB.Cortex.html#124-156" title="Go to source code">initMapper</a>( )</code>
+
+		<div class="description short">
+			<p>create mapper instance</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>create mapper instance</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="fields" id="_fields">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_fields">#</a>
+		<code><a href="source-class-DB.Cortex.html#158-192" title="Go to source code">fields</a>( <span>array <var>$fields</var> = <span class="php-keyword1">array</span>()</span>, <span>boolean <var>$exclude</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			<p>get fields or set whitelist / blacklist of fields</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>get fields or set whitelist / blacklist of fields</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$fields</var></dt>
+					<dd></dd>
+					<dt><var>$exclude</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setFieldConfiguration" id="_setFieldConfiguration">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setFieldConfiguration">#</a>
+		<code><a href="source-class-DB.Cortex.html#194-210" title="Go to source code">setFieldConfiguration</a>( <span>array <var>$config</var></span> )</code>
+
+		<div class="description short">
+			<p>set model definition
+config example:
+ array('title' => array(
+         'type' => \DB\SQL\Schema::DT_TEXT,
+         'default' => 'new record title',
+         'nullable' => true
+         )
+       '...' => ...
+ )</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>set model definition
+config example: array('title' => array( 'type' => \DB\SQL\Schema::DT_TEXT, 'default' => 'new record title', 'nullable' => true ) '...' => ... )</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$config</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getFieldConfiguration" id="_getFieldConfiguration">
+
+		<td class="attributes"><code>
+			 public 
+
+			array|null
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getFieldConfiguration">#</a>
+		<code><a href="source-class-DB.Cortex.html#212-219" title="Go to source code">getFieldConfiguration</a>( )</code>
+
+		<div class="description short">
+			<p>returns model field conf array</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>returns model field conf array</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					array|null
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="resolveConfiguration" id="_resolveConfiguration">
+
+		<td class="attributes"><code>
+			 public static
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_resolveConfiguration">#</a>
+		<code><a href="source-class-DB.Cortex.html#221-239" title="Go to source code">resolveConfiguration</a>( )</code>
+
+		<div class="description short">
+			<p>kick start to just fetch the config</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>kick start to just fetch the config</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					array
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="addToCollection" id="_addToCollection">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_addToCollection">#</a>
+		<code><a href="source-class-DB.Cortex.html#241-247" title="Go to source code">addToCollection</a>( <span><code><a href="class-DB.CortexCollection.html">DB\CortexCollection</a></code> <var>$cx</var></span> )</code>
+
+		<div class="description short">
+			<p>give this model a reference to the collection it is part of</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>give this model a reference to the collection it is part of</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cx</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getCollection" id="_getCollection">
+
+		<td class="attributes"><code>
+			 protected 
+
+			<code><a href="class-DB.CortexCollection.html">DB\CortexCollection</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getCollection">#</a>
+		<code><a href="source-class-DB.Cortex.html#249-257" title="Go to source code">getCollection</a>( )</code>
+
+		<div class="description short">
+			<p>returns the collection where this model lives in</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>returns the collection where this model lives in</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-DB.CortexCollection.html">DB\CortexCollection</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getTable" id="_getTable">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getTable">#</a>
+		<code><a href="source-class-DB.Cortex.html#259-268" title="Go to source code">getTable</a>( )</code>
+
+		<div class="description short">
+			<p>returns model table name</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>returns model table name</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setup" id="_setup">
+
+		<td class="attributes"><code>
+			 public static
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setup">#</a>
+		<code><a href="source-class-DB.Cortex.html#270-369" title="Go to source code">setup</a>( <span> <var>$db</var> = <span class="php-keyword1">null</span></span>, <span> <var>$table</var> = <span class="php-keyword1">null</span></span>, <span> <var>$fields</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>setup / update table schema</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>setup / update table schema</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$db</var></dt>
+					<dd></dd>
+					<dt><var>$table</var></dt>
+					<dd></dd>
+					<dt><var>$fields</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setdown" id="_setdown">
+
+		<td class="attributes"><code>
+			 public static
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setdown">#</a>
+		<code><a href="source-class-DB.Cortex.html#371-427" title="Go to source code">setdown</a>( <span>null <var>$db</var> = <span class="php-keyword1">null</span></span>, <span>null <var>$table</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>erase all model data, handle with care</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>erase all model data, handle with care</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$db</var></dt>
+					<dd></dd>
+					<dt><var>$table</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getMMTableName" id="_getMMTableName">
+
+		<td class="attributes"><code>
+			 protected static
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getMMTableName">#</a>
+		<code><a href="source-class-DB.Cortex.html#429-454" title="Go to source code">getMMTableName</a>( <span>string <var>$ftable</var></span>, <span>string <var>$fkey</var></span>, <span>string <var>$ptable</var></span>, <span>string <var>$pkey</var></span>, <span>null|array <var>$fConf</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>computes the m:m table name</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>computes the m:m table name</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$ftable</var></dt>
+					<dd>foreign table</dd>
+					<dt><var>$fkey</var></dt>
+					<dd>foreign key</dd>
+					<dt><var>$ptable</var></dt>
+					<dd>own table</dd>
+					<dt><var>$pkey</var></dt>
+					<dd>own key</dd>
+					<dt><var>$fConf</var></dt>
+					<dd>foreign conf [class,key]</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="resolveRelationConf" id="_resolveRelationConf">
+
+		<td class="attributes"><code>
+			 protected static
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_resolveRelationConf">#</a>
+		<code><a href="source-class-DB.Cortex.html#456-504" title="Go to source code">resolveRelationConf</a>( <span> <var>$field</var></span> )</code>
+
+		<div class="description short">
+			<p>resolve relation field types</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>resolve relation field types</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$field</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="afind" id="_afind">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_afind">#</a>
+		<code><a href="source-class-DB.Cortex.html#506-518" title="Go to source code">afind</a>( <span>null <var>$filter</var> = <span class="php-keyword1">NULL</span></span>, <span>array <var>$options</var> = <span class="php-keyword1">NULL</span></span>, <span>integer <var>$ttl</var> = <span class="php-num">0</span></span>, <span>integer <var>$rel_depths</var> = <span class="php-num">1</span></span> )</code>
+
+		<div class="description short">
+			<p>Return an array of result arrays matching criteria</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Return an array of result arrays matching criteria</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$filter</var></dt>
+					<dd></dd>
+					<dt><var>$options</var></dt>
+					<dd></dd>
+					<dt><var>$ttl</var></dt>
+					<dd></dd>
+					<dt><var>$rel_depths</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="find" id="_find">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-DB.CortexCollection.html">DB\CortexCollection</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_find">#</a>
+		<code><a href="source-class-DB.Cortex.html#520-574" title="Go to source code">find</a>( <span>array|null <var>$filter</var> = <span class="php-keyword1">NULL</span></span>, <span>array <var>$options</var> = <span class="php-keyword1">NULL</span></span>, <span>integer <var>$ttl</var> = <span class="php-num">0</span></span> )</code>
+
+		<div class="description short">
+			<p>Return an array of objects matching criteria</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Return an array of objects matching criteria</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$filter</var></dt>
+					<dd></dd>
+					<dt><var>$options</var></dt>
+					<dd></dd>
+					<dt><var>$ttl</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-DB.CortexCollection.html">DB\CortexCollection</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="filteredFind" id="_filteredFind">
+
+		<td class="attributes"><code>
+			 protected 
+
+			array|false
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_filteredFind">#</a>
+		<code><a href="source-class-DB.Cortex.html#576-779" title="Go to source code">filteredFind</a>( <span>array <var>$filter</var> = <span class="php-keyword1">NULL</span></span>, <span>array <var>$options</var> = <span class="php-keyword1">NULL</span></span>, <span>integer <var>$ttl</var> = <span class="php-num">0</span></span>, <span>boolean <var>$count</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			<p>wrapper for custom find queries</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>wrapper for custom find queries</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$filter</var></dt>
+					<dd></dd>
+					<dt><var>$options</var></dt>
+					<dd></dd>
+					<dt><var>$ttl</var></dt>
+					<dd></dd>
+					<dt><var>$count</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array|false<br>array of underlying cursor objects
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="load" id="_load">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-DB.Cortex.html">DB\Cortex</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_load">#</a>
+		<code><a href="source-class-DB.Cortex.html#781-800" title="Go to source code">load</a>( <span>null <var>$filter</var> = <span class="php-keyword1">NULL</span></span>, <span>array <var>$options</var> = <span class="php-keyword1">NULL</span></span>, <span>integer <var>$ttl</var> = <span class="php-num">0</span></span> )</code>
+
+		<div class="description short">
+			<p>Retrieve first object that satisfies criteria</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Retrieve first object that satisfies criteria</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$filter</var></dt>
+					<dd></dd>
+					<dt><var>$options</var></dt>
+					<dd></dd>
+					<dt><var>$ttl</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-DB.Cortex.html">DB\Cortex</a></code>
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-DB.Cursor.html#_load">DB\Cursor::load()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="has" id="_has">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_has">#</a>
+		<code><a href="source-class-DB.Cortex.html#802-818" title="Go to source code">has</a>( <span>string <var>$key</var></span>, <span>array <var>$filter</var></span>, <span>null <var>$options</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>add has-conditional filter to next find call</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>add has-conditional filter to next find call</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd></dd>
+					<dt><var>$filter</var></dt>
+					<dd></dd>
+					<dt><var>$options</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<br>$this
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_hasRefsIn" id="__hasRefsIn">
+
+		<td class="attributes"><code>
+			 protected 
+
+			array|false
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__hasRefsIn">#</a>
+		<code><a href="source-class-DB.Cortex.html#820-843" title="Go to source code">_hasRefsIn</a>( <span>string <var>$key</var></span>, <span>array <var>$filter</var></span>, <span>array <var>$options</var></span>, <span>integer <var>$ttl</var> = <span class="php-num">0</span></span> )</code>
+
+		<div class="description short">
+			<p>return IDs of records that has a linkage to this mapper</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>return IDs of records that has a linkage to this mapper</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd>relation field</dd>
+					<dt><var>$filter</var></dt>
+					<dd>condition for foreign records</dd>
+					<dt><var>$options</var></dt>
+					<dd>filter options for foreign records</dd>
+					<dt><var>$ttl</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array|false
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_hasRefsInMM" id="__hasRefsInMM">
+
+		<td class="attributes"><code>
+			 protected 
+
+			array|false
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__hasRefsInMM">#</a>
+		<code><a href="source-class-DB.Cortex.html#845-874" title="Go to source code">_hasRefsInMM</a>( <span>string <var>$key</var></span>, <span>array <var>$filter</var></span>, <span>array <var>$options</var></span>, <span>integer <var>$ttl</var> = <span class="php-num">0</span></span> )</code>
+
+		<div class="description short">
+			<p>return IDs of own mappers that match the given relation filter on pivot tables</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>return IDs of own mappers that match the given relation filter on pivot tables</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd></dd>
+					<dt><var>$filter</var></dt>
+					<dd></dd>
+					<dt><var>$options</var></dt>
+					<dd></dd>
+					<dt><var>$ttl</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array|false
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_hasJoinMM_sql" id="__hasJoinMM_sql">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__hasJoinMM_sql">#</a>
+		<code><a href="source-class-DB.Cortex.html#876-895" title="Go to source code">_hasJoinMM_sql</a>( <span> <var>$key</var></span>, <span> <var>$hasCond</var></span>, <span> <var>&amp; $filter</var></span>, <span> <var>&amp; $options</var></span> )</code>
+
+		<div class="description short">
+			<p>build query for SQL pivot table join and merge conditions</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>build query for SQL pivot table join and merge conditions</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_hasJoin_sql" id="__hasJoin_sql">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__hasJoin_sql">#</a>
+		<code><a href="source-class-DB.Cortex.html#897-910" title="Go to source code">_hasJoin_sql</a>( <span> <var>$key</var></span>, <span> <var>$table</var></span>, <span> <var>$cond</var></span>, <span> <var>&amp; $filter</var></span>, <span> <var>&amp; $options</var></span> )</code>
+
+		<div class="description short">
+			<p>build query for single SQL table join and merge conditions</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>build query for single SQL table join and merge conditions</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_sql_left_join" id="__sql_left_join">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__sql_left_join">#</a>
+		<code><a href="source-class-DB.Cortex.html#912-922" title="Go to source code">_sql_left_join</a>( <span> <var>$skey</var></span>, <span> <var>$sTable</var></span>, <span> <var>$fkey</var></span>, <span> <var>$fTable</var></span> )</code>
+
+		<div class="description short">
+			<p>assemble SQL join query string</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>assemble SQL join query string</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_sql_mergeRelCondition" id="__sql_mergeRelCondition">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__sql_mergeRelCondition">#</a>
+		<code><a href="source-class-DB.Cortex.html#924-948" title="Go to source code">_sql_mergeRelCondition</a>( <span>array <var>$cond</var></span>, <span>string <var>$table</var></span>, <span>array <var>&amp; $filter</var></span>, <span>array <var>&amp; $options</var></span> )</code>
+
+		<div class="description short">
+			<p>merge condition of relation with current condition</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>merge condition of relation with current condition</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cond</var></dt>
+					<dd>condition of related model</dd>
+					<dt><var>$table</var></dt>
+					<dd>table of related model</dd>
+					<dt><var>$filter</var></dt>
+					<dd>current filter to merge with</dd>
+					<dt><var>$options</var></dt>
+					<dd>current options to merge with</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_sql_quoteCondition" id="__sql_quoteCondition">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__sql_quoteCondition">#</a>
+		<code><a href="source-class-DB.Cortex.html#950-960" title="Go to source code">_sql_quoteCondition</a>( <span> <var>$cond</var></span>, <span> <var>$table</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="filter" id="_filter">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_filter">#</a>
+		<code><a href="source-class-DB.Cortex.html#962-973" title="Go to source code">filter</a>( <span>string <var>$key</var></span>, <span>array <var>$filter</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$option</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>add filter for loading related models</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>add filter for loading related models</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd></dd>
+					<dt><var>$filter</var></dt>
+					<dd></dd>
+					<dt><var>$option</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<br>$this
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="clearFilter" id="_clearFilter">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_clearFilter">#</a>
+		<code><a href="source-class-DB.Cortex.html#975-985" title="Go to source code">clearFilter</a>( <span>null|string <var>$key</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>removes one or all relation filter</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>removes one or all relation filter</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="mergeWithRelFilter" id="_mergeWithRelFilter">
+
+		<td class="attributes"><code>
+			 protected 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_mergeWithRelFilter">#</a>
+		<code><a href="source-class-DB.Cortex.html#987-1003" title="Go to source code">mergeWithRelFilter</a>( <span>string <var>$key</var></span>, <span>array <var>$crit</var></span> )</code>
+
+		<div class="description short">
+			<p>merge the relation filter to the query criteria if it exists</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>merge the relation filter to the query criteria if it exists</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd></dd>
+					<dt><var>$crit</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getRelFilterOption" id="_getRelFilterOption">
+
+		<td class="attributes"><code>
+			 protected 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getRelFilterOption">#</a>
+		<code><a href="source-class-DB.Cortex.html#1005-1015" title="Go to source code">getRelFilterOption</a>( <span>string <var>$key</var></span> )</code>
+
+		<div class="description short">
+			<p>returns the option condition for a relation filter, if defined</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>returns the option condition for a relation filter, if defined</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>null
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="erase" id="_erase">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_erase">#</a>
+		<code><a href="source-class-DB.Cortex.html#1017-1037" title="Go to source code">erase</a>( <span> <var>$filter</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Delete object/s and reset ORM</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Delete object/s and reset ORM</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$filter</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-DB.Cursor.html#_erase">DB\Cursor::erase()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="save" id="_save">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_save">#</a>
+		<code><a href="source-class-DB.Cortex.html#1039-1099" title="Go to source code">save</a>( )</code>
+
+		<div class="description short">
+			<p>Save mapped record</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Save mapped record</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-DB.Cursor.html#_save">DB\Cursor::save()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="count" id="_count">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_count">#</a>
+		<code><a href="source-class-DB.Cortex.html#1101-1113" title="Go to source code">count</a>( <span>null <var>$filter</var> = <span class="php-keyword1">NULL</span></span>, <span>integer <var>$ttl</var> = <span class="php-num">60</span></span> )</code>
+
+		<div class="description short">
+			<p>Count records that match criteria</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Count records that match criteria</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$filter</var></dt>
+					<dd></dd>
+					<dt><var>$ttl</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="loaded" id="_loaded">
+
+		<td class="attributes"><code>
+			 public 
+
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_loaded">#</a>
+		<code><a href="source-class-DB.Cortex.html#1115-1121" title="Go to source code">loaded</a>( )</code>
+
+		<div class="description short">
+			<p>Count records that are currently loaded</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Count records that are currently loaded</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					integer
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-DB.Cursor.html#_loaded">DB\Cursor::loaded()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="countRel" id="_countRel">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_countRel">#</a>
+		<code><a href="source-class-DB.Cortex.html#1123-1199" title="Go to source code">countRel</a>( <span> <var>$key</var></span> )</code>
+
+		<div class="description short">
+			<p>add a virtual field that counts occurring relations</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>add a virtual field that counts occurring relations</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_mongo_addGroup" id="__mongo_addGroup">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__mongo_addGroup">#</a>
+		<code><a href="source-class-DB.Cortex.html#1201-1216" title="Go to source code">_mongo_addGroup</a>( <span> <var>$opt</var></span> )</code>
+
+		<div class="description short">
+			<p>merge mongo group options array</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>merge mongo group options array</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$opt</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set" id="_set">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set">#</a>
+		<code><a href="source-class-DB.Cortex.html#1218-1342" title="Go to source code">set</a>( <span> <var>$key</var></span>, <span> <var>$val</var></span> )</code>
+
+		<div class="description short">
+			<p>Bind value to key</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Bind value to key</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd>string</dd>
+					<dt><var>$val</var></dt>
+					<dd>mixed</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="emit" id="_emit">
+
+		<td class="attributes"><code>
+			 protected 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_emit">#</a>
+		<code><a href="source-class-DB.Cortex.html#1344-1365" title="Go to source code">emit</a>( <span> <var>$event</var></span>, <span> <var>$val</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>call custom field handlers</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>call custom field handlers</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$event</var></dt>
+					<dd></dd>
+					<dt><var>$val</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onset" id="_onset">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onset">#</a>
+		<code><a href="source-class-DB.Cortex.html#1367-1374" title="Go to source code">onset</a>( <span> <var>$key</var></span>, <span> <var>$func</var></span> )</code>
+
+		<div class="description short">
+			<p>Define a custom field setter</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Define a custom field setter</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd></dd>
+					<dt><var>$func</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onget" id="_onget">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onget">#</a>
+		<code><a href="source-class-DB.Cortex.html#1376-1383" title="Go to source code">onget</a>( <span> <var>$key</var></span>, <span> <var>$func</var></span> )</code>
+
+		<div class="description short">
+			<p>Define a custom field getter</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Define a custom field getter</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd></dd>
+					<dt><var>$func</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="virtual" id="_virtual">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed|null
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_virtual">#</a>
+		<code><a href="source-class-DB.Cortex.html#1385-1393" title="Go to source code">virtual</a>( <span>string <var>$key</var></span>, <span>mixed|callable <var>$val</var></span> )</code>
+
+		<div class="description short">
+			<p>virtual mapper field setter</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>virtual mapper field setter</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd></dd>
+					<dt><var>$val</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed|null
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get" id="_get">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed
+			&amp;
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get">#</a>
+		<code><a href="source-class-DB.Cortex.html#1395-1643" title="Go to source code">get</a>( <span>string <var>$key</var></span>, <span>boolean <var>$raw</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			<p>Retrieve contents of key</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Retrieve contents of key</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd></dd>
+					<dt><var>$raw</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getForeignKeysArray" id="_getForeignKeysArray">
+
+		<td class="attributes"><code>
+			 protected 
+
+			array|<code><a href="class-DB.Cortex.html">DB\Cortex</a></code>|null|object
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getForeignKeysArray">#</a>
+		<code><a href="source-class-DB.Cortex.html#1645-1691" title="Go to source code">getForeignKeysArray</a>( <span> <var>$val</var></span>, <span> <var>$rel_field</var></span>, <span> <var>$key</var></span> )</code>
+
+		<div class="description short">
+			<p>find the ID values of given relation collection</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>find the ID values of given relation collection</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$val</var></dt>
+					<dd>string|array|object|bool</dd>
+					<dt><var>$rel_field</var></dt>
+					<dd>string</dd>
+					<dt><var>$key</var></dt>
+					<dd>string</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array|<code><a href="class-DB.Cortex.html">DB\Cortex</a></code>|null|object
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getRelInstance" id="_getRelInstance">
+
+		<td class="attributes"><code>
+			 protected 
+
+			<code><a href="class-DB.Cortex.html">DB\Cortex</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getRelInstance">#</a>
+		<code><a href="source-class-DB.Cortex.html#1693-1723" title="Go to source code">getRelInstance</a>( <span>string <var>$model</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$relConf</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$key</var> = <span class="php-quote">''</span></span> )</code>
+
+		<div class="description short">
+			<p>creates and caches related mapper objects</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>creates and caches related mapper objects</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$model</var></dt>
+					<dd></dd>
+					<dt><var>$relConf</var></dt>
+					<dd></dd>
+					<dt><var>$key</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-DB.Cortex.html">DB\Cortex</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="cast" id="_cast">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_cast">#</a>
+		<code><a href="source-class-DB.Cortex.html#1725-1789" title="Go to source code">cast</a>( <span>boolean|<code><a href="class-DB.Cortex.html">DB\Cortex</a></code> <var>$obj</var> = <span class="php-keyword1">NULL</span></span>, <span>boolean|integer <var>$rel_depths</var> = <span class="php-num">1</span></span> )</code>
+
+		<div class="description short">
+			<p>Return fields of mapper object as an associative array</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Return fields of mapper object as an associative array</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$obj</var></dt>
+					<dd></dd>
+					<dt><var>$rel_depths</var></dt>
+					<dd>depths to resolve relations</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="castField" id="_castField">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_castField">#</a>
+		<code><a href="source-class-DB.Cortex.html#1791-1808" title="Go to source code">castField</a>( <span>string|array <var>$key</var></span>, <span>integer <var>$rel_depths</var> = <span class="php-num">0</span></span> )</code>
+
+		<div class="description short">
+			<p>cast a related collection of mappers</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>cast a related collection of mappers</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd>array of mapper objects, or field name</dd>
+					<dt><var>$rel_depths</var></dt>
+					<dd>depths to resolve relations</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>array of associative arrays
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="factory" id="_factory">
+
+		<td class="attributes"><code>
+			 protected 
+
+			<code><a href="class-DB.Cortex.html">DB\Cortex</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_factory">#</a>
+		<code><a href="source-class-DB.Cortex.html#1810-1829" title="Go to source code">factory</a>( <span><code><a href="class-DB.Cursor.html">DB\Cursor</a></code>|array <var>$mapper</var></span> )</code>
+
+		<div class="description short">
+			<p>wrap result mapper</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>wrap result mapper</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$mapper</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-DB.Cortex.html">DB\Cortex</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="dry" id="_dry">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_dry">#</a>
+		<code><a href="source-class-DB.Cortex.html#1831-1833" title="Go to source code">dry</a>( )</code>
+
+		<div class="description short">
+			<p>Return TRUE if current cursor position is not mapped to any record</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Return TRUE if current cursor position is not mapped to any record</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-DB.Cursor.html#_dry">DB\Cursor::dry()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="copyfrom" id="_copyfrom">
+
+		<td class="attributes"><code>
+			 public 
+
+			null
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_copyfrom">#</a>
+		<code><a href="source-class-DB.Cortex.html#1835-1862" title="Go to source code">copyfrom</a>( <span>string|array <var>$key</var></span>, <span>callable|array|string <var>$fields</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>hydrate the mapper from hive key or given array</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>hydrate the mapper from hive key or given array</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd></dd>
+					<dt><var>$fields</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					null
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="copyto" id="_copyto">
+
+		<td class="attributes"><code>
+			 public 
+
+			null|
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_copyto">#</a>
+		<code><a href="source-class-DB.Cortex.html#1864-1872" title="Go to source code">copyto</a>( <span>string <var>$key</var></span>, <span>integer <var>$relDepth</var> = <span class="php-num">0</span></span> )</code>
+
+		<div class="description short">
+			<p>copy mapper values into hive key</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>copy mapper values into hive key</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd>the hive key to copy into</dd>
+					<dt><var>$relDepth</var></dt>
+					<dd>the depth of relations to resolve</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					null|
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="skip" id="_skip">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_skip">#</a>
+		<code><a href="source-class-DB.Cortex.html#1874-1881" title="Go to source code">skip</a>( <span> <var>$ofs</var> = <span class="php-num">1</span></span> )</code>
+
+		<div class="description short">
+			<p>Map to nth record relative to current cursor position</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Map to nth record relative to current cursor position</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$ofs</var></dt>
+					<dd>int</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-DB.Cursor.html#_skip">DB\Cursor::skip()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="first" id="_first">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_first">#</a>
+		<code><a href="source-class-DB.Cortex.html#1883-1888" title="Go to source code">first</a>( )</code>
+
+		<div class="description short">
+			<p>Map to first record in cursor</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Map to first record in cursor</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-DB.Cursor.html#_first">DB\Cursor::first()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="last" id="_last">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_last">#</a>
+		<code><a href="source-class-DB.Cortex.html#1890-1895" title="Go to source code">last</a>( )</code>
+
+		<div class="description short">
+			<p>Map to last record in cursor</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Map to last record in cursor</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-DB.Cursor.html#_last">DB\Cursor::last()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="reset" id="_reset">
+
+		<td class="attributes"><code>
+			 public 
+
+			null|
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_reset">#</a>
+		<code><a href="source-class-DB.Cortex.html#1897-1920" title="Go to source code">reset</a>( <span>boolean <var>$mapper</var> = <span class="php-keyword1">true</span></span> )</code>
+
+		<div class="description short">
+			<p>reset and re-initialize the mapper</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>reset and re-initialize the mapper</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$mapper</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					null|
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-DB.Cursor.html#_reset">DB\Cursor::reset()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="exists" id="_exists">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_exists">#</a>
+		<code><a href="source-class-DB.Cortex.html#1922-1933" title="Go to source code">exists</a>( <span>string <var>$key</var></span>, <span>boolean <var>$relField</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			<p>check if a certain field exists in the mapper or
+or is a virtual relation field</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>check if a certain field exists in the mapper or
+or is a virtual relation field</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd></dd>
+					<dt><var>$relField</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="clear" id="_clear">
+
+		<td class="attributes"><code>
+			 public 
+
+			null|
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_clear">#</a>
+		<code><a href="source-class-DB.Cortex.html#1935-1945" title="Go to source code">clear</a>( <span>string <var>$key</var></span> )</code>
+
+		<div class="description short">
+			<p>clear any mapper field or relation</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>clear any mapper field or relation</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					null|
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="insert" id="_insert">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_insert">#</a>
+		<code><a href="source-class-DB.Cortex.html#1947-1954" title="Go to source code">insert</a>( )</code>
+
+		<div class="description short">
+			<p>Insert new record</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Insert new record</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					array
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="update" id="_update">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_update">#</a>
+		<code><a href="source-class-DB.Cortex.html#1956-1963" title="Go to source code">update</a>( )</code>
+
+		<div class="description short">
+			<p>Update current record</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Update current record</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					array
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="dbtype" id="_dbtype">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_dbtype">#</a>
+		<code><a href="source-class-DB.Cortex.html#1965-1967" title="Go to source code">dbtype</a>( )</code>
+
+		<div class="description short">
+			<p>Return database type</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Return database type</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__destruct" id="___destruct">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___destruct">#</a>
+		<code><a href="source-class-DB.Cortex.html#1969-1971" title="Go to source code">__destruct</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__clone" id="___clone">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___clone">#</a>
+		<code><a href="source-class-DB.Cortex.html#1973-1975" title="Go to source code">__clone</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getiterator" id="_getiterator">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getiterator">#</a>
+		<code><a href="source-class-DB.Cortex.html#1977-1980" title="Go to source code">getiterator</a>( )</code>
+
+		<div class="description short">
+			<p>Get cursor's equivalent external iterator
+Causes a fatal error in PHP 5.3.5if uncommented
+return ArrayIterator</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Get cursor's equivalent external iterator
+Causes a fatal error in PHP 5.3.5if uncommented
+return ArrayIterator</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-DB.Cursor.html#methods">DB\Cursor</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-DB.Cursor.html#_aftererase">aftererase()</a>, 
+			<a href="class-DB.Cursor.html#_afterinsert">afterinsert()</a>, 
+			<a href="class-DB.Cursor.html#_aftersave">aftersave()</a>, 
+			<a href="class-DB.Cursor.html#_afterupdate">afterupdate()</a>, 
+			<a href="class-DB.Cursor.html#_beforeerase">beforeerase()</a>, 
+			<a href="class-DB.Cursor.html#_beforeinsert">beforeinsert()</a>, 
+			<a href="class-DB.Cursor.html#_beforesave">beforesave()</a>, 
+			<a href="class-DB.Cursor.html#_beforeupdate">beforeupdate()</a>, 
+			<a href="class-DB.Cursor.html#_findone">findone()</a>, 
+			<a href="class-DB.Cursor.html#_next">next()</a>, 
+			<a href="class-DB.Cursor.html#_onerase">onerase()</a>, 
+			<a href="class-DB.Cursor.html#_oninsert">oninsert()</a>, 
+			<a href="class-DB.Cursor.html#_onload">onload()</a>, 
+			<a href="class-DB.Cursor.html#_onsave">onsave()</a>, 
+			<a href="class-DB.Cursor.html#_onupdate">onupdate()</a>, 
+			<a href="class-DB.Cursor.html#_paginate">paginate()</a>, 
+			<a href="class-DB.Cursor.html#_prev">prev()</a>, 
+			<a href="class-DB.Cursor.html#_valid">valid()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-Magic.html#methods">Magic</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-Magic.html#___get">__get()</a>, 
+			<a href="class-Magic.html#___isset">__isset()</a>, 
+			<a href="class-Magic.html#___set">__set()</a>, 
+			<a href="class-Magic.html#___unset">__unset()</a>, 
+			<a href="class-Magic.html#_offsetexists">offsetexists()</a>, 
+			<a href="class-Magic.html#_offsetget">offsetget()</a>, 
+			<a href="class-Magic.html#_offsetset">offsetset()</a>, 
+			<a href="class-Magic.html#_offsetunset">offsetunset()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from IteratorAggregate</caption>
+	<tr>
+		<td><code>
+getIterator()
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from ArrayAccess</caption>
+	<tr>
+		<td><code>
+offsetExists(), 
+offsetGet(), 
+offsetSet(), 
+offsetUnset()
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+	<table class="summary constants" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="DT_SERIALIZED" id="DT_SERIALIZED">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-DB.Cortex.html#69" title="Go to source code"><b>DT_SERIALIZED</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#DT_SERIALIZED" class="anchor">#</a>
+				<code><span class="php-quote">'SERIALIZED'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="DT_JSON" id="DT_JSON">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-DB.Cortex.html#70" title="Go to source code"><b>DT_JSON</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#DT_JSON" class="anchor">#</a>
+				<code><span class="php-quote">'JSON'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="E_ARRAY_DATATYPE" id="E_ARRAY_DATATYPE">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-DB.Cortex.html#73" title="Go to source code"><b>E_ARRAY_DATATYPE</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#E_ARRAY_DATATYPE" class="anchor">#</a>
+				<code><span class="php-quote">'Unable to save an Array in field %s. Use DT_SERIALIZED or DT_JSON.'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="E_CONNECTION" id="E_CONNECTION">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-DB.Cortex.html#74" title="Go to source code"><b>E_CONNECTION</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#E_CONNECTION" class="anchor">#</a>
+				<code><span class="php-quote">'No valid DB Connection given.'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="E_NO_TABLE" id="E_NO_TABLE">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-DB.Cortex.html#75" title="Go to source code"><b>E_NO_TABLE</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#E_NO_TABLE" class="anchor">#</a>
+				<code><span class="php-quote">'No table specified.'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="E_UNKNOWN_DB_ENGINE" id="E_UNKNOWN_DB_ENGINE">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-DB.Cortex.html#76" title="Go to source code"><b>E_UNKNOWN_DB_ENGINE</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#E_UNKNOWN_DB_ENGINE" class="anchor">#</a>
+				<code><span class="php-quote">'This unknown DB system is not supported: %s'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="E_FIELD_SETUP" id="E_FIELD_SETUP">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-DB.Cortex.html#77" title="Go to source code"><b>E_FIELD_SETUP</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#E_FIELD_SETUP" class="anchor">#</a>
+				<code><span class="php-quote">'No field setup defined'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="E_UNKNOWN_FIELD" id="E_UNKNOWN_FIELD">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-DB.Cortex.html#78" title="Go to source code"><b>E_UNKNOWN_FIELD</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#E_UNKNOWN_FIELD" class="anchor">#</a>
+				<code><span class="php-quote">'Field %s does not exist in %s.'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="E_INVALID_RELATION_OBJECT" id="E_INVALID_RELATION_OBJECT">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-DB.Cortex.html#79" title="Go to source code"><b>E_INVALID_RELATION_OBJECT</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#E_INVALID_RELATION_OBJECT" class="anchor">#</a>
+				<code><span class="php-quote">'You can only save hydrated mapper objects'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="E_NULLABLE_COLLISION" id="E_NULLABLE_COLLISION">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-DB.Cortex.html#80" title="Go to source code"><b>E_NULLABLE_COLLISION</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#E_NULLABLE_COLLISION" class="anchor">#</a>
+				<code><span class="php-quote">'Unable to set NULL to the NOT NULLABLE field: %s'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="E_WRONG_RELATION_CLASS" id="E_WRONG_RELATION_CLASS">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-DB.Cortex.html#81" title="Go to source code"><b>E_WRONG_RELATION_CLASS</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#E_WRONG_RELATION_CLASS" class="anchor">#</a>
+				<code><span class="php-quote">'Relations only works with Cortex objects'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="E_MM_REL_VALUE" id="E_MM_REL_VALUE">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-DB.Cortex.html#82" title="Go to source code"><b>E_MM_REL_VALUE</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#E_MM_REL_VALUE" class="anchor">#</a>
+				<code><span class="php-quote">'Invalid value for many field &quot;%s&quot;. Expecting null, split-able string, hydrated mapper object, or array of mapper objects.'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="E_MM_REL_CLASS" id="E_MM_REL_CLASS">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-DB.Cortex.html#83" title="Go to source code"><b>E_MM_REL_CLASS</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#E_MM_REL_CLASS" class="anchor">#</a>
+				<code><span class="php-quote">'Mismatching m:m relation config from class `%s` to `%s`.'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="E_MM_REL_FIELD" id="E_MM_REL_FIELD">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-DB.Cortex.html#84" title="Go to source code"><b>E_MM_REL_FIELD</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#E_MM_REL_FIELD" class="anchor">#</a>
+				<code><span class="php-quote">'Mismatching m:m relation keys from `%s` to `%s`.'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="E_REL_CONF_INC" id="E_REL_CONF_INC">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-DB.Cortex.html#85" title="Go to source code"><b>E_REL_CONF_INC</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#E_REL_CONF_INC" class="anchor">#</a>
+				<code><span class="php-quote">'Incomplete relation config for `%s`. Linked key is missing.'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="E_MISSING_REL_CONF" id="E_MISSING_REL_CONF">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-DB.Cortex.html#86" title="Go to source code"><b>E_MISSING_REL_CONF</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#E_MISSING_REL_CONF" class="anchor">#</a>
+				<code><span class="php-quote">'Cannot create related model. Specify a model name or relConf array.'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="E_HAS_COND" id="E_HAS_COND">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-DB.Cortex.html#87" title="Go to source code"><b>E_HAS_COND</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#E_HAS_COND" class="anchor">#</a>
+				<code><span class="php-quote">'Cannot use a &quot;has&quot;-filter on a non-bidirectional relation field'</span></code>
+			</div>
+		</td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Constants inherited from <a href="class-DB.Cursor.html#constants">DB\Cursor</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-DB.Cursor.html#E_Field"><b>E_Field</b></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+	<table class="summary properties" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="db" id="$db">
+		<td class="attributes"><code>
+			protected  
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-DB.Cortex.html#31-33" title="Go to source code"><var>$db</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$db" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="table" id="$table">
+		<td class="attributes"><code>
+			protected  
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-DB.Cortex.html#34" title="Go to source code"><var>$table</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$table" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="fluid" id="$fluid">
+		<td class="attributes"><code>
+			protected  
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-DB.Cortex.html#35" title="Go to source code"><var>$fluid</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$fluid" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="fieldConf" id="$fieldConf">
+		<td class="attributes"><code>
+			protected  
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-DB.Cortex.html#36" title="Go to source code"><var>$fieldConf</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$fieldConf" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="ttl" id="$ttl">
+		<td class="attributes"><code>
+			protected  
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-DB.Cortex.html#37" title="Go to source code"><var>$ttl</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$ttl" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="rel_ttl" id="$rel_ttl">
+		<td class="attributes"><code>
+			protected  
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-DB.Cortex.html#38" title="Go to source code"><var>$rel_ttl</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$rel_ttl" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="primary" id="$primary">
+		<td class="attributes"><code>
+			protected  
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-DB.Cortex.html#39" title="Go to source code"><var>$primary</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$primary" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="smartLoading" id="$smartLoading">
+		<td class="attributes"><code>
+			protected  
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-DB.Cortex.html#41" title="Go to source code"><var>$smartLoading</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$smartLoading" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="standardiseID" id="$standardiseID">
+		<td class="attributes"><code>
+			protected  
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-DB.Cortex.html#42" title="Go to source code"><var>$standardiseID</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$standardiseID" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="dbsType" id="$dbsType">
+		<td class="attributes"><code>
+			protected  
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-DB.Cortex.html#44" title="Go to source code"><var>$dbsType</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$dbsType" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="fieldsCache" id="$fieldsCache">
+		<td class="attributes"><code>
+			protected  
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-DB.Cortex.html#45" title="Go to source code"><var>$fieldsCache</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$fieldsCache" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="saveCsd" id="$saveCsd">
+		<td class="attributes"><code>
+			protected  
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-DB.Cortex.html#46" title="Go to source code"><var>$saveCsd</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$saveCsd" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="collection" id="$collection">
+		<td class="attributes"><code>
+			protected  
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-DB.Cortex.html#47" title="Go to source code"><var>$collection</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$collection" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="relFilter" id="$relFilter">
+		<td class="attributes"><code>
+			protected  
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-DB.Cortex.html#48" title="Go to source code"><var>$relFilter</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$relFilter" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="hasCond" id="$hasCond">
+		<td class="attributes"><code>
+			protected  
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-DB.Cortex.html#49" title="Go to source code"><var>$hasCond</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$hasCond" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="whitelist" id="$whitelist">
+		<td class="attributes"><code>
+			protected  
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-DB.Cortex.html#50" title="Go to source code"><var>$whitelist</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$whitelist" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="relWhitelist" id="$relWhitelist">
+		<td class="attributes"><code>
+			protected  
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-DB.Cortex.html#51" title="Go to source code"><var>$relWhitelist</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$relWhitelist" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="grp_stack" id="$grp_stack">
+		<td class="attributes"><code>
+			protected  
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-DB.Cortex.html#52" title="Go to source code"><var>$grp_stack</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$grp_stack" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="countFields" id="$countFields">
+		<td class="attributes"><code>
+			protected  
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-DB.Cortex.html#53" title="Go to source code"><var>$countFields</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$countFields" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="preBinds" id="$preBinds">
+		<td class="attributes"><code>
+			protected  
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-DB.Cortex.html#54" title="Go to source code"><var>$preBinds</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$preBinds" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="vFields" id="$vFields">
+		<td class="attributes"><code>
+			protected  
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-DB.Cortex.html#55" title="Go to source code"><var>$vFields</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$vFields" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="_ttl" id="$_ttl">
+		<td class="attributes"><code>
+			protected  
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-DB.Cortex.html#56" title="Go to source code"><var>$_ttl</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$_ttl" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="mapper" id="$mapper">
+		<td class="attributes"><code>
+			protected  
+			<code><a href="class-DB.Cursor.html">DB\Cursor</a></code>
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-DB.Cortex.html#58-59" title="Go to source code"><var>$mapper</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$mapper" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="queryParser" id="$queryParser">
+		<td class="attributes"><code>
+			protected  
+			<code><a href="class-DB.CortexQueryParser.html">DB\CortexQueryParser</a></code>
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-DB.Cortex.html#61-62" title="Go to source code"><var>$queryParser</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$queryParser" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="init" id="$init">
+		<td class="attributes"><code>
+			public static 
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-DB.Cortex.html#64-65" title="Go to source code"><var>$init</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$init" class="anchor">#</a>
+				<code><span class="php-keyword1">false</span></code>
+			</div>
+		</td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Properties inherited from <a href="class-DB.Cursor.html#properties">DB\Cursor</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-DB.Cursor.html#$ptr"><var>$ptr</var></a>, 
+			<a href="class-DB.Cursor.html#$query"><var>$query</var></a>, 
+			<a href="class-DB.Cursor.html#$trigger"><var>$trigger</var></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		OMF 1.2 Documentation API documentation generated by <a href="http://munir.skilledsoft.com">Alienwithin</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

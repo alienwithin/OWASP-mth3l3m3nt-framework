@@ -1,0 +1,24 @@
+<h2>Recon: Whois</h2>
+
+<div class="row solid">
+        <form id="form" action="cnc/recon/whoareyou" method="post" role="form">
+            <div class="col-sm-6">
+
+                <div class="form-group">
+                    <label>Hostname</label>
+                    <input type="text" name="hostname" class="form-control" placeholder="africahackon.com" />
+                </div>
+
+                               
+
+                <button type="submit" class="btn btn-primary">Get Whois</button>
+            </div>
+
+        </form>
+      
+       <div class="content col-xs-8">
+       <br/>
+      	{{highlight_string(@content,true)|raw}}
+      </div>
+    </div>
+     

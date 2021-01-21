@@ -1,0 +1,106 @@
+<script src="{{@UI}}js/Chart.min.js"></script>
+
+<div class="col-sm-6">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Quick Actions</h3>
+        </div>
+        <div class="panel-body icon_block">
+            <div class="row" >
+                <div class="col-xs-12 icon_block_in">
+                    <a href="cnc/websaccre" title="Web Utilities"><i class="glyphicon glyphicon-cloud dropdown"></i></a>
+                    <a href="cnc/payload" title="Payloads"><i class="glyphicon glyphicon-tint"></i></a>
+                    <a href="cnc/webot" title="Web Bot"><i class="glyphicon glyphicon-screenshot dropdown"></i></a>
+                    <a href="cnc/lfi" title="LFI Exploits"><i class="fa fa-thumb-tack" aria-hidden="true"></i></a>
+                    <a href="{{@BASE}}" title="Frontend" target="_blank"><i class="glyphicon glyphicon-home"></i></a>
+                    <a href="cnc/user" title="User Manager"><i class="fa fa-user" aria-hidden="true"></i></a>
+                    <a href="cnc/settings" title="Settings"><i class="glyphicon glyphicon-wrench"></i></a>
+                    <a href="cnc/leave" title="Logout"><i class="glyphicon glyphicon-off"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="col-sm-6">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Package Information</h3>
+        </div>
+        <div class="panel-body">
+            <div class="row" >
+                <div class="col-xs-12">  
+                    <p><strong>Domain  </strong>  : <a href="{{@SCHEME.'://'.@HOST.'/'}}">{{@SCHEME.'://'.@HOST.@BASE.'/'}}</a></p>
+                    <p><strong>IP  </strong>      : {{ @IP}}  </p>
+        			<p><strong>Package</strong>: {{@PACKAGE}} v {{@APP_VERSION}}</p>
+					<p><strong>DB Engine</strong>: {{@CONFIG.ACTIVE_DB}}</p>
+                </div>  
+            </div>     
+        </div>
+    </div>
+</div>
+<F3:set payloads="{{\Model\Payload::countAll()}}"/>
+<F3:set payloadsSQLi="{{\Model\Payload::countSQLi()}}"/>
+<F3:set payloadsXSS="{{\Model\Payload::countXSS()}}"/>
+<F3:set payloadsLFI="{{\Model\Payload::countLFI()}}"/>
+<F3:set payloadsMisc="{{\Model\Payload::countMisc()}}"/>
+<div class="col-sm-6">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Payloads ({{ @payloads }})</h3>
+        </div>
+            <F3:check if="{{ @payloads > 0 }}">
+                <true>
+                    <canvas id="payload-chart" width="300" height="300"/>
+                    <script>
+                        var pieData = {
+                            labels: ["Injection", "Cross Site Scripting", "File Inclusion", "Miscellaneous"],
+                            datasets: [
+                                {
+                                    label: "Payload Dataset",
+                                    fillColor: "rgba(151,187,205,0.2)",
+                                    strokeColor: "rgba(151,187,205,1)",
+                                    pointColor: "rgba(151,187,205,1)",
+                                    pointStrokeColor: "#fff",
+                                    pointHighlightFill: "#fff",
+                                    pointHighlightStroke: "rgba(151,187,205,1)",
+                                    data: [{{ @payloadsSQLi }}, {{ @payloadsXSS }}, {{ @payloadsLFI }}, {{ @payloadsMisc }}]
+                                }
+                            ]
+                        };
+
+                        window.onload = function(){
+                            var ctx = document.getElementById("payload-chart").getContext("2d");
+                            window.myPie = new Chart(ctx).Radar(pieData);
+                        };
+                    </script>
+                </true>
+                <false>
+                    <p>No Payloads Added</p>
+                </false>
+            </F3:check>
+    </div>
+</div>
+<div class="col-sm-6">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">User Information</h3>
+        </div>
+        <div class="panel-body">
+            <div class="row" >
+                <div class="col-xs-12">  
+                    <p><strong>User's Name  </strong>  : {{ @BACKEND_USER.name }}</p>
+                    <p><strong>IP  </strong>      : {{ @IP}}  </p>
+        			<p><strong>User Agent</strong>: {{ @AGENT}}  </p>
+					<p><strong>Time Zone</strong>: {{ @TZ}}  </p>
+                </div>  
+            </div>     
+        </div>
+    </div>
+</div>
+</div>
+
+    <div id="comment-widget" class="panel {{@payloads>0?'panel-info':'panel-default'}}">
+        
+    </div>
+</div>

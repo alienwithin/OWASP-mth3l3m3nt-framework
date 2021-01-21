@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <base href="{{@SCHEME.'://'.@HOST.':'.@PORT.@BASE.'/'}}"/>
+    <meta charset="{{@$ENCODING}}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="OWASP Mth3l3m3nt Framework - Web Penetration Testing Tool">
+    <meta name="author" content="Munir Njiru">
+    <link rel="shortcut icon" href="{{@UI}}assets/ico/favicon.ico">
+    <title>{{@CONFIG.framework_title}}</title>
+    <!-- Bootstrap core CSS -->
+    <link href="{{@UI}}assets/css/bootstrap.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="{{@UI}}assets/css/style.css" rel="stylesheet">
+    <link href="{{@UI}}assets/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="{{@UI}}assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="{{@UI}}assets/js/html5shiv.js"></script>
+      <script src="{{@UI}}assets/js/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="{{@UI}}assets/js/modernizr.js"></script>
+  </head>
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="{{@SCHEME.'://'.@HOST.@BASE.'/'}}">
+          	<img src="{{@UI}}assets/img/omf2.svg">
+          </a>
+        </div>
+        <div class="navbar-collapse collapse navbar-right">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="{{@SCHEME.'://'.@HOST.@BASE.'/'}}">HOME</a></li>
+            <li><a href="#payloads">PAYLOADS</a></li>
+            <li><a href="#footerwrap">SOCIAL MEDIA</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">USEFUL LINKS <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="https://www.owasp.org/index.php/OWASP_Mth3l3m3nt_Framework_Project" target="_blank">OWASP WIKI</a></li>
+                <li><a href="http://alienwithin.github.io/OWASP-mth3l3m3nt-framework/framework-docs/" target="_blank">DEVELOPER DOCUMENTATION</a></li>
+                <li><a href="https://github.com/alienwithin/OWASP-mth3l3m3nt-framework/issues" target="_blank">BUG TRACKER</a></li>
+                
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+	
+
+
+	<!-- *****************************************************************************************************************
+	 HEADERWRAP
+	 ***************************************************************************************************************** -->
+	<!-- // Landing page only -->
+	
+	<div id="headerwrap">
+	    <div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2">
+					<section class="box">
+						<h3>Keep Proactively Testing The Web</h3>
+						<h5>For The World Is Cruel!!</h5>
+					</section>	
+					<ul class="list-inline banner-social-buttons">
+                        <li>
+                            <a href="https://github.com/alienwithin/OWASP-mth3l3m3nt-framework/zipball/master" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Zip Download</span></a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/alienwithin/OWASP-mth3l3m3nt-framework/tarball/master" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Tar.gz Download</span></a>
+                        </li>
+                    </ul>
+					
+				</div>
+			</div>
+	    </div>
+	</div>
+	
+	
+
+	<include if="{{@ERROR && @ERROR.code != 400}}" href="templates/error.html"/>
+	<include if="{{isset(@SUBPART)}}" href="{{'templates/'.@SUBPART}}"/> 
+	<!-- *****************************************************************************************************************
+	 TESTIMONIALS
+	 ***************************************************************************************************************** -->
+	 <div id="twrap">
+	 	<div class="container centered">
+	 		<div class="row">
+	 			<div class="col-lg-8 col-lg-offset-2">
+	 			<i class="fa fa-info-circle"></i>
+	 			<h4>The OWASP Mth3l3m3nt framework is a penetration testing tool, it should be used for legal purposes only on assets that you own. Ethics is key. </h4>
+	 			<br/>
+	 			<h4><b>Munir Njiru</b></h4>
+	 			<p>Project Lead</p>
+	 			</div>
+	 		</div><!--/row -->
+	 	</div><!--/container -->
+	 </div><!--/twrap -->
+
+	<!-- *****************************************************************************************************************
+	 FOOTER
+	 ***************************************************************************************************************** -->
+	 <div id="footerwrap">
+	 	<div class="container">
+		 	<div class="row">
+		 		<div class="col-lg-7">
+		 			<h4>Performance</h4>
+		 			
+		 			<p>{{ \Base::instance()->format('Page rendered by Mth3l3m3nt Framework v{0}, in {1} msecs / Memory usage {2} KB',@APP_VERSION,round(1e3*(microtime(TRUE)-$TIME),2),round(memory_get_usage(TRUE)/1e3,1)) }}</p>
+		 			
+		 			<h4>Social Links</h4>
+		 			
+		 			<p>
+		 				<a href="http://www.facebook.com/psychmartianmuntopia" target="_blank"><i class="fa fa-facebook"></i></a>
+		 				<a href="http://twitter.com/muntopia" target="_blank"><i class="fa fa-twitter"></i></a>
+		 				<a href="https://plus.google.com/u/0/+MunirTheMartianNjiru/posts" target="_blank"><i class="fa fa-google-plus-square"></i></a>
+		 				<a href="http://munir.skilledsoft.com" target="_blank"><i class="fa fa-globe"></i></a>
+		 			</p>		 		
+
+		 		</div>
+		 		<div class="col-lg-5 col-lg-offset-0">
+		 			<h4>Payload Statistics</h4>
+		 				<include href="templates/payload_chart.html"/>
+		 		</div>
+		 	</div><!--/row -->
+	 	</div><!--/container -->
+	 </div><!--/footerwrap -->
+	 
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="{{@UI}}assets/js/jquery.min.js"></script>
+    <script src="{{@UI}}assets/js/bootstrap.min.js"></script>
+	<script src="{{@UI}}assets/js/retina-1.1.0.js"></script>
+	<script src="{{@UI}}assets/js/jquery.hoverdir.js"></script>
+	<script src="{{@UI}}assets/js/jquery.hoverex.min.js"></script>
+	<script src="{{@UI}}assets/js/jquery.prettyPhoto.js"></script>
+  	<script src="{{@UI}}assets/js/jquery.isotope.min.js"></script>
+  	<script src="{{@UI}}assets/js/custom.js"></script>
+	<script src="{{@UI}}assets/js/Chart.min.js"></script>
+  </body>
+</html>

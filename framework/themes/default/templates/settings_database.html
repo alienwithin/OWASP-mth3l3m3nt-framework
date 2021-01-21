@@ -1,0 +1,285 @@
+<h2>Settings: Database Configuration</h2>
+
+
+<div class="row">
+        <div class="form-group">
+            <div class="col-sm-12">
+                <div class="panel-group" id="accordion">
+
+                    <div class="panel {{@CONFIG.ACTIVE_DB=='JIG'?'panel-success':'panel-default'}}">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#jig">
+                                    Jig Flat-File DB
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="jig" class="panel-collapse collapse {{(@CONFIG.ACTIVE_DB=='JIG'?'in':'')}}">
+                            <div class="panel-body">
+                                <p>Jig is a lightweight and fast database engine that uses flat files as storage containers. This makes it super fast, since you don't need wait for the DB service and your server can keep the whole DB files in memory.</p>
+                                <p>This is a good choice for starting, but could become slow when the DB files grow (1000+ records).</p>
+                                <form action="cnc/settings/database" method="post" role="form">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label>storage directory</label>
+                                                <input type="text" name="DB_JIG[dir]" class="form-control" placeholder="framework/data/" value="{{isset(@POST.DB_JIG[dir])?@POST.DB_JIG[dir]:'' |esc}}"/>
+                                                <span class="help-block">Notice: make sure this folder is writable</span>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>format</label>
+                                                <F3:select name="DB_JIG[format]" class="form-control" group="{{@JIG_format}}" />
+                                                <span class="help-block">Notice: switching the format of existing db files is not supported</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="hidden" name="active_db" value="JIG" />
+                                    <input type="submit" class="btn btn-primary" value="{{@CONFIG.ACTIVE_DB=='JIG'?'save':'switch to JIG'}}" />
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel {{@CONFIG.ACTIVE_DB=='SQLITE'?'panel-success':'panel-default'}}">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#sqlite">
+                                    SQLite
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="sqlite" class="panel-collapse collapse {{(@CONFIG.ACTIVE_DB=='SQLITE'?'in':'')}}">
+                            <div class="panel-body">
+                                <p>SQLite is a very fast and small SQL database.</p>
+                                <form action="cnc/settings/database" method="post" role="form">
+                                    <div class="row">
+                                        <div class="col-sm-8">
+                                            <div class="form-group">
+                                                <label>database file path</label>
+                                                <input type="text" name="DB_SQLITE[path]" class="form-control" placeholder="framework/data/mth3l3m3nt_sqlite.db" />
+                                                <span class="help-block">Notice: this file will be created, if it's not existing. Make sure its folder is writable.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <F3:check if="{{extension_loaded('pdo_sqlite')}}">
+                                        <true>
+                                            <input type="hidden" name="active_db" value="SQLITE" />
+                                            <input type="submit" class="btn btn-primary" value="{{@CONFIG.ACTIVE_DB=='SQLITE'?'save':'switch to SQLite'}}" />
+                                        </true>
+                                        <false>
+                                            <div class="alert alert-warning">
+                                                <strong>Missing dependency:</strong> "pdo_sqlite" module not loaded
+                                            </div>
+                                        </false>
+                                    </F3:check>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel {{@CONFIG.ACTIVE_DB=='MYSQL'?'panel-success':'panel-default'}}">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#mysql">
+                                    MySQL
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="mysql" class="panel-collapse collapse {{(@CONFIG.ACTIVE_DB=='MYSQL'?'in':'')}}">
+                            <div class="panel-body">
+                                <p>MySQL is a popular database, with many features and is available on most servers.</p>
+                                <form action="cnc/settings/database" method="post" role="form">
+                                    <div class="row">
+                                        <div class="col-xs-3 form-group">
+                                            <label>username</label>
+                                            <input type="text" name="DB_MYSQL[user]" autocomplete="off" class="form-control" placeholder="root" value="{{isset(@POST.DB_MYSQL[user])?@POST.DB_MYSQL[user]:'' |esc}}"/>
+                                        </div>
+                                        <div class="col-xs-3 form-group">
+                                            <label>password</label>
+                                            <input type="password" name="DB_MYSQL[password]" autocomplete="off" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-3 form-group">
+                                            <label>host</label>
+                                            <input type="text" name="DB_MYSQL[host]" class="form-control" placeholder="localhost" value="{{isset(@POST.DB_MYSQL[host])?@POST.DB_MYSQL[host]:'' |esc}}"/>
+                                        </div>
+                                        <div class="col-xs-3 form-group">
+                                            <label>port</label>
+                                            <input type="text" name="DB_MYSQL[port]" class="form-control" placeholder="3306" value="{{isset(@POST.DB_MYSQL[port])?@POST.DB_MYSQL[port]:'' |esc}}"/>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-3 form-group">
+                                            <label>database</label>
+                                            <input type="text" name="DB_MYSQL[dbname]" class="form-control" placeholder="dbname" value="{{isset(@POST.DB_MYSQL[dbname])?@POST.DB_MYSQL[dbname]:'' |esc}}"/>
+                                        </div>
+                                    </div>
+
+                                    <F3:check if="{{extension_loaded('pdo_mysql')}}">
+                                        <true>
+                                            <input type="hidden" name="active_db" value="MYSQL" />
+                                            <input type="submit" class="btn btn-primary" value="{{@CONFIG.ACTIVE_DB=='MYSQL'?'save':'switch to MySQL'}}" />
+                                        </true>
+                                        <false>
+                                            <div class="alert alert-warning">
+                                                <strong>Missing dependency:</strong> "pdo_mysql" module not loaded
+                                            </div>
+                                        </false>
+                                    </F3:check>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel {{@CONFIG.ACTIVE_DB=='PGSQL'?'panel-success':'panel-default'}}">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#pgsql">
+                                    PostgreSQL
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="pgsql" class="panel-collapse collapse {{(@CONFIG.ACTIVE_DB=='PGSQL'?'in':'')}}">
+                            <div class="panel-body">
+                                <p>PostgreSQL is a feature-rich SQL database that runs on many operating-systems.</p>
+                                <form action="cnc/settings/database" method="post" role="form">
+                                    <div class="row">
+                                        <div class="col-xs-3 form-group">
+                                            <label>username</label>
+                                            <input type="text" name="DB_PGSQL[user]" autocomplete="off" class="form-control" placeholder="root" value="{{isset(@POST.DB_PGSQL[user])?@POST.DB_PGSQL[user]:'' |esc}}"/>
+                                        </div>
+                                        <div class="col-xs-3 form-group">
+                                            <label>password</label>
+                                            <input type="password" autocomplete="off" name="DB_PGSQL[password]" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-3 form-group">
+                                            <label>host</label>
+                                            <input type="text" name="DB_PGSQL[host]" class="form-control" placeholder="localhost" value="{{isset(@POST.DB_PGSQL[host])?@POST.DB_PGSQL[host]:'' |esc}}"/>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-3 form-group">
+                                            <label>database</label>
+                                            <input type="text" name="DB_PGSQL[dbname]" class="form-control" placeholder="dbname" value="{{isset(@POST.DB_PGSQL[dbname])?@POST.DB_PGSQL[dbname]:'' |esc}}"/>
+                                        </div>
+                                    </div>
+                                    <F3:check if="{{extension_loaded('pdo_pgsql')}}">
+                                        <true>
+                                            <input type="hidden" name="active_db" value="PGSQL" />
+                                            <input type="submit" class="btn btn-primary" value="{{@CONFIG.ACTIVE_DB=='PGSQL'?'save':'switch to PostgreSQL'}}" />
+                                        </true>
+                                        <false>
+                                            <div class="alert alert-warning">
+                                                <strong>Missing dependency:</strong> "pdo_pgsql" module not loaded
+                                            </div>
+                                        </false>
+                                    </F3:check>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel {{@CONFIG.ACTIVE_DB=='SQLSRV'?'panel-success':'panel-default'}}">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#sqlsrv">
+                                    SQL Server
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="sqlsrv" class="panel-collapse collapse {{(@CONFIG.ACTIVE_DB=='SQLSRV'?'in':'')}}">
+                            <div class="panel-body">
+                                <p>SQL Server from Microsoft (2008 or newer)</p>
+                                <form action="cnc/settings/database" method="post" role="form">
+                                    <div class="row">
+                                        <div class="col-xs-3 form-group">
+                                            <label>username</label>
+                                            <input type="text" name="DB_SQLSRV[user]" autocomplete="off" class="form-control" placeholder="root" value="{{isset(@POST.DB_SQLSRV[user])?@POST.DB_SQLSRV[user]:'' |esc}}"/>
+                                        </div>
+                                        <div class="col-xs-3 form-group">
+                                            <label>password</label>
+                                            <input type="password" autocomplete="off" name="DB_SQLSRV[password]" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-6 form-group">
+                                            <label>host</label>
+                                            <input type="text" name="DB_SQLSRV[host]" class="form-control" placeholder="LOCALHOST\INSTANCE" value="{{isset(@POST.DB_SQLSRV[host])?@POST.DB_SQLSRV[host]:'' |esc}}"/>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-3 form-group">
+                                            <label>database</label>
+                                            <input type="text" name="DB_SQLSRV[dbname]" class="form-control" placeholder="dbname" value="{{isset(@POST.DB_SQLSRV[dbname])?@POST.DB_SQLSRV[dbname]:'' |esc}}"/>
+                                        </div>
+                                    </div>
+                                    <F3:check if="{{extension_loaded('pdo_sqlsrv')}}">
+                                        <true>
+                                            <input type="hidden" name="active_db" value="SQLSRV" />
+                                            <input type="submit" class="btn btn-primary" value="{{@CONFIG.ACTIVE_DB=='SQLSRV'?'save':'switch to SQL Server'}}" />
+                                        </true>
+                                        <false>
+                                            <div class="alert alert-warning">
+                                                <strong>Missing dependency:</strong> "pdo_sqlsrv" module not loaded
+                                            </div>
+                                        </false>
+                                    </F3:check>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel {{@CONFIG.ACTIVE_DB=='MONGO'?'panel-success':'panel-default'}}">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#mongo">
+                                    MongoDB
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="mongo" class="panel-collapse collapse {{(@CONFIG.ACTIVE_DB=='MONGO'?'in':'')}}">
+                            <div class="panel-body">
+                                <p>MongoDB is a fast, object-oriented NoSQL database.</p>
+                                <form action="cnc/settings/database" method="post" role="form">
+
+                                    <div class="row">
+                                        <div class="col-xs-3 form-group">
+                                            <label>host</label>
+                                            <input type="text" name="DB_MONGO[host]" class="form-control" placeholder="localhost" value="{{isset(@POST.DB_MONGO[host])?@POST.DB_MONGO[host]:'' |esc}}"/>
+                                        </div>
+                                        <div class="col-xs-3 form-group">
+                                            <label>port</label>
+                                            <input type="text" name="DB_MONGO[port]" class="form-control" placeholder="27017" value="{{isset(@POST.DB_MONGO[port])?@POST.DB_MONGO[port]:'' |esc}}"/>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-3 form-group">
+                                            <label>database</label>
+                                            <input type="text" name="DB_MONGO[dbname]" class="form-control" placeholder="dbname" value="{{isset(@POST.DB_MONGO[dbname])?@POST.DB_MONGO[dbname]:'' |esc}}"/>
+                                        </div>
+                                    </div>
+
+                                    <F3:check if="{{extension_loaded('mongo')}}">
+                                        <true>
+                                            <input type="hidden" name="active_db" value="MONGO" />
+                                            <input type="submit" class="btn btn-primary" value="{{@CONFIG.ACTIVE_DB=='MONGO'?'save':'switch to MongoDB'}}" />
+                                        </true>
+                                        <false>
+                                            <div class="alert alert-warning">
+                                                <strong>Missing dependency:</strong> "mongo" module not loaded
+                                            </div>
+                                        </false>
+                                    </F3:check>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class DB\SQL\TableCreator | OMF 1.2 Documentation</title>
+
+	<link rel="stylesheet" href="resources/style.css?e99947befd7bf673c6b43ff75e9e0f170c88a60e">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+				<li>
+					<a href="namespace-Controller.html">
+						Controller					</a>
+
+						</li>
+				<li class="active">
+					<a href="namespace-DB.html">
+						DB<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-DB.Jig.html">
+						Jig					</a>
+
+						</li>
+				<li>
+					<a href="namespace-DB.Mongo.html">
+						Mongo					</a>
+
+						</li>
+				<li class="active">
+					<a href="namespace-DB.SQL.html">
+						SQL					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="namespace-Model.html">
+						Model					</a>
+
+						</li>
+				<li>
+					<a href="namespace-None.html">
+						None					</a>
+
+						</li>
+				<li>
+					<a href="namespace-Template.html">
+						Template<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Template.Tags.html">
+						Tags					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="namespace-View.html">
+						View					</a>
+
+						</li>
+				<li>
+					<a href="namespace-Web.html">
+						Web<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Web.Google.html">
+						Google					</a>
+
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-DB.SQL.Column.html">Column</a></li>
+				<li><a href="class-DB.SQL.DB_Utils.html">DB_Utils</a></li>
+				<li><a href="class-DB.SQL.Mapper.html">Mapper</a></li>
+				<li><a href="class-DB.SQL.Schema.html">Schema</a></li>
+				<li><a href="class-DB.SQL.Session.html">Session</a></li>
+				<li><a href="class-DB.SQL.TableBuilder.html">TableBuilder</a></li>
+				<li class="active"><a href="class-DB.SQL.TableCreator.html">TableCreator</a></li>
+				<li><a href="class-DB.SQL.TableModifier.html">TableModifier</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-DB.SQL.html" title="Summary of DB\SQL"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class TableCreator</h1>
+
+
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-DB.SQL.DB_Utils.html"><span>DB\SQL\DB_Utils</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+			<a href="class-DB.SQL.TableBuilder.html"><span>DB\SQL\TableBuilder</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:60px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>DB\SQL\TableCreator</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-DB.html">DB</a>\<a href="namespace-DB.SQL.html">SQL</a><br>
+		
+
+			<b>Located at</b> <a href="source-class-DB.SQL.TableCreator.html#403-482" title="Go to source code">lib/db/sql/schema.php</a>
+		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="build" id="_build">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean|<code><a href="class-DB.SQL.TableModifier.html">DB\SQL\TableModifier</a></code>|string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_build">#</a>
+		<code><a href="source-class-DB.SQL.TableCreator.html#408-464" title="Go to source code">build</a>( <span>boolean <var>$exec</var> = <span class="php-keyword1">TRUE</span></span> )</code>
+
+		<div class="description short">
+			<p>generate SQL query for creating a basic table, containing an ID serial field
+and execute it if $exec is true, otherwise just return the generated query string</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>generate SQL query for creating a basic table, containing an ID serial field
+and execute it if $exec is true, otherwise just return the generated query string</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$exec</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean|<code><a href="class-DB.SQL.TableModifier.html">DB\SQL\TableModifier</a></code>|string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="addIndex" id="_addIndex">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_addIndex">#</a>
+		<code><a href="source-class-DB.SQL.TableCreator.html#466-480" title="Go to source code">addIndex</a>( <span>string|array <var>$columns</var></span>, <span>boolean <var>$unique</var> = <span class="php-keyword1">FALSE</span></span>, <span>integer <var>$length</var> = <span class="php-num">20</span></span> )</code>
+
+		<div class="description short">
+			<p>create index on one or more columns</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>create index on one or more columns</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$columns</var></dt>
+					<dd>Column(s) to be indexed</dd>
+					<dt><var>$unique</var></dt>
+					<dd>Unique index</dd>
+					<dt><var>$length</var></dt>
+					<dd>index length for text fields in mysql</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-DB.SQL.TableBuilder.html#methods">DB\SQL\TableBuilder</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-DB.SQL.TableBuilder.html#___construct">__construct()</a>, 
+			<a href="class-DB.SQL.TableBuilder.html#__addIndex">_addIndex()</a>, 
+			<a href="class-DB.SQL.TableBuilder.html#_addColumn">addColumn()</a>, 
+			<a href="class-DB.SQL.TableBuilder.html#_primary">primary()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-DB.SQL.DB_Utils.html#methods">DB\SQL\DB_Utils</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-DB.SQL.DB_Utils.html#_findQuery">findQuery()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+	<table class="summary constants" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="TEXT_TableAlreadyExists" id="TEXT_TableAlreadyExists">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-DB.SQL.TableCreator.html#406" title="Go to source code"><b>TEXT_TableAlreadyExists</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#TEXT_TableAlreadyExists" class="anchor">#</a>
+				<code><span class="php-quote">&quot;Table `%s` already exists. Cannot create it.&quot;</span></code>
+			</div>
+		</td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Constants inherited from <a href="class-DB.SQL.TableBuilder.html#constants">DB\SQL\TableBuilder</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-DB.SQL.TableBuilder.html#TEXT_ColumnExists"><b>TEXT_ColumnExists</b></a>, 
+			<a href="class-DB.SQL.TableBuilder.html#TEXT_NoDefaultForTEXT"><b>TEXT_NoDefaultForTEXT</b></a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Constants inherited from <a href="class-DB.SQL.DB_Utils.html#constants">DB\SQL\DB_Utils</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-DB.SQL.DB_Utils.html#TEXT_ENGINE_NOT_SUPPORTED"><b>TEXT_ENGINE_NOT_SUPPORTED</b></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+	<table class="summary inherited">
+	<caption>Properties inherited from <a href="class-DB.SQL.TableBuilder.html#properties">DB\SQL\TableBuilder</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-DB.SQL.TableBuilder.html#$columns"><var>$columns</var></a>, 
+			<a href="class-DB.SQL.TableBuilder.html#$increments"><var>$increments</var></a>, 
+			<a href="class-DB.SQL.TableBuilder.html#$name"><var>$name</var></a>, 
+			<a href="class-DB.SQL.TableBuilder.html#$pkeys"><var>$pkeys</var></a>, 
+			<a href="class-DB.SQL.TableBuilder.html#$queries"><var>$queries</var></a>, 
+			<a href="class-DB.SQL.TableBuilder.html#$rebuild_cmd"><var>$rebuild_cmd</var></a>, 
+			<a href="class-DB.SQL.TableBuilder.html#$schema"><var>$schema</var></a>, 
+			<a href="class-DB.SQL.TableBuilder.html#$suppress"><var>$suppress</var></a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Properties inherited from <a href="class-DB.SQL.DB_Utils.html#properties">DB\SQL\DB_Utils</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-DB.SQL.DB_Utils.html#$db"><var>$db</var></a>, 
+			<a href="class-DB.SQL.DB_Utils.html#$f3"><var>$f3</var></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		OMF 1.2 Documentation API documentation generated by <a href="http://munir.skilledsoft.com">Alienwithin</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

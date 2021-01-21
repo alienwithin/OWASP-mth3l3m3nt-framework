@@ -1,0 +1,24 @@
+<h5 class="alert alert-info"><strong>{{ @POST.lTitle }}</strong></h5>
+<div class="row solid">
+    <div class="col-md-12">
+        <dl class="dl-horizontal w120 mthelement-element">
+            <dt><i class="glyphicon glyphicon-share-alt"></i>More info</dt>
+			<dd>{{@POST.lDescription}}</dd>
+			<form id="form" action="cnc/larfi/view/{{@PARAMS.id}}" method="post" role="form">
+            <div class="col-sm-6">
+            <dt><i class="glyphicon glyphicon-tint"></i> Web Address</dt>
+			<input type="text" name="url" class="form-control" placeholder="http://africahackon.com" />
+			<input type="hidden" id="lPayload" name="lPayload" value="{{ @POST.lPayload }}" class="form-control"/><br/>
+					<input type="hidden" id="lMethod" name="lMethod" value="{{ @POST.lMethod }}" class="form-control"/><br/>
+					<input type="hidden" id="lType" name="lType" value="{{ @POST.lType }}" class="form-control"/><br/>
+          <!--dt><i class="glyphicon glyphicon-tint"></i>Attack</dt-->
+		  <button type="submit" class="btn btn-sm btn-primary">Perform LFI</button>  
+        </dl>
+	
+    </div>
+</div>
+		
+<div class="content col-xs-8" data-wrap="true">
+       <br/>
+      {{highlight_string(@content,true)|raw}}
+      </div>

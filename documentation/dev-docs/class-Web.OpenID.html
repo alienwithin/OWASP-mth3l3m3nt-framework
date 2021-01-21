@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class Web\OpenID | OMF 1.2 Documentation</title>
+
+	<link rel="stylesheet" href="resources/style.css?e99947befd7bf673c6b43ff75e9e0f170c88a60e">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+				<li>
+					<a href="namespace-Controller.html">
+						Controller					</a>
+
+						</li>
+				<li>
+					<a href="namespace-DB.html">
+						DB<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-DB.Jig.html">
+						Jig					</a>
+
+						</li>
+				<li>
+					<a href="namespace-DB.Mongo.html">
+						Mongo					</a>
+
+						</li>
+				<li>
+					<a href="namespace-DB.SQL.html">
+						SQL					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="namespace-Model.html">
+						Model					</a>
+
+						</li>
+				<li>
+					<a href="namespace-None.html">
+						None					</a>
+
+						</li>
+				<li>
+					<a href="namespace-Template.html">
+						Template<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Template.Tags.html">
+						Tags					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="namespace-View.html">
+						View					</a>
+
+						</li>
+				<li class="active">
+					<a href="namespace-Web.html">
+						Web<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Web.Google.html">
+						Google					</a>
+
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Web.Geo.html">Geo</a></li>
+				<li class="active"><a href="class-Web.OpenID.html">OpenID</a></li>
+				<li><a href="class-Web.Pingback.html">Pingback</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Web.html" title="Summary of Web"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class OpenID</h1>
+
+
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-Magic.html"><span>Magic</span></a>
+			
+			 implements 
+<span>ArrayAccess</span>
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>Web\OpenID</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Web.html">Web</a><br>
+		
+
+			<b>Located at</b> <a href="source-class-Web.OpenID.html#26-247" title="Go to source code">lib/web/openid.php</a>
+		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="discover" id="_discover">
+
+		<td class="attributes"><code>
+			 protected 
+
+			string|false
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_discover">#</a>
+		<code><a href="source-class-Web.OpenID.html#34-133" title="Go to source code">discover</a>( <span> <var>$proxy</var></span> )</code>
+
+		<div class="description short">
+			<p>Determine OpenID provider</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Determine OpenID provider</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$proxy</var></dt>
+					<dd>string</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string|false
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="auth" id="_auth">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_auth">#</a>
+		<code><a href="source-class-Web.OpenID.html#135-166" title="Go to source code">auth</a>( <span> <var>$proxy</var> = <span class="php-keyword1">NULL</span></span>, <span> <var>$attr</var> = <span class="php-keyword1">array</span>()</span>, <span>array <var>$reqd</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			<p>Initiate OpenID authentication sequence; Return FALSE on failure
+or redirect to OpenID provider URL</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Initiate OpenID authentication sequence; Return FALSE on failure
+or redirect to OpenID provider URL</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$proxy</var></dt>
+					<dd>string</dd>
+					<dt><var>$attr</var></dt>
+					<dd>array</dd>
+					<dt><var>$reqd</var></dt>
+					<dd>string|array</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="verified" id="_verified">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_verified">#</a>
+		<code><a href="source-class-Web.OpenID.html#168-196" title="Go to source code">verified</a>( <span> <var>$proxy</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			<p>Return TRUE if OpenID verification was successful</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Return TRUE if OpenID verification was successful</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$proxy</var></dt>
+					<dd>string</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="response" id="_response">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_response">#</a>
+		<code><a href="source-class-Web.OpenID.html#198-204" title="Go to source code">response</a>( )</code>
+
+		<div class="description short">
+			<p>Return OpenID response fields</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Return OpenID response fields</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					array
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="exists" id="_exists">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_exists">#</a>
+		<code><a href="source-class-Web.OpenID.html#206-213" title="Go to source code">exists</a>( <span> <var>$key</var></span> )</code>
+
+		<div class="description short">
+			<p>Return TRUE if OpenID request parameter exists</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Return TRUE if OpenID request parameter exists</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd>string</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set" id="_set">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set">#</a>
+		<code><a href="source-class-Web.OpenID.html#215-223" title="Go to source code">set</a>( <span> <var>$key</var></span>, <span> <var>$val</var></span> )</code>
+
+		<div class="description short">
+			<p>Bind value to OpenID request parameter</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Bind value to OpenID request parameter</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd>string</dd>
+					<dt><var>$val</var></dt>
+					<dd>string</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get" id="_get">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed
+			&amp;
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get">#</a>
+		<code><a href="source-class-Web.OpenID.html#225-236" title="Go to source code">get</a>( <span> <var>$key</var></span> )</code>
+
+		<div class="description short">
+			<p>Return value of OpenID request parameter</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Return value of OpenID request parameter</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd>string</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="clear" id="_clear">
+
+		<td class="attributes"><code>
+			 public 
+
+			null
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_clear">#</a>
+		<code><a href="source-class-Web.OpenID.html#238-245" title="Go to source code">clear</a>( <span> <var>$key</var></span> )</code>
+
+		<div class="description short">
+			<p>Remove OpenID request parameter</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Remove OpenID request parameter</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					null
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-Magic.html#methods">Magic</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-Magic.html#___get">__get()</a>, 
+			<a href="class-Magic.html#___isset">__isset()</a>, 
+			<a href="class-Magic.html#___set">__set()</a>, 
+			<a href="class-Magic.html#___unset">__unset()</a>, 
+			<a href="class-Magic.html#_offsetexists">offsetexists()</a>, 
+			<a href="class-Magic.html#_offsetget">offsetget()</a>, 
+			<a href="class-Magic.html#_offsetset">offsetset()</a>, 
+			<a href="class-Magic.html#_offsetunset">offsetunset()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from ArrayAccess</caption>
+	<tr>
+		<td><code>
+offsetExists(), 
+offsetGet(), 
+offsetSet(), 
+offsetUnset()
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary properties" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="url" id="$url">
+		<td class="attributes"><code>
+			protected  
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Web.OpenID.html#28-30" title="Go to source code"><var>$url</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$url" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="args" id="$args">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Web.OpenID.html#32" title="Go to source code"><var>$args</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$args" class="anchor">#</a>
+				<code><span class="php-keyword1">array</span>()</code>
+			</div>
+		</td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		OMF 1.2 Documentation API documentation generated by <a href="http://munir.skilledsoft.com">Alienwithin</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

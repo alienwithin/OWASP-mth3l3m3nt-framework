@@ -1,0 +1,28 @@
+{
+	"name": "alienwithin/owasp-mth3l3m3nt-framework",
+	"description": "OWASP Mth3l3m3nt Framework is a penetration testing aiding tool and exploitation framework. It fosters a principle of attack the web using the web as well as pentest on the go through its responsive interface.",
+	"homepage": "https://alienwithin.github.io/OWASP-mth3l3m3nt-framework/",
+	"license": "GPL-3.0",
+	"require": {
+		"php": ">=5.3.6"
+	},
+	"repositories": [
+		{
+			"type": "vcs",
+			"url": "https://github.com/alienwithin/OWASP-mth3l3m3nt-framework"
+		}
+	],
+	"authors": [
+      {
+          "name": "Munir Njiru",
+          "email": "munir@skilledsoft.com"
+      }
+  ],
+	"autoload": {
+		"files": ["lib/base.php"],
+		 "classmap": [
+		      "framework",
+		      "framework/__includes"
+    		]
+	}
+}

@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class Auth | OMF 1.2 Documentation</title>
+
+	<link rel="stylesheet" href="resources/style.css?e99947befd7bf673c6b43ff75e9e0f170c88a60e">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+				<li>
+					<a href="namespace-Controller.html">
+						Controller					</a>
+
+						</li>
+				<li>
+					<a href="namespace-DB.html">
+						DB<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-DB.Jig.html">
+						Jig					</a>
+
+						</li>
+				<li>
+					<a href="namespace-DB.Mongo.html">
+						Mongo					</a>
+
+						</li>
+				<li>
+					<a href="namespace-DB.SQL.html">
+						SQL					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="namespace-Model.html">
+						Model					</a>
+
+						</li>
+				<li class="active">
+					<a href="namespace-None.html">
+						None					</a>
+
+						</li>
+				<li>
+					<a href="namespace-Template.html">
+						Template<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Template.Tags.html">
+						Tags					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="namespace-View.html">
+						View					</a>
+
+						</li>
+				<li>
+					<a href="namespace-Web.html">
+						Web<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Web.Google.html">
+						Google					</a>
+
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Audit.html">Audit</a></li>
+				<li class="active"><a href="class-Auth.html">Auth</a></li>
+				<li><a href="class-Base.html">Base</a></li>
+				<li><a href="class-Basket.html">Basket</a></li>
+				<li><a href="class-Bcrypt.html">Bcrypt</a></li>
+				<li><a href="class-Cache.html">Cache</a></li>
+				<li><a href="class-Config.html">Config</a></li>
+				<li><a href="class-DBHandler.html">DBHandler</a></li>
+				<li><a href="class-Error.html">Error</a></li>
+				<li><a href="class-F3.html">F3</a></li>
+				<li><a href="class-Flash.html" class="invalid">Flash</a></li>
+				<li><a href="class-Image.html">Image</a></li>
+				<li><a href="class-ISO.html">ISO</a></li>
+				<li><a href="class-Log.html">Log</a></li>
+				<li><a href="class-Magic.html">Magic</a></li>
+				<li><a href="class-Markdown.html">Markdown</a></li>
+				<li><a href="class-Matrix.html">Matrix</a></li>
+				<li><a href="class-Pagination.html">Pagination</a></li>
+				<li><a href="class-Prefab.html">Prefab</a></li>
+				<li><a href="class-Preview.html">Preview</a></li>
+				<li><a href="class-Registry.html">Registry</a></li>
+				<li><a href="class-Session.html">Session</a></li>
+				<li><a href="class-setup.html">setup</a></li>
+				<li><a href="class-SMTP.html">SMTP</a></li>
+				<li><a href="class-Template.html">Template</a></li>
+				<li><a href="class-Test.html">Test</a></li>
+				<li><a href="class-UTF.html">UTF</a></li>
+				<li><a href="class-Validation.html">Validation</a></li>
+				<li><a href="class-View.html">View</a></li>
+				<li><a href="class-Web.html">Web</a></li>
+			</ul>
+
+
+
+
+
+			<h3>Functions</h3>
+			<ul>
+				<li><a href="function-gzdecode.html">gzdecode</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-None.html" title="Summary of None"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class Auth</h1>
+
+
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		
+
+			<b>Located at</b> <a href="source-class-Auth.html#25-241" title="Go to source code">lib/auth.php</a>
+		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="_jig" id="__jig">
+
+		<td class="attributes"><code>
+			 protected 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__jig">#</a>
+		<code><a href="source-class-Auth.html#41-65" title="Go to source code">_jig</a>( <span> <var>$id</var></span>, <span> <var>$pw</var></span>, <span> <var>$realm</var></span> )</code>
+
+		<div class="description short">
+			<p>Jig storage handler</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Jig storage handler</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$id</var></dt>
+					<dd>string</dd>
+					<dt><var>$pw</var></dt>
+					<dd>string</dd>
+					<dt><var>$realm</var></dt>
+					<dd>string</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_mongo" id="__mongo">
+
+		<td class="attributes"><code>
+			 protected 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__mongo">#</a>
+		<code><a href="source-class-Auth.html#67-84" title="Go to source code">_mongo</a>( <span> <var>$id</var></span>, <span> <var>$pw</var></span>, <span> <var>$realm</var></span> )</code>
+
+		<div class="description short">
+			<p>MongoDB storage handler</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>MongoDB storage handler</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$id</var></dt>
+					<dd>string</dd>
+					<dt><var>$pw</var></dt>
+					<dd>string</dd>
+					<dt><var>$realm</var></dt>
+					<dd>string</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_sql" id="__sql">
+
+		<td class="attributes"><code>
+			 protected 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__sql">#</a>
+		<code><a href="source-class-Auth.html#86-110" title="Go to source code">_sql</a>( <span> <var>$id</var></span>, <span> <var>$pw</var></span>, <span> <var>$realm</var></span> )</code>
+
+		<div class="description short">
+			<p>SQL storage handler</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>SQL storage handler</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$id</var></dt>
+					<dd>string</dd>
+					<dt><var>$pw</var></dt>
+					<dd>string</dd>
+					<dt><var>$realm</var></dt>
+					<dd>string</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_ldap" id="__ldap">
+
+		<td class="attributes"><code>
+			 protected 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__ldap">#</a>
+		<code><a href="source-class-Auth.html#112-133" title="Go to source code">_ldap</a>( <span> <var>$id</var></span>, <span> <var>$pw</var></span> )</code>
+
+		<div class="description short">
+			<p>LDAP storage handler</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>LDAP storage handler</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$id</var></dt>
+					<dd>string</dd>
+					<dt><var>$pw</var></dt>
+					<dd>string</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_smtp" id="__smtp">
+
+		<td class="attributes"><code>
+			 protected 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__smtp">#</a>
+		<code><a href="source-class-Auth.html#135-180" title="Go to source code">_smtp</a>( <span> <var>$id</var></span>, <span> <var>$pw</var></span> )</code>
+
+		<div class="description short">
+			<p>SMTP storage handler</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>SMTP storage handler</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$id</var></dt>
+					<dd>string</dd>
+					<dt><var>$pw</var></dt>
+					<dd>string</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="login" id="_login">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_login">#</a>
+		<code><a href="source-class-Auth.html#182-191" title="Go to source code">login</a>( <span> <var>$id</var></span>, <span> <var>$pw</var></span>, <span> <var>$realm</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			<p>Login auth mechanism</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Login auth mechanism</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$id</var></dt>
+					<dd>string</dd>
+					<dt><var>$pw</var></dt>
+					<dd>string</dd>
+					<dt><var>$realm</var></dt>
+					<dd>string</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="basic" id="_basic">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_basic">#</a>
+		<code><a href="source-class-Auth.html#193-222" title="Go to source code">basic</a>( <span> <var>$func</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			<p>HTTP basic auth mechanism</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>HTTP basic auth mechanism</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$func</var></dt>
+					<dd>callback</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+
+			object
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-Auth.html#224-239" title="Go to source code">__construct</a>( <span> <var>$storage</var></span>, <span>array <var>$args</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			<p>Instantiate class</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Instantiate class</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$storage</var></dt>
+					<dd>string|object</dd>
+					<dt><var>$args</var></dt>
+					<dd>array</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					object
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+	<table class="summary constants" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="E_LDAP" id="E_LDAP">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-Auth.html#29" title="Go to source code"><b>E_LDAP</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#E_LDAP" class="anchor">#</a>
+				<code><span class="php-quote">'LDAP connection failure'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="E_SMTP" id="E_SMTP">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-Auth.html#30" title="Go to source code"><b>E_SMTP</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#E_SMTP" class="anchor">#</a>
+				<code><span class="php-quote">'SMTP connection failure'</span></code>
+			</div>
+		</td>
+	</tr>
+	</table>
+
+
+
+
+	<table class="summary properties" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="storage" id="$storage">
+		<td class="attributes"><code>
+			protected  
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Auth.html#33-35" title="Go to source code"><var>$storage</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$storage" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="mapper" id="$mapper">
+		<td class="attributes"><code>
+			protected  
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Auth.html#37" title="Go to source code"><var>$mapper</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$mapper" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="args" id="$args">
+		<td class="attributes"><code>
+			protected  
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Auth.html#39" title="Go to source code"><var>$args</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$args" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		OMF 1.2 Documentation API documentation generated by <a href="http://munir.skilledsoft.com">Alienwithin</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

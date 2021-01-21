@@ -1,0 +1,21 @@
+
+  <div class="alert alert-info"><h4>{{ @POST.zName |esc}}</h4></div>
+
+
+    <form id="botmaster" method="POST" action="cnc/webot/view/{{@PARAMS.id}}">
+    	
+    	 <input type="text" id="instruction" name="instruction"  class="form-control"/><br/>
+    	<input type="hidden" id="zLoc" name="zLoc" value="{{ @POST.zLoc }}" class="form-control"/><br/>
+    	<input type="hidden" id="zParam" name="zParam" value="{{ @POST.zParam }}" class="form-control"/><br/>
+    	<input type="submit" name="command" value="Command Me" class="form-control"/><br/><br/>
+    </form>
+<check if="{{ isset(@content) }}">
+<true>
+<div id="slaved" class="alert alert-success"> {{highlight_string(@content,true)|raw}}</div>
+</true>
+
+     
+   
+    
+    <a href="{{ @BASE.'/cnc/webot' }}" class="btn btn-primary"><i class="icon-edit icon-white"></i> Back</a>
+  

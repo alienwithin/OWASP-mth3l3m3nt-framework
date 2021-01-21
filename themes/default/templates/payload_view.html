@@ -1,0 +1,51 @@
+
+<!--*****************************************************************************************************************
+	Payload View
+	 ***************************************************************************************************************** -->
+
+<div class="container mtb">
+	<div class="row">
+		<switch expr="{{ @POST.pType }}">
+			<case value="XSS">
+				<div class="col-lg-6">
+					<img class="img-responsive" src="{{@UI}}assets/img/vulnerabilities/xss.png" alt="Cross Site Scripting">
+					<section class="info"><a href="https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)" target="_blank"><strong>Cross-Site Scripting (XSS)</strong></a> attacks are a type of injection, in which malicious scripts are injected into otherwise benign and trusted web sites. XSS attacks occur when an attacker uses a web application to send malicious code, generally in the form of a browser side script, to a different end user. Flaws that allow these attacks to succeed are quite widespread and occur anywhere a web application uses input from a user within the output it generates without validating or encoding it.</section>
+				</div>
+			</case>
+			<case value="Injection">
+				<div class="col-lg-6">
+					<img class="img-responsive" src="{{@UI}}assets/img/vulnerabilities/injection.png" alt="Injection Flaws">
+					<section class="info"><strong>Injection flaws</strong> allow attackers to relay malicious code through an application to another system. These attacks include calls to the operating system via system calls, the use of external programs via shell commands, as well as calls to backend databases via SQL (i.e., SQL injection). Whole scripts written in Perl, Python, and other languages can be injected into poorly designed applications and executed. <br/>Common types of injections are: <a href="https://www.owasp.org/index.php/LDAP_injection" target="_blank">LDAP</a> /<a href="https://www.owasp.org/index.php/Testing_for_XML_Injection_(OTG-INPVAL-008)" target="_blank"> XML injections </a> / <a href="https://www.owasp.org/index.php/XPATH_Injection" target="_blank"> XPath injections</a> /<a href="" target="_blank">SQL Injections</a>/<a href="" target="_blank">No SQL Injections</a>/<a href="" target="_blank">OS Command injections</a>.
+					</section>
+				</div>
+			</case>
+			<case value="file inclusion">
+				<div class="col-lg-6">
+					<img class="img-responsive" src="{{@UI}}assets/img/vulnerabilities/file-include.png" alt="File Inclusion Attacks">
+					<small class="info"><strong>File Inclusion</strong> vulnerabilities allow an attacker to include a file, usually exploiting a "dynamic file inclusion" mechanisms implemented in the target application. The vulnerability occurs due to the use of user-supplied input without proper validation. The common types are : <br/>
+						* <a href="https://www.owasp.org/index.php/Testing_for_Remote_File_Inclusion" target="_blank">RFI (Remote File Inclusion)</a><br/>
+						* <a href="https://www.owasp.org/index.php/Testing_for_Local_File_Inclusion" target="_blank">LFI (Local File Inclusion)</a>
+					</small>
+				</div>
+			</case>
+			<default>
+				<div class="col-lg-6">
+					<img class="img-responsive" src="{{@UI}}assets/img/vulnerabilities/misc.png" alt="Miscellaneous">
+					<small class="info">Refer to the <a href="https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project" target="_blank"><strong>OWASP Top 10</strong></a> which is a powerful awareness document for web application security. The OWASP Top Ten represents a broad consensus about what the most critical web application security flaws are. Project members include a variety of security experts from around the world who have shared their expertise to produce this list. This attack will fall in one of the other sections.
+					</small>
+				</div>
+			</default>
+		</switch>
+
+
+		<div class="col-lg-6">
+			<h1>{{ @POST.pName |esc}} - ( {{ @POST.pType |esc}} )</h1>
+			<p>{{ @POST.pDescription }} </p>
+
+			<p><code><strong> Payload is as below:</strong></code></p>
+
+			<div class="alert alert-info">  {{ @POST.payload |esc }}</div>
+			<p><br/><a href="{{ @BASE.'/' }}" class="btn btn-theme">Back to Payloads</a></p>
+		</div>
+	</div><!--/row -->
+</div><!--/container -->

@@ -1,0 +1,10 @@
+Installation on Windows: 
+https://www.youtube.com/watch?v=QjBbrNtCx3A
+
+
+Installation on Linux (Kali Linux)
+https://www.youtube.com/watch?v=_Nw05Q3fc2A
+
+
+Using some key Modules as demonstrated in Africahackon CTF 2015
+https://www.youtube.com/watch?v=ZFWOKg9c_vA

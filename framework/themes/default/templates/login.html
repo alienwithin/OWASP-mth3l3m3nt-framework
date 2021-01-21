@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="{{@SCHEME.'://'.@HOST.@BASE.'/'}}"/>
+    <meta charset="{{@$ENCODING}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{@UI}}ico/favicon.png">
+    <title>{{ @CONFIG.framework_title }} - Backend</title>
+    <link href="{{@UI}}css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{@UI}}css/backend.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="{{@UI}}js/vendor/html5shiv.js"></script>
+    <script src="{{@UI}}js/vendor/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="login_screen">
+
+<div class="container">
+
+    <repeat group="{{ \Flash::instance()->getMessages() }}" value="{{ @msg }}">
+        <div class="login-alert alert alert-{{ @msg.status }} alert-dismissable">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            {{ @msg.text }}
+        </div>
+    </repeat>
+            <div id="login-box" class="borderflow">
+                <div class="header clearfix">
+                    <a href="cnc/" ><img src="themes/default/assets/img/omf.png"/></a>                    
+                </div>
+                <form role="form" method="post" action="{{@CONFIG.ssl_backend?'https://'.@HOST.@BASE.'/login':'login'}}" id="login-form">
+                    <div class="form-group">
+                        <label class="control-label" for="inputUser">Username</label>
+                        <input type="text" class="form-control" id="inputUser" name="username" />
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="inputPassword">Password</label>
+                        <input type="password" class="form-control" id="inputPassword" name="password" />
+                    </div>
+                    <button id="login-submit" type="submit" class="btn btn-primary">Login</button>
+                </form>
+            </div>
+</div>
+
+<script src="{{@UI}}js/vendor/jquery.js"></script>
+<script src="{{@UI}}js/vendor/bootstrap.min.js"></script>
+<script src="{{@UI}}js/jq_borderflow.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $('.borderflow').borderFlow({borderWidth: 8});
+        $('#login-submit').click(function () {
+            $('#login-box').data('borderFlow').playSimple({duration:10000});
+        });
+
+    });
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<h2>Web Utilities: Generic Request</h2>
+<style type="text/css">
+	.content{
+		    white-space:normal !important;
+   		 word-wrap:break-word; 
+	}
+	p {word-wrap:break-word;}
+	
+</style>
+<script type='text/javascript'>
+    $("#webform").submit(function(event) {
+
+
+        event.preventDefault();
+
+
+        var $form = $( this ),
+                url = $form.attr( 'action' );
+
+
+        var posting = $.post( url, { means: $('#means').val(), url: $('#url').val(),postReceive: $('#postReceive').val() } );
+
+
+    });
+</script>
+<div class="box-body">
+        <form id="webform" action="cnc/websaccre/generic_request" method="post" role="form">
+            <div class="col-sm-6">
+            
+			<label>Method</label>
+			<select name="means" id="means" class="form-control">
+			    <option name="get" value="GET">GET</option>
+                <option name="head" value="HEAD">HEAD</option>
+                <option name="options" value="OPTIONS">OPTIONS</option>
+                <option name="trace" value="TRACE">TRACE</option>
+                <option name="post" value="POST">POST</option>
+            </select>
+                  
+           <br/><label>Web Address</label>
+            <input type="text" name="url" class="form-control" placeholder="http://africahackon.com" />
+
+		<div id="postData">
+					<label>Post Data</label>
+                    <textarea name="postReceive" class="form-control" placeholder="someformfield=someformvalue&someOtherFormField=someOtherFormValue"></textarea>           	</div>
+
+               <br/><br/> <button type="submit" class="btn btn-primary">Make Web Request</button>
+            </div>
+
+        </form>
+
+       <div class="content col-xs-8" data-wrap="true">
+       <br/>
+           {{highlight_string(@content,true)|raw}}
+      </div>
+    </div>
+     

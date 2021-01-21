@@ -1,0 +1,32 @@
+<h2>Web Utilities: Decoder</h2>
+
+<div class="row solid">
+        <form id="form" action="cnc/dencoder/decoder_multi" method="post" role="form">
+            <div class="col-sm-6">
+
+                <div class="form-group">
+                    <label>Encoded Text</label>
+                    <textarea style="width:100%" name="encoded" class="form-control custom-control"></textarea><br/>
+                    <select name="encodedFormat" class="form-control custom-control">
+                    	<option name="base64" value="base64">Base 64</option>
+                    	<option name="hex" value="hex">Hex</option>
+                    	<option name="hex_0x" value="hex_0x">Hex with 0x Prefix</option>
+                    	<option name="hex_slash_x" value="hex_slash_x">Hex with \x Seperator</option>
+                    	 <option name="rot13" value="rot13">Rot 13</option>
+                    </select>
+                    
+                </div>
+
+                               
+
+                <button type="submit" class="btn btn-primary">Decode</button>
+            </div>
+
+        </form>
+      
+       <div class="content col-xs-8" data-wrap="true">
+       <br/>
+      	{{highlight_string(@content,true)|raw}}
+      </div>
+    </div>
+     
